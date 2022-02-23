@@ -119,12 +119,43 @@ def restart_daemon():
 
 @QtCore.Slot()
 def check_update():
-    subprocess.run("curl -Lsk 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' | python3",shell=True)
+    temp_app = QApplication([])
+    if LatestVersion == LocalVersion :
+        temp_app.quit()
+        Already_latest_msg_box = QMessageBox()
+        Already_latest_msg_box.setText("you are using the latest release")
+        Already_latest_msg_box.exec()
+    if LatestVersion != LocalVersion :
+        Updatemsg_box = QMessageBox()
+        UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
+        buttonReply = QMessageBox.information(Updatemsg_box, 'Update now ?', UpdateLog, QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+        if buttonReply == QMessageBox.Yes:
+            Updating_msg_box = QMessageBox()
+            Updating_msg_box.setText("Updating")
+            Updating_msg_box.exec()
+            Updating = subprocess.run("curl 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' -o %s| python3" %resource_path(".."),shell=True)
+            if Updating.returncode == 0 :
+                Updating_msg_box.close()
+                temp_app.quit()
+                Update_done_msg_box = QMessageBox()
+                Update_done_msg_box.setText("Update done\nPlease restart the app to apply the new version")
+                Update_done_msg_box.exec()
+            if Updating.returncode == 1 :
+                temp_app.quit()
+                Update_err_msg_box = QMessageBox()
+                Update_err_msg_box.setText("Error occurred")
+                Update_err_msg_box.exec()
+
+        if buttonReply == QMessageBox.No:
+            temp_app.quit()
+    temp_app.exec_()
 
 # Show update avaliable message
 @QtCore.Slot()
 def UpdateNotification() :
     if LatestVersion != LocalVersion :
+        UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
         Update_Avaliable_box = QMessageBox()
-        Update_Avaliable_box.setText('UPDATE AVALIABLE')
+        Update_Avaliable_box.setWindowTitle('UPDATE AVALIABLE')
+        Update_Avaliable_box.setText(UpdateLog)
         Update_Avaliable_box.exec()
