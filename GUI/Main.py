@@ -63,19 +63,22 @@ def Installation():
             print(AppleID+','+Password)
             InsAltStoreCMD='%s -u %s -a %s -p %s %s > %s' % (resource_path("AltServer"),UDID,AppleID,Password,PATH,resource_path("log.txt"))
             print(InsAltStoreCMD)
+            Installing = True
+            WarnTime=0
             InsAltStore=subprocess.Popen(InsAltStoreCMD, stdin=PIPE, stdout=PIPE, shell=True)
-            while InsAltStore.poll() is None:   
+            while Installing :   
                 CheckIns=subprocess.run('grep "Installation Failed" %s' %resource_path("log.txt"),shell=True)
                 CheckWarn=subprocess.run('grep "Are you sure you want to continue?" %s' %resource_path("log.txt"),shell=True)
                 CheckSuccess=subprocess.run('grep "Installation Succeeded" %s' %resource_path("log.txt"),shell=True)
 
                 if CheckIns.returncode == 0 :
+                    Installing = False
                     InsAltStore.terminate()
                     Failmsg=subprocess.check_output("tail -6 %s" %resource_path("log.txt"),shell=True).decode('utf-8')
                     Failmsg_box = QMessageBox()
                     Failmsg_box.setText(Failmsg)
                     Failmsg_box.exec()
-                if CheckWarn.returncode == 0 :
+                if CheckWarn.returncode == 0 and WarnTime == 0 :
                     Warnmsg=subprocess.check_output("tail -8 %s" %resource_path("log.txt"),shell=True).decode('utf-8')
                     Warnmsg_box = QMessageBox()
                     buttonReply = QMessageBox.warning(Warnmsg_box, 'Alert', Warnmsg, QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
@@ -83,13 +86,16 @@ def Installation():
                         InsAltStore.communicate(input=b'\n')
                     
                     if buttonReply == QMessageBox.No :
+                        Installing = False
                         os.system('pkill -TERM -P {pid}'.format(pid=InsAltStore.pid)) 
                         Cancelmsg_box = QMessageBox()
                         Cancelmsg_box.setText("Installation Canceled")
                         Cancelmsg_box.exec()
-            if CheckSuccess.returncode == 0 :
-                Success_msg.setVisible(True)
-                Success_msg.showMessage("Installation Succeded","AltStore was successfully installed",QSystemTrayIcon.Information,200)
+                    WarnTime = 1
+                if CheckSuccess.returncode == 0 :
+                    Installing = False
+                    Success_msg.setVisible(True)
+                    Success_msg.showMessage("Installation Succeded","AltStore was successfully installed",QSystemTrayIcon.Information,200)
 
         btn.setText("Install")
         btn.clicked.connect(ButtonClicked)
