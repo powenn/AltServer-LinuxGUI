@@ -34,7 +34,7 @@ def about_message():
     msg_box.setIconPixmap(QPixmap(resource_path("Icon@128.png")))
     msg_box.setWindowTitle('AltServer-Linux')
     msg_box.setInformativeText('GUI by powenn on Github\n\nAltServer-Linux by NyaMisty on Github\n\nNot offical AltServer from Riley Testut')
-    msg_box.setDetailedText('Source code :\nhttps://github.com/powenn/AltServer-LinuxGUI\n\nFor questions about this GUI, you can contact @powen00hsiao on Twitter')
+    msg_box.setDetailedText('Version : 0.1\nSource code :\nhttps://github.com/powenn/AltServer-LinuxGUI\n\nFor questions about this GUI, you can contact @powen00hsiao on Twitter')
     msg_box.exec()
 
 @QtCore.Slot()
@@ -131,15 +131,16 @@ def check_update():
         if buttonReply == QMessageBox.Yes:
             Updating_msg_box = QSystemTrayIcon()
             Updating_msg_box.setVisible(True)
-            Updating_msg_box.showMessage("Updating",QSystemTrayIcon.Information,200)
-            Updating = subprocess.run("curl 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py %s' | python3" %cwd,shell=True)
+            Updating_msg_box.showMessage("Updating","Please wait a moment",QSystemTrayIcon.Information,200)
+            update_pyfile = cwd+"/update.py"
+            subprocess.run("curl -L 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' > %s| python3" %update_pyfile,shell=True)
+            Updating=subprocess.run("python3 %s" %update_pyfile,shell=True)
             if Updating.returncode == 0 :
-                Updating_msg_box.close()
+                subprocess.run("rm -rf %s" %update_pyfile,shell=True)
                 Update_done_msg_box = QMessageBox()
                 Update_done_msg_box.setText("Update done\nPlease restart the app to apply the new version")
                 Update_done_msg_box.exec()
             if Updating.returncode == 1 :
-                Updating_msg_box.close()
                 Update_err_msg_box = QMessageBox()
                 Update_err_msg_box.setText("Error occurred")
                 Update_err_msg_box.exec()
