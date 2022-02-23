@@ -136,10 +136,13 @@ def check_update():
             subprocess.run("curl -L 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' > %s| python3" %update_pyfile,shell=True)
             Updating=subprocess.run("python3 %s" %update_pyfile,shell=True)
             if Updating.returncode == 0 :
+                old_ver =  cwd+"/AltServerGUI"
+                new_ver = cwd+"/AltServerGUI-new"
                 subprocess.run("rm -rf %s" %update_pyfile,shell=True)
                 Update_done_msg_box = QMessageBox()
                 Update_done_msg_box.setText("Update done\nPlease restart the app to apply the new version")
                 Update_done_msg_box.exec()
+                subprocess.run("mv -f %s %s" %(new_ver,old_ver))
             if Updating.returncode == 1 :
                 Update_err_msg_box = QMessageBox()
                 Update_err_msg_box.setText("Error occurred")
