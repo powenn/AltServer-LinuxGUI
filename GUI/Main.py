@@ -19,6 +19,7 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 
+cwd = os.getcwd()
 AltServer = resource_path("AltServer")
 AltServerDaemon = resource_path("AltServerDaemon")
 
@@ -119,9 +120,7 @@ def restart_daemon():
 
 @QtCore.Slot()
 def check_update():
-    temp_app = QApplication([])
     if LatestVersion == LocalVersion :
-        temp_app.quit()
         Already_latest_msg_box = QMessageBox()
         Already_latest_msg_box.setText("you are using the latest release")
         Already_latest_msg_box.exec()
@@ -130,25 +129,23 @@ def check_update():
         UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
         buttonReply = QMessageBox.information(Updatemsg_box, 'Update now ?', UpdateLog, QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
         if buttonReply == QMessageBox.Yes:
-            Updating_msg_box = QMessageBox()
-            Updating_msg_box.setText("Updating")
-            Updating_msg_box.exec()
-            Updating = subprocess.run("curl 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' -o %s| python3" %resource_path(".."),shell=True)
+            Updating_msg_box = QSystemTrayIcon()
+            Updating_msg_box.setVisible(True)
+            Updating_msg_box.showMessage("Updating",QSystemTrayIcon.Information,200)
+            Updating = subprocess.run("curl 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py %s' | python3" %cwd,shell=True)
             if Updating.returncode == 0 :
                 Updating_msg_box.close()
-                temp_app.quit()
                 Update_done_msg_box = QMessageBox()
                 Update_done_msg_box.setText("Update done\nPlease restart the app to apply the new version")
                 Update_done_msg_box.exec()
             if Updating.returncode == 1 :
-                temp_app.quit()
+                Updating_msg_box.close()
                 Update_err_msg_box = QMessageBox()
                 Update_err_msg_box.setText("Error occurred")
                 Update_err_msg_box.exec()
 
         if buttonReply == QMessageBox.No:
-            temp_app.quit()
-    temp_app.exec_()
+            pass
 
 # Show update avaliable message
 @QtCore.Slot()

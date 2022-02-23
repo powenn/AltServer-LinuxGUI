@@ -7,5 +7,5 @@ import subprocess
 
 LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode('utf-8')
 
-GetReleaseCMD='curl -O https://github.com/powenn/AltServer-LinuxGUI/releases/download/%s/AltServerGUI' %LatestVersion
+GetReleaseCMD='curl https://github.com/powenn/AltServer-LinuxGUI/releases/download/%s/AltServerGUI.zip' %LatestVersion
 subprocess.run(GetReleaseCMD,shell=True)
