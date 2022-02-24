@@ -82,6 +82,7 @@ def Installation():
                 CheckIns=subprocess.run('grep "Installation Failed" %s' %resource_path("log.txt"),shell=True)
                 CheckWarn=subprocess.run('grep "Are you sure you want to continue?" %s' %resource_path("log.txt"),shell=True)
                 CheckSuccess=subprocess.run('grep "Installation Succeeded" %s' %resource_path("log.txt"),shell=True)
+                Check2fa=subprocess.run('grep "Requires two factor..." %s' %resource_path("log.txt"),shell=True)
 
                 if CheckIns.returncode == 0 :
                     Installing = False
@@ -104,6 +105,29 @@ def Installation():
                         Cancelmsg_box.setText("Installation Canceled")
                         Cancelmsg_box.exec()
                     WarnTime = 1
+
+                if Check2fa.returncode == 0 and WarnTime == 0 :           
+                    msg_2fa_Area=QDialog()
+                    msg_2fa_Area.setWindowTitle("Requires two factor")
+                    code_2fa_Layout = QVBoxLayout()
+                    code_2fa_label = QLabel("Please Enter two factor code")
+                    Input_2fa_Area = QLineEdit(placeholderText="two factor code")
+                    send_2fa_btn = QPushButton()
+                    def Button_2fa_Clicked():
+                        Input_2fa_Area.close()
+                        code_2fa=Input_2fa_Area.text()
+                        code_2fa=code_2fa+"\n"
+                        code_2fa_bytes = bytes(code_2fa.encode())
+                        InsAltStore.communicate(input=code_2fa_bytes)
+
+                    send_2fa_btn.setText("Send")
+                    send_2fa_btn.clicked.connect(Button_2fa_Clicked)
+                    code_2fa_Layout.addWidget(code_2fa_label)
+                    code_2fa_Layout.addWidget(Input_2fa_Area)
+                    code_2fa_Layout.addWidget(send_2fa_btn)
+                    msg_2fa_Area.setLayout(code_2fa_Layout)
+                    msg_2fa_Area.exec()
+                
                 if CheckSuccess.returncode == 0 :
                     Installing = False
                     Success_msg.setVisible(True)
@@ -132,6 +156,7 @@ def restart_daemon():
 @QtCore.Slot()
 def check_update():
     if (internet_stat()) == True  :
+        LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode('utf-8')
         if LatestVersion == LocalVersion :
             Already_latest_msg_box = QMessageBox()
             Already_latest_msg_box.setText("you are using the latest release")
@@ -139,9 +164,7 @@ def check_update():
         if LatestVersion != LocalVersion :
             Updatemsg_box = QMessageBox()
             UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
-            Updatemsg_box.setWindowTitle("Update Avaliable")
             Updatemsg_box.setText(UpdateLog)
-            Updatemsg_box.exec()
             buttonReply = QMessageBox.information(Updatemsg_box, 'Update now ?', UpdateLog, QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
             if buttonReply == QMessageBox.Yes:
                 Updating_msg_box = QSystemTrayIcon()
