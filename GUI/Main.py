@@ -8,6 +8,8 @@ from PyQt5.QtWidgets import *
 from PySide2 import QtCore
 from subprocess import *
 import subprocess
+from shutil import *
+import requests
 import os
 import sys
 
@@ -23,9 +25,18 @@ cwd = os.getcwd()
 AltServer = resource_path("AltServer")
 AltServerDaemon = resource_path("AltServerDaemon")
 
+def internet_stat():
+    timeout = 5
+    try:
+        requests.get("https://www.google.com", timeout=timeout)
+        print("Connected to the Internet")
+        return True
+    except (requests.ConnectionError, requests.Timeout) as exception:
+	    return False
+
 # Version 
 LocalVersion=subprocess.check_output("sed -n 1p %s" %resource_path("version"),shell=True).decode('utf-8').replace("\n", "")
-LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode('utf-8')
+LatestVersion=""
 
 # Function part
 @QtCore.Slot()
@@ -120,43 +131,62 @@ def restart_daemon():
 
 @QtCore.Slot()
 def check_update():
-    if LatestVersion == LocalVersion :
-        Already_latest_msg_box = QMessageBox()
-        Already_latest_msg_box.setText("you are using the latest release")
-        Already_latest_msg_box.exec()
-    if LatestVersion != LocalVersion :
-        Updatemsg_box = QMessageBox()
-        UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
-        buttonReply = QMessageBox.information(Updatemsg_box, 'Update now ?', UpdateLog, QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
-        if buttonReply == QMessageBox.Yes:
-            Updating_msg_box = QSystemTrayIcon()
-            Updating_msg_box.setVisible(True)
-            Updating_msg_box.showMessage("Updating","Please wait a moment",QSystemTrayIcon.Information,200)
-            update_pyfile = cwd+"/update.py"
-            subprocess.run("curl -L 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' > %s| python3" %update_pyfile,shell=True)
-            Updating=subprocess.run("python3 %s" %update_pyfile,shell=True)
-            if Updating.returncode == 0 :
-                old_ver =  cwd+"/AltServerGUI"
-                new_ver = cwd+"/AltServerGUI-new"
-                subprocess.run("rm -rf %s" %update_pyfile,shell=True)
-                Update_done_msg_box = QMessageBox()
-                Update_done_msg_box.setText("Update done\nPlease restart the app to apply the new version")
-                Update_done_msg_box.exec()
-                subprocess.run("mv -f %s %s" %(new_ver,old_ver))
-            if Updating.returncode == 1 :
-                Update_err_msg_box = QMessageBox()
-                Update_err_msg_box.setText("Error occurred")
-                Update_err_msg_box.exec()
+    if (internet_stat()) == True  :
+        if LatestVersion == LocalVersion :
+            Already_latest_msg_box = QMessageBox()
+            Already_latest_msg_box.setText("you are using the latest release")
+            Already_latest_msg_box.exec()
+        if LatestVersion != LocalVersion :
+            Updatemsg_box = QMessageBox()
+            UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
+            Updatemsg_box.setWindowTitle("Update Avaliable")
+            Updatemsg_box.setText(UpdateLog)
+            Updatemsg_box.exec()
+            buttonReply = QMessageBox.information(Updatemsg_box, 'Update now ?', UpdateLog, QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+            if buttonReply == QMessageBox.Yes:
+                Updating_msg_box = QSystemTrayIcon()
+                Updating_msg_box.setVisible(True)
+                Updating_msg_box.showMessage("Updating","Please wait a moment",QSystemTrayIcon.Information,200)
+                update_pyfile = cwd+"/update.py"
+                subprocess.run("curl -L 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' > %s" %update_pyfile,shell=True)
+                Updating = subprocess.run("python3 %s" %update_pyfile,shell=True)
+                if Updating.returncode == 0 :
+                    cur_file = cwd+"/AltServerGUI"
+                    old_ver =  cwd+"/AltServerGUI-old"
+                    new_ver = cwd+"/AltServerGUI-new"
+                    subprocess.run("rm -rf %s" %update_pyfile,shell=True)
+                    move(cur_file,old_ver)
+                    move(new_ver,cur_file)
+                    os.remove(old_ver)
+                    Update_done_msg_box = QMessageBox()
+                    Update_done_msg_box.setText("Update done\nPlease restart the app to apply the new version")
+                    Update_done_msg_box.exec()
+                if Updating.returncode == 1 :
+                    Update_err_msg_box = QMessageBox()
+                    Update_err_msg_box.setText("Error occurred")
+                    Update_err_msg_box.exec()
+            if buttonReply == QMessageBox.No:
+                pass
+    if (internet_stat()) == False:
+        No_network_box = QMessageBox()
+        No_network_box.setWindowTitle('No network')
+        No_network_box.setText("Please connect to network")
+        No_network_box.exec()
 
-        if buttonReply == QMessageBox.No:
-            pass
 
 # Show update avaliable message
 @QtCore.Slot()
 def UpdateNotification() :
-    if LatestVersion != LocalVersion :
-        UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
-        Update_Avaliable_box = QMessageBox()
-        Update_Avaliable_box.setWindowTitle('UPDATE AVALIABLE')
-        Update_Avaliable_box.setText(UpdateLog)
-        Update_Avaliable_box.exec()
+    if (internet_stat()) == True:
+        LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode('utf-8')
+        if LatestVersion != LocalVersion :
+            UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
+            Update_Avaliable_box = QMessageBox()
+            Update_Avaliable_box.setWindowTitle('UPDATE AVALIABLE')
+            Update_Avaliable_box.setText(UpdateLog)
+            Update_Avaliable_box.exec()
+    if (internet_stat()) == False:
+        No_network_box = QMessageBox()
+        No_network_box.setWindowTitle('No network')
+        No_network_box.setText("Please connect to network")
+        No_network_box.exec()
