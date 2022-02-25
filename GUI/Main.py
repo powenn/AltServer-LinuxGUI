@@ -126,6 +126,7 @@ def Installation():
                     code_2fa_Layout.addWidget(send_2fa_btn)
                     msg_2fa_Area.setLayout(code_2fa_Layout)
                     msg_2fa_Area.exec()
+                    WarnTime = 1
                 
                 if CheckSuccess.returncode == 0 :
                     Installing = False
