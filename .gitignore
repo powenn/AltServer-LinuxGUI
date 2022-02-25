@@ -3,3 +3,4 @@ build
 AltServerData
 __pycache__
 .DS_Store
+log.txt
