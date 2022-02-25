@@ -12,7 +12,8 @@ if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AltServerDaemon,shell=True) 
     subprocess.run("chmod +x %s" %AltServerDaemon,shell=True)
 
 # UI part
-app = QApplication([])
+app = QApplication(sys.argv)
+app.setApplicationName("AltServer")
 app.setQuitOnLastWindowClosed(False)
 
 # Create the icon

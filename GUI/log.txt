@@ -1,96 +1,96 @@
 Installing app...
 Received response status code: 200
 parse anisette data ret
-Got anisetteData json: {"X-Apple-I-Client-Time":"2022-02-23T10:29:41Z","X-Apple-I-MD":"AAAABQAAABCcLX2f+vlp/EWim1Redt55AAAAAQ==","X-Apple-I-MD-LU":"CE99147F8610526892ED1AC53931EF38552A2CB64C2DC433D242FDAE789A7F80","X-Apple-I-MD-M":"wbxShQ1m2WmGT+Sf496k3tYfwQhrzQ+79dQKNUVBzpz/rO+4faO/k3ZjePXDCXk1jMefsXn7NllulZOH","X-Apple-I-MD-RINFO":"17106176","X-Apple-I-SRL-NO":"0","X-Apple-I-TimeZone":"GMT+0","X-Apple-Locale":"en_GB","X-MMe-Client-Info":"<iMac11,3> <Mac OS X;10.15.6;19G2021> <com.apple.AuthKit/1 (com.apple.dt.Xcode/3594.4.19)>","X-Mme-Device-Id":"F6C158F4-BD50-4EDD-B897-9BE4349EEED5"}
+Got anisetteData json: {"X-Apple-I-Client-Time":"2022-02-25T07:19:45Z","X-Apple-I-MD":"AAAABQAAABCCBHMuJUb5Y05RACLPNOryAAAAAQ==","X-Apple-I-MD-LU":"CE99147F8610526892ED1AC53931EF38552A2CB64C2DC433D242FDAE789A7F80","X-Apple-I-MD-M":"wbxShQ1m2WmGT+Sf496k3tYfwQhrzQ+79dQKNUVBzpz/rO+4faO/k3ZjePXDCXk1jMefsXn7NllulZOH","X-Apple-I-MD-RINFO":"17106176","X-Apple-I-SRL-NO":"0","X-Apple-I-TimeZone":"GMT+0","X-Apple-Locale":"en_GB","X-MMe-Client-Info":"<iMac11,3> <Mac OS X;10.15.6;19G2021> <com.apple.AuthKit/1 (com.apple.dt.Xcode/3594.4.19)>","X-Mme-Device-Id":"F6C158F4-BD50-4EDD-B897-9BE4349EEED5"}
 X-Apple-I-MD-M: wbxShQ1m2WmGT+Sf496k3tYfwQhrzQ+79dQKNUVBzpz/rO+4faO/k3ZjePXDCXk1jMefsXn7NllulZOH
-X-Apple-I-MD: AAAABQAAABCcLX2f+vlp/EWim1Redt55AAAAAQ==
+X-Apple-I-MD: AAAABQAAABCCBHMuJUb5Y05RACLPNOryAAAAAQ==
 X-Apple-I-MD-LU: CE99147F8610526892ED1AC53931EF38552A2CB64C2DC433D242FDAE789A7F80
 X-Apple-I-MD-RINFO: 17106176
 X-Mme-Device-Id: F6C158F4-BD50-4EDD-B897-9BE4349EEED5
 X-Apple-I-SRL-NO: 0
 X-MMe-Client-Info: <iMac11,3> <Mac OS X;10.15.6;19G2021> <com.apple.AuthKit/1 (com.apple.dt.Xcode/3594.4.19)>
-X-Apple-I-Client-Time: 2022-02-23T10:29:41Z
+X-Apple-I-Client-Time: 2022-02-25T07:19:45Z
 X-Apple-Locale: en_GB
 X-Apple-I-TimeZone: GMT+0
 Building anisetteData obj...
 MachineID : wbxShQ1m2WmGT+Sf496k3tYfwQhrzQ+79dQKNUVBzpz/rO+4faO/k3ZjePXDCXk1jMefsXn7NllulZOH
-One-Time Password: AAAABQAAABCcLX2f+vlp/EWim1Redt55AAAAAQ==
+One-Time Password: AAAABQAAABCCBHMuJUb5Y05RACLPNOryAAAAAQ==
 Local User ID: CE99147F8610526892ED1AC53931EF38552A2CB64C2DC433D242FDAE789A7F80
 Device UDID: F6C158F4-BD50-4EDD-B897-9BE4349EEED5
 Device Description: <iMac11,3> <Mac OS X;10.15.6;19G2021> <com.apple.AuthKit/1 (com.apple.dt.Xcode/3594.4.19)>
-Date: 1969-12-31T18:59:59-0500
+Date: 1970-01-01T07:59:59+0800
 Received auth response status code: 200
 Received auth response status code: 200
 HMAC_OUT:
-Byte:38
-Byte:102
-Byte:-17
-Byte:119
-Byte:-63
-Byte:60
-Byte:122
+Byte:83
+Byte:48
+Byte:-118
+Byte:91
+Byte:121
+Byte:108
+Byte:-66
 Byte:-45
-Byte:73
-Byte:-110
-Byte:88
-Byte:-73
-Byte:-127
-Byte:-102
-Byte:99
-Byte:85
-Byte:-84
-Byte:-18
-Byte:-79
-Byte:17
-Byte:-15
-Byte:-101
-Byte:92
-Byte:-37
-Byte:87
+Byte:-95
+Byte:42
+Byte:120
+Byte:108
+Byte:116
+Byte:48
+Byte:1
+Byte:-47
+Byte:-70
 Byte:106
-Byte:-103
-Byte:-52
-Byte:-89
-Byte:-1
-Byte:-85
 Byte:106
-NP:
-Byte:-55
-Byte:-99
-Byte:51
-Byte:-56
-Byte:0
-Byte:-91
-Byte:-123
-Byte:36
-Byte:-65
-Byte:-92
-Byte:41
-Byte:-79
-Byte:-29
-Byte:-65
-Byte:-60
-Byte:72
-Byte:-15
-Byte:-36
-Byte:-97
-Byte:-57
-Byte:39
-Byte:-37
-Byte:-65
+Byte:93
 Byte:-40
-Byte:-48
 Byte:85
-Byte:115
-Byte:55
-Byte:50
-Byte:39
-Byte:-124
-Byte:58
-Data: <dict><key>authmode</key><integer>1</integer><key>acname</key><string>aa0966091716@gmail.com</string><key>ln</key><string>蕭</string><key>c</key><data>MTExNTZhYTYtOTJkYy00ODVhLWJiNmYtN2U0OWE1MjdhOWE1bjh3ZjM4T29DYWltK0s1RWV2YUFxcW9EMG9jdDk0b1p1SU5sU3E2UzFIQ3d5bmRQemRiM0xXaDlzY3BCejUwL3EzMktENjVzVEJyZlBSTENOc1RxbnpicVZub1hJRDBuQW9SSklxSlR0TmgxaVIxTkl6aE9wWlV6b2lpU3ZPdkRXRnBI</data><key>primaryEmailVetted</key><integer>1</integer><key>beneficiaryListVersion</key><string>0</string><key>fn</key><string>博文</string><key>adsid</key><string>000030-08-1760bc53-d7e5-4c62-9d0f-fa3233b7f163</string><key>duration</key><integer>3600</integer><key>GsIdmsToken</key><string>AAAABLwIAAAAAGIWDJcRDGdzLmlkbXMuYXV0aL0AJAFNj1NhQfzn26hO4JOO2gVlNIODFpxallCB5PTBCo9er+2cACJTw/AP5KeQRnry+jv52XqBukX3oQa4o47bEY62uNwjgIiDmdmSohRTrz8xxXfM/5y4aw4v77tbkQ44T9mMk7freNuecRsXsBkSIl2ALuOD0rZrAjOt+F8t5l8y1Z1WM6aUwTgwEFxsNqJIQc+moxBM9L4Up50onLUk47QGAI0=</string><key>status-code</key><integer>200</integer><key>t</key><dict><key>com.apple.gs.idms.pet</key><dict><key>duration</key><integer>300</integer><key>expiry</key><integer>1645612483039</integer><key>token</key><string>Gb+/TRyJap5IEgrW8+AA2GCC5MnqpgPnx1j4PFGyOLP2DCPxaDVlW9uSKDm8nqy8h+kEfK3gSJU4wgC6FjFeiHy5xaeSwF9vyo9dg6Pi4mko/OrzZYlDmfoRqkx2O/oDHlouLPYrxacZyUPnJq7kG08wRs2Bfn0paE+nir+VNcCgJBvYex76N0YRhd5Ps2rwoLIq3DHNo+yjhTChwB4KFc3iR63HR6X6kmZufi+1FRyJTAyKVsYxsqZ+AZwYb2geNcslO5aUAVjgqUKNHzhC505qpVL6ETVNnyIxbtRKn1ODosvoviiipwp5wQeEy5K4f+7/b8SmRr8cTu+NJ0I6VWu3atHQmix5QlnduREjnzHj5rvGALjzgRHvjP9TQ8Xki+gOyYLtpd3lSgllweSp2cwr0J1598EW4M2zrcENQFMxdkvfiZvLnuD0X1ovC4GKzWkxGQbCjM/AHtgxhn+4zXcw/2CXPET</string></dict><key>com.apple.gs.icloud.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>Gb+/TRyJap5IEgrW8+AA2GC4I3HaUmy4iardV0A8ZGZCTP8qM7nydVRcCrtLaM1TKjxVO61PONihwJbccuAzdzNmjQA7NkPN5/CsVpWFdYrhcj+ibN0GdROqh+zuuldUrS92Lt0faIjiE1QF5YXa1HMvu3kdE7Vi3W5kwTI/MwY4p/gNrktJaUs/FoNPCMtC+h6gG2r3l6Aiwmv5ibO/JNv6QwUhqlfaBXLCsq7lrebF5dPYxBGwIFOquIzcYRX+i4wAFDfBtIYte6VZ6EwOlXkEGdLCmWQga3VUMcZVQ2zRbDP3P3kaklSDcbJesokTRnZndyvYyu0yVd95Y2Cwz+4MRFm5s+iMEqMGPThQCjANGISXCZSferbRex4ohZTlHTfS0rhE/DiDeq+Hkcl0mxjmBnS3GW9gAIAtTd9vyxWP6QFaoAlbfSsv2leJ18ayYzBom9yROCH1oREHD61llvPZ6t+0</string></dict><key>com.apple.gs.appleid.auth</key><dict><key>duration</key><integer>3600</integer><key>expiry</key><integer>1645615783039</integer><key>token</key><string>Gb+/TRyJap5IEgrW8+AA2GD6P2nCOepZ8LGNdU0MsN4v9K+NAsAByVCqaOcziJUuhQg2riRIVex5mm1EpP+zbXqO514A6SpmyeNiSRdLCNGQBCCibQCxTCAROscLCMe5Zm4UQFzbHyJGOyywu5zBRCi30SAiWFqekysUsdFaS/WuKr1GBI57OjAnZTwz6LvC58k2C1flGKQy9pW+EDJxIMgagaD8YBrWUBoFdIeoMfi7F+r3oDBMoxqDA9R2LNGboFXRgahOwX7TSVDYGM5ZN3gmr+e9IkPmMWf7XzDAqZR3e/QEnu7Qn2He8a+dKhmq/mNjW8yyjS66RI/7PRYbU1NCqXFCZ1QcfoP25NJfOcZ+pALaEiZfyRe/kdx+CGiiax9F2ptet77+Z08yDx6/ycBPS0hyPNuWUG8DIQa2HtcMnR3ZxcsAajLxlhSfKnqcp0Ga4iE52RtF4eD6wok0s/UGstkJ</string></dict><key>com.apple.gs.idms.hb</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRCmdzLmlkbXMuaGK9ACQBTY9TYUH859uoTuCTjtoFZTSDgxacWpZQgeT0wQqPXq/tnAAiU8PwD+SnkEZ68vo7+dl6gbpF96EGuKOO2xGOtrjcI4CIg5nZkqIUU68/McV3zP+cuGsOL++7W5EOOE/ZjJO363jbnnEbF7AZEiJdgC7jg9K2awIzrfhfLeZf4pqF8uMlr7ZihYk8Me9pfuVFNqQLplL4DUExlUQ+Lbfc28XW</string></dict><key>com.apple.gs.pb.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRCmdzLnBiLmF1dGi9ACQBTY9TYUH859uoTuCTjtoFZTSDgxacWpZQgeT0wQqPXq/tnAAiU8PwD+SnkEZ68vo7+dl6gbpF96EGuKOO2xGOtrjcI4CIg5nZkqIUU68/McV3zP+cuGsOL++7W5EOOE/ZjJO363jbnnEbF7AZEiJdgC7jg9K2awIzrfhfLeZfw8fjxbXeVsZyxWrutAbmLwjX9v7iL63LYbLkgI0QYx5Zm8EA</string></dict><key>com.apple.gs.idms.ln</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRCmdzLmlkbXMubG69ACQBTY9TYUH859uoTuCTjtoFZTSDgxacWpZQgeT0wQqPXq/tnAAiU8PwD+SnkEZ68vo7+dl6gbpF96EGuKOO2xGOtrjcI4CIg5nZkqIUU68/McV3zP+cuGsOL++7W5EOOE/ZjJO363jbnnEbF7AZEiJdgC7jg9K2awIzrfhfLeZfMtWdVjOmlME4MBBcbDaiSAF6aNgxXs7Pz8FmW2WCe0V+bRl1</string></dict><key>com.apple.gs.supportapp.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcREmdzLnN1cHBvcnRhcHAuYXV0aL0AJAFNj1NhQfzn26hO4JOO2gVlNIODFpxallCB5PTBCo9er+2cACJTw/AP5KeQRnry+jv52XqBukX3oQa4o47bEY62uNwjgIiDmdmSohRTrz8xxXfM/5y4aw4v77tbkQ44T9mMk7freNuecRsXsBkSIl2ALuOD0rZrAjOt+F8t5l/1zVX//PoZ17CwO7H6tydMPQJ5ctFBSELvQv75FqoWbQoibhg=</string></dict><key>com.apple.gs.global.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRDmdzLmdsb2JhbC5hdXRovQAkAU2PU2FB/OfbqE7gk47aBWU0g4MWnFqWUIHk9MEKj16v7ZwAIlPD8A/kp5BGevL6O/nZeoG6RfehBrijjtsRjra43COAiIOZ2ZKiFFOvPzHFd8z/nLhrDi/vu1uRDjhP2YyTt+t4255xGxewGRIiXYAu44PStmsCM634Xy3mX8TwT/sJq7GwDju8UyGmkTIpTISMj4umFrCHmEFE9UNaKbx8YA==</string></dict><key>com.apple.gs.beta.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRDGdzLmJldGEuYXV0aL0AJAFNj1NhQfzn26hO4JOO2gVlNIODFpxallCB5PTBCo9er+2cACJTw/AP5KeQRnry+jv52XqBukX3oQa4o47bEY62uNwjgIiDmdmSohRTrz8xxXfM/5y4aw4v77tbkQ44T9mMk7freNuecRsXsBkSIl2ALuOD0rZrAjOt+F8t5l8im1YxR7Iy9C1rCElQ8PLg9jIHa/osCOwH1YtphR3u+xG+fF8=</string></dict><key>com.apple.gs.itunes.mu.invite</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRE2dzLml0dW5lcy5tdS5pbnZpdGW9ACQBTY9TYUH859uoTuCTjtoFZTSDgxacWpZQgeT0wQqPXq/tnAAiU8PwD+SnkEZ68vo7+dl6gbpF96EGuKOO2xGOtrjcI4CIg5nZkqIUU68/McV3zP+cuGsOL++7W5EOOE/ZjJO363jbnnEbF7AZEiJdgC7jg9K2awIzrfhfLeZfU5VmHRykAJ1q3Jl7Iml2vlPlhwcRa5TXSfrFU8rJaJIxiZIE</string></dict><key>com.apple.gs.icloud.storage.buy</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRFWdzLmljbG91ZC5zdG9yYWdlLmJ1eb0AJAFNj1NhQfzn26hO4JOO2gVlNIODFpxallCB5PTBCo9er+2cACJTw/AP5KeQRnry+jv52XqBukX3oQa4o47bEY62uNwjgIiDmdmSohRTrz8xxXfM/5y4aw4v77tbkQ44T9mMk7freNuecRsXsBkSIl2ALuOD0rZrAjOt+F8t5l9zs/D3LApmX/sJjpB4kRpJffeVu7yYLn76W6cGiy9GI4H2AJ4=</string></dict><key>com.apple.gs.news.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRDGdzLm5ld3MuYXV0aL0AJAFNj1NhQfzn26hO4JOO2gVlNIODFpxallCB5PTBCo9er+2cACJTw/AP5KeQRnry+jv52XqBukX3oQa4o47bEY62uNwjgIiDmdmSohRTrz8xxXfM/5y4aw4v77tbkQ44T9mMk7freNuecRsXsBkSIl2ALuOD0rZrAjOt+F8t5l/Jbf3kJCBj6sb4HqMFlRZkqY8eHOpVVOn2zB3eyC2eGZNaLQI=</string></dict><key>com.apple.gs.authagent.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcREWdzLmF1dGhhZ2VudC5hdXRovQAkAU2PU2FB/OfbqE7gk47aBWU0g4MWnFqWUIHk9MEKj16v7ZwAIlPD8A/kp5BGevL6O/nZeoG6RfehBrijjtsRjra43COAiIOZ2ZKiFFOvPzHFd8z/nLhrDi/vu1uRDjhP2YyTt+t4255xGxewGRIiXYAu44PStmsCM634Xy3mX0jTLQj6b4x2CxDvRiHRolYQAYiaj3in/xkffxIbIgyIqszcDg==</string></dict><key>com.apple.gs.dip.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRC2dzLmRpcC5hdXRovQAkAU2PU2FB/OfbqE7gk47aBWU0g4MWnFqWUIHk9MEKj16v7ZwAIlPD8A/kp5BGevL6O/nZeoG6RfehBrijjtsRjra43COAiIOZ2ZKiFFOvPzHFd8z/nLhrDi/vu1uRDjhP2YyTt+t4255xGxewGRIiXYAu44PStmsCM634Xy3mX47nniGweGpHy06D6atDSSfV8PKsQPRhqg6OczAFoEzxNnAemQ==</string></dict><key>com.apple.gs.icloud.family.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677148183039</integer><key>token</key><string>AAAABLwIAAAAAGIWDJcRFWdzLmljbG91ZC5mYW1pbHkuYXV0aL0AJAFNj1NhQfzn26hO4JOO2gVlNIODFpxallCB5PTBCo9er+2cACJTw/AP5KeQRnry+jv52XqBukX3oQa4o47bEY62uNwjgIiDmdmSohRTrz8xxXfM/5y4aw4v77tbkQ44T9mMk7freNuecRsXsBkSIl2ALuOD0rZrAjOt+F8t5l+wprNHdxKWJm45jHXwX5BJ0MWyqizGYjD1IDtP8P+mZ5LUiVg=</string></dict></dict><key>countryCode</key><string>TW</string><key>custodianEnabled</key><integer>0</integer><key>sk</key><data>3Q6JQOo6g6G0qWloVqpM+HjDSuFYKHIShrcnKgRxdZE=</data><key>underAge</key><integer>0</integer><key>additionalInfo</key><dict><key>obfuscatedPhoneNumbers</key><array><dict><key>recentlyUsed</key><integer>1</integer><key>maskedPhoneNumber</key><string>**** *** 716</string></dict></array><key>phoneNumbers</key><array><dict><key>phoneNumber</key><string>0966 091 716</string><key>recentlyUsed</key><integer>1</integer><key>type</key><string>2fa</string></dict></array></dict><key>ageOfMajority</key><integer>13</integer><key>DsPrsId</key><integer>16931312843</integer><key>primaryEmail</key><string>aa0966091716@gmail.com</string><key>ut</key><integer>4</integer></dict>
+Byte:-126
+Byte:-6
+Byte:-37
+Byte:13
+Byte:8
+Byte:-121
+Byte:6
+Byte:-111
+Byte:-109
+Byte:81
+NP:
+Byte:60
+Byte:16
+Byte:-127
+Byte:14
+Byte:-78
+Byte:-89
+Byte:78
+Byte:-105
+Byte:-75
+Byte:-83
+Byte:-50
+Byte:-110
+Byte:44
+Byte:26
+Byte:-107
+Byte:-9
+Byte:-12
+Byte:-73
+Byte:126
+Byte:-30
+Byte:-114
+Byte:-112
+Byte:-43
+Byte:-86
+Byte:52
+Byte:-21
+Byte:-123
+Byte:-66
+Byte:-123
+Byte:-104
+Byte:-23
+Byte:-26
+Data: <dict><key>authmode</key><integer>1</integer><key>acname</key><string>aa0966091716@gmail.com</string><key>ln</key><string>蕭</string><key>c</key><data>NjI3MTkwNWUtOTU0Yy00Y2Y2LThhMmEtMWM1Mjg4M2ZmMDA1RGtwNEpqdzBXNDlGVExQbzVTNEx6MFdmdU90UEV2ajN2NUxlNndvOXZQbE5GeFM5eVVyL2k3ak15K0pzWEMrVWo5RkpyazFYeGVRSzFIanFmTWF0S0JSTkhzUnlmRytUdjJ3aVRhOHZ5c1BjL3lzN1RrL2lPYkFqQ2hOYTlRWWpXRnBI</data><key>primaryEmailVetted</key><integer>1</integer><key>beneficiaryListVersion</key><string>0</string><key>fn</key><string>博文</string><key>adsid</key><string>000030-08-1760bc53-d7e5-4c62-9d0f-fa3233b7f163</string><key>duration</key><integer>3600</integer><key>GsIdmsToken</key><string>AAAABLwIAAAAAGIYgxMRDGdzLmlkbXMuYXV0aL0AZ7tPvFx9KLpytBFPdAEQlfzOWLumGVvDtdDxUfTbDw5Db/2z7+MhqheQnaWk5gV3/rB7FaY51S89g2rMaLs/rSvWtgQKQZ0AS1jw6u8vDhO8Mv8i8ScCWMCIlGkjvDa/VJnDFjXCnOxyGOdTOJg/uVmpdlyG0Nkw365qUQT/4mUyjouPVEbOVDXxcejrXSZNwViaiYNn/JKFmGEw8ttnp1w1on0=</string><key>status-code</key><integer>200</integer><key>t</key><dict><key>com.apple.gs.idms.pet</key><dict><key>duration</key><integer>300</integer><key>expiry</key><integer>1645773887656</integer><key>token</key><string>GUj9Q4vUuK8OEB6Jyhp8ngq+ywizcQ/Q40YICco856HJHdDNxX++aaaMomkdG/aCAOE9BrMZvTAO8eyPRmR+8chS0WTrGdaiNTCmCNBbZb5zFlTPRh4cJdECi9D3IUS7BEKkqP1ARCw+MnlKG2MXfCXPCAmol0XGGPUqJvht88Zt26ck21yVjVdBmtz/FEcQpuhs8QwHAxCf7f16F2Sh2y3HzXL46hTS+prmIX4XHtpoDsjNWrwLF/+ggXjVu01oMKP4E/cRSfnKgjwWOgy95dYWepqEQt7t7UXOIrD+qpLGl3u5XEz63PnPvg/QPPWFmrslYVATHZ7B/sxRbTUeK/A7ANB5E+4XLPM2jx+cs7xajGKS5l24siR+V0RueTNwcxJAxWT1LedX4Aw7/LyJzT5EmXAaQR90nPdHX+ECM0K2Ih4LDKVMfW02KrJRAkacwNfygoofT4FWXHNsvP86TygvcYO9PET</string></dict><key>com.apple.gs.icloud.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>GUj9Q4vUuK8OEB6Jyhp8ngrdna6PUUxIQ4/1gGs/AKiPd4NwVkxK6whs+rHdfYU6SmkLeOr9LJWe9axeObmNeLlz7jV9ungTQZ9ecLsqVe39EOBU/zRX+pfCMpr6Qs+TnqDwZu2AHJ1tqS8NpbLafedp4/v8YKsUpU7qLvA62viNRFLKHqCReF8N2HvnCubpyFqhpryY4RE3N0yYnzBNToZa2lQWzwpNo2Hv9u0aeVaorYHJ5CGQJCb+YsZ0CTVr9JcNR/1Ihb5kL2UjGGrUp7tAFUG3Eo5xAo8Sh7h0MxwgG0advtDUkIxj584AkfS3vHq52vuc2gz/z2YwsKnAfjvoqYDA5WTWYKLT/Otf+4c4BVEoUD/saf9bo4sFMtHicrUf1ZXhmPMG9jo4+0uJk2k+aI6gGEHbJXF6d14dsAXDtHm2Sn4Oe940aHjwY40XgC9BsYkQVD9xsKVQsBt8RNE+IXIt</string></dict><key>com.apple.gs.appleid.auth</key><dict><key>duration</key><integer>3600</integer><key>expiry</key><integer>1645777187656</integer><key>token</key><string>GUj9Q4vUuK8OEB6Jyhp8ngpuTCTTG4uyWctmhk7PZ4JuV9YEvHj1Uih4X7rbHMfzUhaM0vmn1GGkpJPsAmgESmOljdHbtLFDm+Qu2GZiiTjUtFiumqerH48bcAbimbPDBI/WTNEJJXNafO6Pr9T7L1j20zTJvI7WWfO3APrGOkM+/rINocG40FemHZg50LFoXmKUuMoF9RGdECG4DTkHNboNDQ3e00jnIBw7u1wSzGBToKvgzGYJYWxRiKr4Ju0IRJf0OCJz7b3DAZQu4ZZ+c/FJe1iS7Mdb6ELHKwIC0LE4M4KY8iCBtl7wQ44G487ipCgJTArwpVIkenUcNArB9SGCLSnm4rfE7txEh1pqn6Oc1U6SbNaC6OlPzoFhYCt1QYQa/jrb+OPoLxPUtwxYWYxRzSx3lm0khnK4U9/91c2YKF58PEmyxzFxuT5icaksCQBSP4GT0y4QCzAmzHnB5qZJ/G5a</string></dict><key>com.apple.gs.idms.hb</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRCmdzLmlkbXMuaGK9AGe7T7xcfSi6crQRT3QBEJX8zli7phlbw7XQ8VH02w8OQ2/9s+/jIaoXkJ2lpOYFd/6wexWmOdUvPYNqzGi7P60r1rYECkGdAEtY8OrvLw4TvDL/IvEnAljAiJRpI7w2v1SZwxY1wpzschjnUziYP7lZqXZchtDZMN+ualEE/+JlfD5NgiDAzbOweeSGmZ1jUSRC27kJ/m/apX0J3r84m9Ui5FLi</string></dict><key>com.apple.gs.pb.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRCmdzLnBiLmF1dGi9AGe7T7xcfSi6crQRT3QBEJX8zli7phlbw7XQ8VH02w8OQ2/9s+/jIaoXkJ2lpOYFd/6wexWmOdUvPYNqzGi7P60r1rYECkGdAEtY8OrvLw4TvDL/IvEnAljAiJRpI7w2v1SZwxY1wpzschjnUziYP7lZqXZchtDZMN+ualEE/+JlUbRQ76YuBKuxWIJ6DRo0M0aj8dSyC9QFaSh+EC9jbvkGdJAb</string></dict><key>com.apple.gs.idms.ln</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRCmdzLmlkbXMubG69AGe7T7xcfSi6crQRT3QBEJX8zli7phlbw7XQ8VH02w8OQ2/9s+/jIaoXkJ2lpOYFd/6wexWmOdUvPYNqzGi7P60r1rYECkGdAEtY8OrvLw4TvDL/IvEnAljAiJRpI7w2v1SZwxY1wpzschjnUziYP7lZqXZchtDZMN+ualEE/+JlRGXlPhTrRD/MzHcqgWEehofu8ZwtcMoTOJ0grduMRGr8kCn2</string></dict><key>com.apple.gs.supportapp.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMREmdzLnN1cHBvcnRhcHAuYXV0aL0AZ7tPvFx9KLpytBFPdAEQlfzOWLumGVvDtdDxUfTbDw5Db/2z7+MhqheQnaWk5gV3/rB7FaY51S89g2rMaLs/rSvWtgQKQZ0AS1jw6u8vDhO8Mv8i8ScCWMCIlGkjvDa/VJnDFjXCnOxyGOdTOJg/uVmpdlyG0Nkw365qUQT/4mVq049ZiMQ+Y6BalUHoS6Pk3vLDWL9XCaXSNeiOWSgGulTAd5M=</string></dict><key>com.apple.gs.global.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRDmdzLmdsb2JhbC5hdXRovQBnu0+8XH0ounK0EU90ARCV/M5Yu6YZW8O10PFR9NsPDkNv/bPv4yGqF5CdpaTmBXf+sHsVpjnVLz2Dasxouz+tK9a2BApBnQBLWPDq7y8OE7wy/yLxJwJYwIiUaSO8Nr9UmcMWNcKc7HIY51M4mD+5Wal2XIbQ2TDfrmpRBP/iZXmU1kbVeu0TSg8eNQH/DYI03bySUSpF0QM6TTFhxZmsI+TZ8A==</string></dict><key>com.apple.gs.beta.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRDGdzLmJldGEuYXV0aL0AZ7tPvFx9KLpytBFPdAEQlfzOWLumGVvDtdDxUfTbDw5Db/2z7+MhqheQnaWk5gV3/rB7FaY51S89g2rMaLs/rSvWtgQKQZ0AS1jw6u8vDhO8Mv8i8ScCWMCIlGkjvDa/VJnDFjXCnOxyGOdTOJg/uVmpdlyG0Nkw365qUQT/4mXtrm2qT5p9fQrWR06BIDqMU2mry5tyopc1rKc9oBBuqoMFrvQ=</string></dict><key>com.apple.gs.itunes.mu.invite</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRE2dzLml0dW5lcy5tdS5pbnZpdGW9AGe7T7xcfSi6crQRT3QBEJX8zli7phlbw7XQ8VH02w8OQ2/9s+/jIaoXkJ2lpOYFd/6wexWmOdUvPYNqzGi7P60r1rYECkGdAEtY8OrvLw4TvDL/IvEnAljAiJRpI7w2v1SZwxY1wpzschjnUziYP7lZqXZchtDZMN+ualEE/+JlWHLhVJCTzq37L8RhjFn5Ru+sSl3Riyo3AkmJsyjvi3wPWFSv</string></dict><key>com.apple.gs.icloud.storage.buy</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRFWdzLmljbG91ZC5zdG9yYWdlLmJ1eb0AZ7tPvFx9KLpytBFPdAEQlfzOWLumGVvDtdDxUfTbDw5Db/2z7+MhqheQnaWk5gV3/rB7FaY51S89g2rMaLs/rSvWtgQKQZ0AS1jw6u8vDhO8Mv8i8ScCWMCIlGkjvDa/VJnDFjXCnOxyGOdTOJg/uVmpdlyG0Nkw365qUQT/4mUVKtk2SlXBxO/mTMf5/FN6dGxXswXSZSp4WPs2VaUDCn5LVEo=</string></dict><key>com.apple.gs.news.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRDGdzLm5ld3MuYXV0aL0AZ7tPvFx9KLpytBFPdAEQlfzOWLumGVvDtdDxUfTbDw5Db/2z7+MhqheQnaWk5gV3/rB7FaY51S89g2rMaLs/rSvWtgQKQZ0AS1jw6u8vDhO8Mv8i8ScCWMCIlGkjvDa/VJnDFjXCnOxyGOdTOJg/uVmpdlyG0Nkw365qUQT/4mV4GPzZkAdEE/lvhwZIRE+ASayJ6CKnOQCsdtfGVrX7OM09EM8=</string></dict><key>com.apple.gs.authagent.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMREWdzLmF1dGhhZ2VudC5hdXRovQBnu0+8XH0ounK0EU90ARCV/M5Yu6YZW8O10PFR9NsPDkNv/bPv4yGqF5CdpaTmBXf+sHsVpjnVLz2Dasxouz+tK9a2BApBnQBLWPDq7y8OE7wy/yLxJwJYwIiUaSO8Nr9UmcMWNcKc7HIY51M4mD+5Wal2XIbQ2TDfrmpRBP/iZbj3cxv7ZUseEt4F8kJIAgE6qC31sNHj4OeYUL5VVnqh3JYqyg==</string></dict><key>com.apple.gs.dip.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRC2dzLmRpcC5hdXRovQBnu0+8XH0ounK0EU90ARCV/M5Yu6YZW8O10PFR9NsPDkNv/bPv4yGqF5CdpaTmBXf+sHsVpjnVLz2Dasxouz+tK9a2BApBnQBLWPDq7y8OE7wy/yLxJwJYwIiUaSO8Nr9UmcMWNcKc7HIY51M4mD+5Wal2XIbQ2TDfrmpRBP/iZRUq2TZKVcHE7+ZMx/n8U3pAf6RQEQ3h+gFzs+bw9pATc/2whw==</string></dict><key>com.apple.gs.icloud.family.auth</key><dict><key>duration</key><integer>31536000</integer><key>expiry</key><integer>1677309587656</integer><key>token</key><string>AAAABLwIAAAAAGIYgxMRFWdzLmljbG91ZC5mYW1pbHkuYXV0aL0AZ7tPvFx9KLpytBFPdAEQlfzOWLumGVvDtdDxUfTbDw5Db/2z7+MhqheQnaWk5gV3/rB7FaY51S89g2rMaLs/rSvWtgQKQZ0AS1jw6u8vDhO8Mv8i8ScCWMCIlGkjvDa/VJnDFjXCnOxyGOdTOJg/uVmpdlyG0Nkw365qUQT/4mUIajMPVqB5y/DKoSLnbJ4Wos00nIJCbR/DPP20mQoBQM6erI4=</string></dict></dict><key>countryCode</key><string>TW</string><key>custodianEnabled</key><integer>0</integer><key>sk</key><data>3KxSafjM+o3BT+QehxeNOv4i16ScpVngOb5Yt9UtXQ0=</data><key>underAge</key><integer>0</integer><key>additionalInfo</key><dict><key>obfuscatedPhoneNumbers</key><array><dict><key>recentlyUsed</key><integer>1</integer><key>maskedPhoneNumber</key><string>**** *** 716</string></dict></array><key>phoneNumbers</key><array><dict><key>phoneNumber</key><string>0966 091 716</string><key>recentlyUsed</key><integer>1</integer><key>type</key><string>2fa</string></dict></array></dict><key>ageOfMajority</key><integer>13</integer><key>DsPrsId</key><integer>16931312843</integer><key>primaryEmail</key><string>aa0966091716@gmail.com</string><key>ut</key><integer>4</integer></dict>PssD9uyM7HA#
 Received auth response status code: 200
 Got token for com.apple.gs.xcode.auth!
-Value : AAAABLwIAAAAAGIWDJcRDWdzLnhjb2RlLmF1dGi9ACQBTY9TYUH859uoTuCTjtoFZTSDgxacWpZQgeT0wQqPXq/tnAAiU8PwD+SnkEZ68vo7+dl6gbpF96EGuKOO2xGOtrjcI4CIg5nZkqIUU68/1HZutzeFGPRgH65tbJ5Dz8AGRHDOonhgTzYroAE2x77GfVIK
+Value : AAAABLwIAAAAAGIYgxQRDWdzLnhjb2RlLmF1dGi9AD+fVnznOmwOJdjDnJ3DM16v/l9CJbvosFXs7xOYHxDcjzp++qm/Itk+OGqBIPqt9GSocWYLkoBvCixR6QMWREqD4pdkp3v5tSKzptRuKybaMOrJDN3m52C8mKCU4xGf98fxDaFx/2bjBqtvjymIjG/QPCDt
 [AppleAPI] Querying: viewDeveloper.action
 Received response status code: 200
 Fetching team...
@@ -99,183 +99,197 @@ Received response status code: 200
 Registering device...
 [AppleAPI] Querying: ios/listDevices.action
 Received response status code: 200
-Comparing  device: 0x5763ec6cwith 0x57606d3c
+Comparing  device: 0x57683b1cwith 0x57647d3c
 Fetching certificate...
+[AppleAPI] Querying ServiceAPI: certificates
+Received response status code: 200
+Failed to load cached certificate:"./AltServerData/Certificates/L4LN9U3ZS7.p12". std::exception
+Alert: Installing AltStore with Multiple AltServers Not Supported
+    Please use the same AltServer you previously used with this Apple ID, or else apps installed with other AltServers will stop working.
+
+Are you sure you want to continue? (Ctrl-C to avoid)
+Press any key to continue...
+[AppleAPI] Querying ServiceAPI: certificates/9W6TA3UAVP
+Received response status code: 204
+[AppleAPI] Querying ServiceAPI: certificates
+Received response status code: 200
+[AppleAPI] Querying: ios/submitDevelopmentCSR.action
+Received response status code: 200
 [AppleAPI] Querying ServiceAPI: certificates
 Received response status code: 200
 Importing app...
 Downloaded app!
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/AltBackup.ipa"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/AltWidgetExtension"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/_CodeSignature/CodeResources"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/Assets.car"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/embedded.mobileprovision"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Silence.m4a"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/BrowseCollectionViewCell.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/BrowseCollectionViewCell.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/SettingsHeaderFooterView.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Intents.intentdefinition"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/_CodeSignature/CodeResources"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/InstalledAppsCollectionHeaderView.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/NewsCollectionViewCell.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/NewsCollectionViewCell.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/AboutPatreonHeaderView.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/AboutPatreonHeaderView.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/navigationController.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/navigationController.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/_CodeSignature/CodeResources"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/Assets.car"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreCore"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/AltStoreCore.framework/ViewApp.intentdefinition"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/KeychainAccess.framework/_CodeSignature/CodeResources"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/KeychainAccess.framework/KeychainAccess"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/KeychainAccess.framework/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Nuke.framework/_CodeSignature/CodeResources"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Nuke.framework/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Nuke.framework/Nuke"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/OpenSSL.framework/OpenSSL"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/OpenSSL.framework/_CodeSignature/CodeResources"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/OpenSSL.framework/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Roxas.framework/_CodeSignature/CodeResources"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Roxas.framework/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Roxas.framework/RSTCollectionViewCell.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Roxas.framework/RSTPlaceholderView.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Frameworks/Roxas.framework/Roxas"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/UpdateCollectionViewCell.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/UpdateCollectionViewCell.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/UpdateCollectionViewCell.nib/objects-12.3+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/AppBannerView.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/AppBannerView.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PatchApp.storyboardc/Info.plist"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/objects-13.0+.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/runtime.nib"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/PkgInfo"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/Assets.car"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/embedded.mobileprovision"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/AltStore"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/AppIcon60x60@2x.png"
-Extracted file:"/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/Payload/AltStore.app/ViewApp.intentdefinition"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/AltBackup.ipa"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/AltWidgetExtension"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/_CodeSignature/CodeResources"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/Assets.car"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PlugIns/AltWidgetExtension.appex/embedded.mobileprovision"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Silence.m4a"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/BrowseCollectionViewCell.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/BrowseCollectionViewCell.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/LaunchScreen.storyboardc/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/SettingsHeaderFooterView.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Intents.intentdefinition"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/_CodeSignature/CodeResources"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/InstalledAppsCollectionHeaderView.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/NewsCollectionViewCell.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/NewsCollectionViewCell.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/AboutPatreonHeaderView.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/AboutPatreonHeaderView.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/navigationController.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/navigationController.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/_CodeSignature/CodeResources"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/Assets.car"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreCore"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/AltStoreCore.framework/ViewApp.intentdefinition"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/KeychainAccess.framework/_CodeSignature/CodeResources"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/KeychainAccess.framework/KeychainAccess"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/KeychainAccess.framework/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Nuke.framework/_CodeSignature/CodeResources"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Nuke.framework/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Nuke.framework/Nuke"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/OpenSSL.framework/OpenSSL"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/OpenSSL.framework/_CodeSignature/CodeResources"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/OpenSSL.framework/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Roxas.framework/_CodeSignature/CodeResources"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Roxas.framework/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Roxas.framework/RSTCollectionViewCell.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Roxas.framework/RSTPlaceholderView.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Frameworks/Roxas.framework/Roxas"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/UpdateCollectionViewCell.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/UpdateCollectionViewCell.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/UpdateCollectionViewCell.nib/objects-12.3+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/AppBannerView.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/AppBannerView.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PatchApp.storyboardc/Info.plist"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/objects-13.0+.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/runtime.nib"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/PkgInfo"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/Assets.car"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/embedded.mobileprovision"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/AltStore"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/AppIcon60x60@2x.png"
+Extracted file:"/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/Payload/AltStore.app/ViewApp.intentdefinition"
 Notify: Installing AltStore to unknown...
     This may take a few seconds.
 Preparing provisioning profiles!
@@ -283,7 +297,7 @@ Preparing provisioning profiles!
 Received response status code: 200
 [AppleAPI] Querying: ios/updateAppId.action
 Received response status code: 200
-Querying entitlements for /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app with ldid...
+Querying entitlements for /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app with ldid...
 [AppleAPI] Querying: ios/listApplicationGroups.action
 Received response status code: 200
 [AppleAPI] Querying: ios/assignApplicationGroupToAppId.action
@@ -294,7 +308,7 @@ Received response status code: 200
 Received response status code: 200
 [AppleAPI] Querying: ios/updateAppId.action
 Received response status code: 200
-Querying entitlements for /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PlugIns/AltWidgetExtension.appex with ldid...
+Querying entitlements for /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PlugIns/AltWidgetExtension.appex with ldid...
 [AppleAPI] Querying: ios/listApplicationGroups.action
 Received response status code: 200
 [AppleAPI] Querying: ios/assignApplicationGroupToAppId.action
@@ -307,171 +321,171 @@ Signing: Preparing InfoPlist...
 Signing: Preparing InfoPlist for extensions...
 Signing: Preparing provisioning profiles...
 Signing: Signing app...
-Signing app /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app using ldid...
-Signing: PlugIns/AltWidgetExtension.appex/embedded.mobileprovision
+Signing app /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app using ldid...
 Signing: PlugIns/AltWidgetExtension.appex/Info.plist
+Signing: PlugIns/AltWidgetExtension.appex/embedded.mobileprovision
 Signing: PlugIns/AltWidgetExtension.appex/Assets.car
 Signing: PlugIns/AltWidgetExtension.appex/AltWidgetExtension
-Signing: Frameworks/KeychainAccess.framework/Info.plist
-Signing: Frameworks/KeychainAccess.framework/KeychainAccess
-Signing: Frameworks/Roxas.framework/RSTPlaceholderView.nib
-Signing: Frameworks/Roxas.framework/RSTCollectionViewCell.nib
-Signing: Frameworks/Roxas.framework/Info.plist
-Signing: Frameworks/Roxas.framework/Roxas
-Signing: Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm
-Signing: Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm
-Signing: Frameworks/AltStoreCore.framework/Info.plist
-Signing: Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom
-Signing: Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm
-Signing: Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm
-Signing: Frameworks/AltStoreCore.framework/Assets.car
-Signing: Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm
-Signing: Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm
-Signing: Frameworks/AltStoreCore.framework/ViewApp.intentdefinition
-Signing: Frameworks/AltStoreCore.framework/AltStoreCore
 Signing: Frameworks/OpenSSL.framework/Info.plist
 Signing: Frameworks/OpenSSL.framework/OpenSSL
 Signing: Frameworks/Nuke.framework/Info.plist
 Signing: Frameworks/Nuke.framework/Nuke
-Signing: UpdateCollectionViewCell.nib/objects-13.0+.nib
-Signing: UpdateCollectionViewCell.nib/objects-12.3+.nib
-Signing: UpdateCollectionViewCell.nib/runtime.nib
-Signing: AppIcon60x60@2x.png
+Signing: Frameworks/KeychainAccess.framework/Info.plist
+Signing: Frameworks/KeychainAccess.framework/KeychainAccess
+Signing: Frameworks/Roxas.framework/Info.plist
+Signing: Frameworks/Roxas.framework/RSTCollectionViewCell.nib
+Signing: Frameworks/Roxas.framework/RSTPlaceholderView.nib
+Signing: Frameworks/Roxas.framework/Roxas
+Signing: Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm
+Signing: Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm
+Signing: Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm
+Signing: Frameworks/AltStoreCore.framework/Info.plist
+Signing: Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm
+Signing: Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom
+Signing: Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm
+Signing: Frameworks/AltStoreCore.framework/Assets.car
+Signing: Frameworks/AltStoreCore.framework/ViewApp.intentdefinition
+Signing: Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm
+Signing: Frameworks/AltStoreCore.framework/AltStoreCore
+Signing: BrowseCollectionViewCell.nib/objects-12.3+.nib
+Signing: BrowseCollectionViewCell.nib/runtime.nib
+Signing: SettingsHeaderFooterView.nib
 Signing: InstalledAppsCollectionHeaderView.nib
-Signing: ALTCertificate.p12
-Signing: PkgInfo
-Signing: embedded.mobileprovision
 Signing: Intents.intentdefinition
+Signing: Info.plist
+Signing: AppBannerView.nib/objects-13.0+.nib
+Signing: AppBannerView.nib/runtime.nib
+Signing: Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib
+Signing: Settings.storyboardc/Info.plist
+Signing: Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib
+Signing: Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib
+Signing: Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib
+Signing: Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib
+Signing: Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib
+Signing: Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib
+Signing: Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib
+Signing: Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib
+Signing: Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib
+Signing: Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib
+Signing: Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib
+Signing: Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib
+Signing: Authentication.storyboardc/Info.plist
+Signing: Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib
+Signing: Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib
+Signing: Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib
+Signing: Authentication.storyboardc/authenticationViewController.nib/runtime.nib
 Signing: Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/objects-13.0+.nib
 Signing: Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/runtime.nib
+Signing: Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib
+Signing: Authentication.storyboardc/instructionsViewController.nib/runtime.nib
 Signing: Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/objects-13.0+.nib
 Signing: Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/runtime.nib
 Signing: Authentication.storyboardc/navigationController.nib/objects-13.0+.nib
 Signing: Authentication.storyboardc/navigationController.nib/runtime.nib
-Signing: Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib
-Signing: Authentication.storyboardc/authenticationViewController.nib/runtime.nib
-Signing: Authentication.storyboardc/Info.plist
-Signing: Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib
-Signing: Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib
-Signing: Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib
-Signing: Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib
-Signing: Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib
-Signing: Authentication.storyboardc/instructionsViewController.nib/runtime.nib
-Signing: PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib
-Signing: PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib
+Signing: ALTCertificate.p12
+Signing: AppIcon60x60@2x.png
+Signing: AboutPatreonHeaderView.nib/objects-13.0+.nib
+Signing: AboutPatreonHeaderView.nib/runtime.nib
+Signing: embedded.mobileprovision
 Signing: PatchApp.storyboardc/Info.plist
 Signing: PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/objects-13.0+.nib
 Signing: PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/runtime.nib
-Signing: AltBackup.ipa
-Signing: Info.plist
-Signing: BrowseCollectionViewCell.nib/objects-12.3+.nib
-Signing: BrowseCollectionViewCell.nib/runtime.nib
-Signing: Silence.m4a
-Signing: AppBannerView.nib/objects-13.0+.nib
-Signing: AppBannerView.nib/runtime.nib
+Signing: PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib
+Signing: PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib
+Signing: PkgInfo
 Signing: Assets.car
-Signing: Base.lproj/LaunchScreen.storyboardc/Info.plist
-Signing: Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib
-Signing: Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib
-Signing: Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib
-Signing: Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/Info.plist
-Signing: Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib
-Signing: Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib
-Signing: Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib
-Signing: Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib
-Signing: Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib
-Signing: Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib
-Signing: Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib
-Signing: Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib
-Signing: Settings.storyboardc/Info.plist
-Signing: Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib
-Signing: Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib
-Signing: Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib
-Signing: Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib
-Signing: Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib
-Signing: Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib
-Signing: Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib
-Signing: SettingsHeaderFooterView.nib
-Signing: ViewApp.intentdefinition
-Signing: AboutPatreonHeaderView.nib/objects-13.0+.nib
-Signing: AboutPatreonHeaderView.nib/runtime.nib
 Signing: NewsCollectionViewCell.nib/objects-12.3+.nib
 Signing: NewsCollectionViewCell.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/Info.plist
+Signing: Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib
+Signing: Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib
+Signing: Base.lproj/LaunchScreen.storyboardc/Info.plist
+Signing: Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib
+Signing: Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+Signing: Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib
+Signing: Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib
+Signing: Silence.m4a
+Signing: ViewApp.intentdefinition
+Signing: AltBackup.ipa
+Signing: UpdateCollectionViewCell.nib/objects-12.3+.nib
+Signing: UpdateCollectionViewCell.nib/objects-13.0+.nib
+Signing: UpdateCollectionViewCell.nib/runtime.nib
 Signing: AltStore
 Signing: Installing app...
 InstallApp: Finding Device...
@@ -484,353 +498,352 @@ InstallApp: Starting afc...
 InstallApp: Connecting afc...
 InstallApp: Preparing to write files to device...
 Writing to device...
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/UpdateCollectionViewCell.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/UpdateCollectionViewCell.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/BrowseCollectionViewCell.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/BrowseCollectionViewCell.nib/objects-12.3+.nib
 Installation Progress: 0.00436047
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/UpdateCollectionViewCell.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/UpdateCollectionViewCell.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/BrowseCollectionViewCell.nib/runtime.nib to: PublicStaging/AltStore.app/BrowseCollectionViewCell.nib/runtime.nib
 Installation Progress: 0.00872093
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/UpdateCollectionViewCell.nib/runtime.nib to: PublicStaging/AltStore.app/UpdateCollectionViewCell.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/_CodeSignature/CodeResources
 Installation Progress: 0.0130814
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/AppIcon60x60@2x.png to: PublicStaging/AltStore.app/AppIcon60x60@2x.png
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/SettingsHeaderFooterView.nib to: PublicStaging/AltStore.app/SettingsHeaderFooterView.nib
 Installation Progress: 0.0174419
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/AltStore to: PublicStaging/AltStore.app/AltStore
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/InstalledAppsCollectionHeaderView.nib to: PublicStaging/AltStore.app/InstalledAppsCollectionHeaderView.nib
 Installation Progress: 0.0218023
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/InstalledAppsCollectionHeaderView.nib to: PublicStaging/AltStore.app/InstalledAppsCollectionHeaderView.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Intents.intentdefinition to: PublicStaging/AltStore.app/Intents.intentdefinition
 Installation Progress: 0.0261628
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/ALTCertificate.p12 to: PublicStaging/AltStore.app/ALTCertificate.p12
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Info.plist to: PublicStaging/AltStore.app/Info.plist
 Installation Progress: 0.0305233
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PkgInfo to: PublicStaging/AltStore.app/PkgInfo
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/AppBannerView.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/AppBannerView.nib/objects-13.0+.nib
 Installation Progress: 0.0348837
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/embedded.mobileprovision to: PublicStaging/AltStore.app/embedded.mobileprovision
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/AppBannerView.nib/runtime.nib to: PublicStaging/AltStore.app/AppBannerView.nib/runtime.nib
 Installation Progress: 0.0392442
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Intents.intentdefinition to: PublicStaging/AltStore.app/Intents.intentdefinition
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib
 Installation Progress: 0.0436047
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib
 Installation Progress: 0.0479651
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib
 Installation Progress: 0.0523256
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/Info.plist to: PublicStaging/AltStore.app/Settings.storyboardc/Info.plist
 Installation Progress: 0.056686
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib
 Installation Progress: 0.0610465
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/navigationController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/navigationController.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib
 Installation Progress: 0.065407
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/navigationController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/navigationController.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib
 Installation Progress: 0.0697674
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib
 Installation Progress: 0.0741279
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib
 Installation Progress: 0.0784884
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/Info.plist to: PublicStaging/AltStore.app/Authentication.storyboardc/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib
 Installation Progress: 0.0828488
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib
 Installation Progress: 0.0872093
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib
 Installation Progress: 0.0915698
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib
 Installation Progress: 0.0959302
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib
 Installation Progress: 0.100291
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib
 Installation Progress: 0.104651
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib
 Installation Progress: 0.109012
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PlugIns/AltWidgetExtension.appex/embedded.mobileprovision to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/embedded.mobileprovision
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib
 Installation Progress: 0.113372
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PlugIns/AltWidgetExtension.appex/Info.plist to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib
 Installation Progress: 0.117733
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PlugIns/AltWidgetExtension.appex/AltWidgetExtension to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/AltWidgetExtension
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib
 Installation Progress: 0.122093
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PlugIns/AltWidgetExtension.appex/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/_CodeSignature/CodeResources
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib
 Installation Progress: 0.126453
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PlugIns/AltWidgetExtension.appex/Assets.car to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/Assets.car
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib
 Installation Progress: 0.130814
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/KeychainAccess.framework/KeychainAccess to: PublicStaging/AltStore.app/Frameworks/KeychainAccess.framework/KeychainAccess
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib
 Installation Progress: 0.135174
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/KeychainAccess.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/KeychainAccess.framework/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib
 Installation Progress: 0.139535
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/KeychainAccess.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/KeychainAccess.framework/_CodeSignature/CodeResources
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib
 Installation Progress: 0.143895
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Roxas.framework/RSTPlaceholderView.nib to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/RSTPlaceholderView.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib
 Installation Progress: 0.148256
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Roxas.framework/Roxas to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/Roxas
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib
 Installation Progress: 0.152616
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Roxas.framework/RSTCollectionViewCell.nib to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/RSTCollectionViewCell.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib
 Installation Progress: 0.156977
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Roxas.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib
 Installation Progress: 0.161337
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Roxas.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/_CodeSignature/CodeResources
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/objects-13.0+.nib
 Installation Progress: 0.165698
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aFi-fb-W0B-view-Otz-hn-WGS.nib/runtime.nib
 Installation Progress: 0.170058
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/Info.plist to: PublicStaging/AltStore.app/Authentication.storyboardc/Info.plist
 Installation Progress: 0.174419
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/objects-13.0+.nib
 Installation Progress: 0.178779
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/refreshAltStoreViewController.nib/runtime.nib
 Installation Progress: 0.18314
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/objects-13.0+.nib
 Installation Progress: 0.1875
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/authenticationViewController.nib/runtime.nib
 Installation Progress: 0.19186
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/objects-13.0+.nib
 Installation Progress: 0.196221
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/aoK-yE-UVT-view-R83-kV-365.nib/runtime.nib
 Installation Progress: 0.200581
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/objects-13.0+.nib
 Installation Progress: 0.204942
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/instructionsViewController.nib/runtime.nib
 Installation Progress: 0.209302
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/objects-13.0+.nib
 Installation Progress: 0.213663
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/yO1-iT-7NP-view-mjy-4S-hyH.nib/runtime.nib
 Installation Progress: 0.218023
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/navigationController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/navigationController.nib/objects-13.0+.nib
 Installation Progress: 0.222384
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Authentication.storyboardc/navigationController.nib/runtime.nib to: PublicStaging/AltStore.app/Authentication.storyboardc/navigationController.nib/runtime.nib
 Installation Progress: 0.226744
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PlugIns/AltWidgetExtension.appex/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/_CodeSignature/CodeResources
 Installation Progress: 0.231105
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PlugIns/AltWidgetExtension.appex/AltWidgetExtension to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/AltWidgetExtension
 Installation Progress: 0.235465
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/_CodeSignature/CodeResources
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PlugIns/AltWidgetExtension.appex/Info.plist to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/Info.plist
 Installation Progress: 0.239826
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PlugIns/AltWidgetExtension.appex/embedded.mobileprovision to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/embedded.mobileprovision
 Installation Progress: 0.244186
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreCore to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreCore
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PlugIns/AltWidgetExtension.appex/Assets.car to: PublicStaging/AltStore.app/PlugIns/AltWidgetExtension.appex/Assets.car
 Installation Progress: 0.248547
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/Assets.car to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/Assets.car
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/ALTCertificate.p12 to: PublicStaging/AltStore.app/ALTCertificate.p12
 Installation Progress: 0.252907
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/AppIcon60x60@2x.png to: PublicStaging/AltStore.app/AppIcon60x60@2x.png
 Installation Progress: 0.257267
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/AboutPatreonHeaderView.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/AboutPatreonHeaderView.nib/objects-13.0+.nib
 Installation Progress: 0.261628
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/AltStoreCore.framework/ViewApp.intentdefinition to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/ViewApp.intentdefinition
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/AboutPatreonHeaderView.nib/runtime.nib to: PublicStaging/AltStore.app/AboutPatreonHeaderView.nib/runtime.nib
 Installation Progress: 0.265988
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/OpenSSL.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/OpenSSL.framework/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/embedded.mobileprovision to: PublicStaging/AltStore.app/embedded.mobileprovision
 Installation Progress: 0.270349
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/OpenSSL.framework/OpenSSL to: PublicStaging/AltStore.app/Frameworks/OpenSSL.framework/OpenSSL
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PatchApp.storyboardc/Info.plist to: PublicStaging/AltStore.app/PatchApp.storyboardc/Info.plist
 Installation Progress: 0.274709
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/OpenSSL.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/OpenSSL.framework/_CodeSignature/CodeResources
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/objects-13.0+.nib
 Installation Progress: 0.27907
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Nuke.framework/Nuke to: PublicStaging/AltStore.app/Frameworks/Nuke.framework/Nuke
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/runtime.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/runtime.nib
 Installation Progress: 0.28343
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Nuke.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/Nuke.framework/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib
 Installation Progress: 0.287791
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Frameworks/Nuke.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/Nuke.framework/_CodeSignature/CodeResources
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib
 Installation Progress: 0.292151
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/PkgInfo to: PublicStaging/AltStore.app/PkgInfo
 Installation Progress: 0.296512
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/UINavigationController-WBb-E1-bN8.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Assets.car to: PublicStaging/AltStore.app/Assets.car
 Installation Progress: 0.300872
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PatchApp.storyboardc/Info.plist to: PublicStaging/AltStore.app/PatchApp.storyboardc/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/OpenSSL.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/OpenSSL.framework/_CodeSignature/CodeResources
 Installation Progress: 0.305233
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/OpenSSL.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/OpenSSL.framework/Info.plist
 Installation Progress: 0.309593
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/runtime.nib to: PublicStaging/AltStore.app/PatchApp.storyboardc/idH-XF-rK8-view-4bV-S5-z7S.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/OpenSSL.framework/OpenSSL to: PublicStaging/AltStore.app/Frameworks/OpenSSL.framework/OpenSSL
 Installation Progress: 0.313953
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/AltBackup.ipa to: PublicStaging/AltStore.app/AltBackup.ipa
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Nuke.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/Nuke.framework/_CodeSignature/CodeResources
 Installation Progress: 0.318314
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Info.plist to: PublicStaging/AltStore.app/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Nuke.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/Nuke.framework/Info.plist
 Installation Progress: 0.322674
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/BrowseCollectionViewCell.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/BrowseCollectionViewCell.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Nuke.framework/Nuke to: PublicStaging/AltStore.app/Frameworks/Nuke.framework/Nuke
 Installation Progress: 0.327035
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/BrowseCollectionViewCell.nib/runtime.nib to: PublicStaging/AltStore.app/BrowseCollectionViewCell.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/KeychainAccess.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/KeychainAccess.framework/_CodeSignature/CodeResources
 Installation Progress: 0.331395
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/_CodeSignature/CodeResources
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/KeychainAccess.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/KeychainAccess.framework/Info.plist
 Installation Progress: 0.335756
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Silence.m4a to: PublicStaging/AltStore.app/Silence.m4a
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/KeychainAccess.framework/KeychainAccess to: PublicStaging/AltStore.app/Frameworks/KeychainAccess.framework/KeychainAccess
 Installation Progress: 0.340116
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/AppBannerView.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/AppBannerView.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Roxas.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/_CodeSignature/CodeResources
 Installation Progress: 0.344477
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/AppBannerView.nib/runtime.nib to: PublicStaging/AltStore.app/AppBannerView.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Roxas.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/Info.plist
 Installation Progress: 0.348837
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Assets.car to: PublicStaging/AltStore.app/Assets.car
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Roxas.framework/RSTCollectionViewCell.nib to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/RSTCollectionViewCell.nib
 Installation Progress: 0.353198
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/LaunchScreen.storyboardc/Info.plist to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Roxas.framework/Roxas to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/Roxas
 Installation Progress: 0.357558
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/Roxas.framework/RSTPlaceholderView.nib to: PublicStaging/AltStore.app/Frameworks/Roxas.framework/RSTPlaceholderView.nib
 Installation Progress: 0.361919
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreToAltStore2.cdm
 Installation Progress: 0.366279
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore8ToAltStore9.cdm
 Installation Progress: 0.37064
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/_CodeSignature/CodeResources to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/_CodeSignature/CodeResources
 Installation Progress: 0.375
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore3ToAltStore4.cdm
 Installation Progress: 0.37936
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/Info.plist to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/Info.plist
 Installation Progress: 0.383721
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore5ToAltStore6.cdm
 Installation Progress: 0.388081
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore4ToAltStore5.cdm
 Installation Progress: 0.392442
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 6.mom
 Installation Progress: 0.396802
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 2.mom
 Installation Progress: 0.401163
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 5.mom
 Installation Progress: 0.405523
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.mom
 Installation Progress: 0.409884
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 3.mom
 Installation Progress: 0.414244
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 4.mom
 Installation Progress: 0.418605
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 9.omo
 Installation Progress: 0.422965
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/VersionInfo.plist
 Installation Progress: 0.427326
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore.mom
 Installation Progress: 0.431686
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 8.mom
 Installation Progress: 0.436047
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore.momd/AltStore 7.mom
 Installation Progress: 0.440407
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore6ToAltStore7.cdm
 Installation Progress: 0.444767
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/Assets.car to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/Assets.car
 Installation Progress: 0.449128
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreCore to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStoreCore
 Installation Progress: 0.453488
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/ViewApp.intentdefinition to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/ViewApp.intentdefinition
 Installation Progress: 0.457849
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm to: PublicStaging/AltStore.app/Frameworks/AltStoreCore.framework/AltStore2ToAltStore3.cdm
 Installation Progress: 0.462209
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/NewsCollectionViewCell.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/NewsCollectionViewCell.nib/objects-12.3+.nib
 Installation Progress: 0.46657
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/Info.plist to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/NewsCollectionViewCell.nib/runtime.nib to: PublicStaging/AltStore.app/NewsCollectionViewCell.nib/runtime.nib
 Installation Progress: 0.47093
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib
 Installation Progress: 0.475291
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/objects-13.0+.nib
 Installation Progress: 0.479651
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/wKh-xq-NuP-view-G9E-Qs-gFM.nib/runtime.nib
 Installation Progress: 0.484012
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/Info.plist to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Info.plist
 Installation Progress: 0.488372
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib
 Installation Progress: 0.492733
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib
 Installation Progress: 0.497093
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib
 Installation Progress: 0.501453
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-12.3+.nib
 Installation Progress: 0.505814
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/appViewController.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/objects-13.0+.nib
 Installation Progress: 0.510174
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/Ojq-DN-xcF-view-IgU-aM-YrX.nib/runtime.nib
 Installation Progress: 0.514535
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-12.3+.nib
 Installation Progress: 0.518895
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/objects-13.0+.nib
 Installation Progress: 0.523256
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/y1A-Nm-mw7-view-v1r-C8-h6h.nib/runtime.nib
 Installation Progress: 0.527616
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-12.3+.nib
 Installation Progress: 0.531977
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/objects-13.0+.nib
 Installation Progress: 0.536337
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-Ojq-DN-xcF.nib/runtime.nib
 Installation Progress: 0.540698
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib
 Installation Progress: 0.545058
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib
 Installation Progress: 0.549419
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib
 Installation Progress: 0.553779
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-12.3+.nib
 Installation Progress: 0.55814
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/e3L-BF-iXp-view-CaT-1q-qnx.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/objects-13.0+.nib
 Installation Progress: 0.5625
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/0V6-N4-hTO-view-0cR-li-tCB.nib/runtime.nib
 Installation Progress: 0.56686
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-12.3+.nib
 Installation Progress: 0.571221
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/objects-13.0+.nib
 Installation Progress: 0.575581
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/hv7-Ar-voT-view-Jrp-gi-4Df.nib/runtime.nib
 Installation Progress: 0.579942
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib
 Installation Progress: 0.584302
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib
 Installation Progress: 0.588663
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib
 Installation Progress: 0.593023
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-12.3+.nib
 Installation Progress: 0.597384
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/tabBarController.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/objects-13.0+.nib
 Installation Progress: 0.601744
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-IXk-qg-mFJ.nib/runtime.nib
 Installation Progress: 0.606105
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-12.3+.nib
 Installation Progress: 0.610465
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/dp8-8j-vt9-view-OTF-Qv-Z5w.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/objects-13.0+.nib
 Installation Progress: 0.614826
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UITableViewController-kBq-V8-3XC.nib/runtime.nib
 Installation Progress: 0.619186
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-12.3+.nib
 Installation Progress: 0.623547
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/GBh-rB-juy-view-sPX-D2-9uY.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/objects-13.0+.nib
 Installation Progress: 0.627907
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/cHC-TX-KzQ-view-S36-hD-vu2.nib/runtime.nib
 Installation Progress: 0.632267
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-12.3+.nib
 Installation Progress: 0.636628
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UICollectionViewController-dp8-8j-vt9.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/objects-13.0+.nib
 Installation Progress: 0.640988
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/kBq-V8-3XC-view-w5c-Q3-FcU.nib/runtime.nib
 Installation Progress: 0.645349
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-12.3+.nib
 Installation Progress: 0.649709
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UITableViewController-GBh-rB-juy.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/objects-13.0+.nib
 Installation Progress: 0.65407
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/Info.plist to: PublicStaging/AltStore.app/Settings.storyboardc/Info.plist
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UINavigationController-Qo4-72-Hmr.nib/runtime.nib
 Installation Progress: 0.65843
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-12.3+.nib
 Installation Progress: 0.662791
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/objects-13.0+.nib
 Installation Progress: 0.667151
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/m4j-ch-w9Y-view-5un-bm-kB5.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/3sa-FZ-PTg-view-736-lq-Aef.nib/runtime.nib
 Installation Progress: 0.671512
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-12.3+.nib
 Installation Progress: 0.675872
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/objects-13.0+.nib
 Installation Progress: 0.680233
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UINavigationController-5Rz-4h-jJ8.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-bTL-bY-9Yq.nib/runtime.nib
 Installation Progress: 0.684593
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-12.3+.nib
 Installation Progress: 0.688953
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/objects-13.0+.nib
 Installation Progress: 0.693314
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-gbN-yn-SCG.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/Main.storyboardc/UIViewController-wKh-xq-NuP.nib/runtime.nib
 Installation Progress: 0.697674
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/LaunchScreen.storyboardc/Info.plist to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
 Installation Progress: 0.702035
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib
 Installation Progress: 0.706395
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/UIViewController-m4j-ch-w9Y.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
 Installation Progress: 0.710756
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/objects-13.0+.nib
 Installation Progress: 0.715116
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib to: PublicStaging/AltStore.app/Base.lproj/LaunchScreen.storyboardc/UITabBarController-6NO-wl-tj1.nib/runtime.nib
 Installation Progress: 0.719477
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib to: PublicStaging/AltStore.app/Settings.storyboardc/aMk-Xp-UL8-view-MuO-1I-cKW.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/Silence.m4a to: PublicStaging/AltStore.app/Silence.m4a
 Installation Progress: 0.723837
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/SettingsHeaderFooterView.nib to: PublicStaging/AltStore.app/SettingsHeaderFooterView.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/ViewApp.intentdefinition to: PublicStaging/AltStore.app/ViewApp.intentdefinition
 Installation Progress: 0.728198
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/ViewApp.intentdefinition to: PublicStaging/AltStore.app/ViewApp.intentdefinition
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/AltStore to: PublicStaging/AltStore.app/AltStore
 Installation Progress: 0.732558
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/AboutPatreonHeaderView.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/AboutPatreonHeaderView.nib/objects-13.0+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/AltBackup.ipa to: PublicStaging/AltStore.app/AltBackup.ipa
 Installation Progress: 0.736919
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/AboutPatreonHeaderView.nib/runtime.nib to: PublicStaging/AltStore.app/AboutPatreonHeaderView.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/UpdateCollectionViewCell.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/UpdateCollectionViewCell.nib/objects-12.3+.nib
 Installation Progress: 0.741279
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/NewsCollectionViewCell.nib/objects-12.3+.nib to: PublicStaging/AltStore.app/NewsCollectionViewCell.nib/objects-12.3+.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/UpdateCollectionViewCell.nib/objects-13.0+.nib to: PublicStaging/AltStore.app/UpdateCollectionViewCell.nib/objects-13.0+.nib
 Installation Progress: 0.74564
-Writing File: /tmp/d116f294-0d68-4561-ab1d-a21a8c7108de/AltStore.app/NewsCollectionViewCell.nib/runtime.nib to: PublicStaging/AltStore.app/NewsCollectionViewCell.nib/runtime.nib
+Writing File: /tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2/AltStore.app/UpdateCollectionViewCell.nib/runtime.nib to: PublicStaging/AltStore.app/UpdateCollectionViewCell.nib/runtime.nib
 Installation Progress: 0.75
 Finished writing to device.
-Removed profile: com.L4LN9U3ZS7.com.rileytestut.AltStore.AltWidget (b4bb64fc-7a82-4e2c-ab2d-a496c89a9e9a)
-Removed profile: com.L4LN9U3ZS7.com.rileytestut.AltStore (67099a27-1c3c-4fde-9d62-f3ba0d15e1a1)
+Removed profile: com.L4LN9U3ZS7.com.rileytestut.AltStore.AltWidget (350cb98e-1da9-4655-ba25-9ce8972a57e2)
 Installation Progress: 0.7625
 Installation Progress: 0.7875
 Installation Progress: 0.8
@@ -844,7 +857,7 @@ Installation Progress: 0.9
 Installation Progress: 0.925
 Installation Progress: 0.95
 Installation Progress: 0.975
-Removing tmp dir: rm -rf '/tmp/d116f294-0d68-4561-ab1d-a21a8c7108de'
+Removing tmp dir: rm -rf '/tmp/f4a557d5-bc38-46b6-be1b-e073f49f56d2'
 Notify: Installation Succeeded
     AltStore was successfully installed on unknown.
 Finished!
