@@ -29,7 +29,6 @@ def internet_stat():
     timeout = 5
     try:
         requests.get("https://www.google.com", timeout=timeout)
-        print("Connected to the Internet")
         return True
     except (requests.ConnectionError, requests.Timeout) as exception:
 	    return False
@@ -114,7 +113,7 @@ def Installation():
                     Input_2fa_Area = QLineEdit(placeholderText="two factor code")
                     send_2fa_btn = QPushButton()
                     def Button_2fa_Clicked():
-                        Input_2fa_Area.close()
+                        msg_2fa_Area.close()
                         code_2fa=Input_2fa_Area.text()
                         code_2fa=code_2fa+"\n"
                         code_2fa_bytes = bytes(code_2fa.encode())
