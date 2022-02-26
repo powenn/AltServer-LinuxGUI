@@ -1,4 +1,4 @@
-# AltServer-Linux GUI wrote in PyQT
+# AltServer-Linux GUI wrote in PyQT5
 # This is the Main part for functions
 # Author of the GUI : powen
 
