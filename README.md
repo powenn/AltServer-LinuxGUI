@@ -32,6 +32,8 @@ AltServer for Linux is from [NyaMisty](https://github.com/NyaMisty),so you shoul
 Just make sure it has execute permission ,and double click to run 
 
 If you didn't see the app display on tray,you have to install `gnome-shell-extension-appindicator`
+
+And enable it in tweaks:extension
 ```
 sudo apt install gnome-shell-extension-appindicator
 ```
