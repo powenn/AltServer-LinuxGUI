@@ -53,8 +53,8 @@ pyinstaller -i Icon.ico UI.spec
 
 ## Demo Video
 
-<a href="https://www.youtube.com/watch?v=14uSA_JxZTo">
-  <img src="https://img.youtube.com/vi/14uSA_JxZTo/maxresdefault.jpg" >
+<a href="https://www.youtube.com/watch?v=YTL99EzzrQc">
+  <img src="https://img.youtube.com/vi/YTL99EzzrQc/maxresdefault.jpg" >
 </a>
 
-[1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/01.jpg
+[1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/01.png
