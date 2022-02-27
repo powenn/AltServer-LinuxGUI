@@ -29,7 +29,13 @@ AltServer for Linux is from [NyaMisty](https://github.com/NyaMisty),so you shoul
 
 ## Note 
 
-Just make sure it has execute permission ,and double click to run 
+Needed dependencies
+
+```
+sudo apt-get install usbmuxd libimobiledevice6 libimobiledevice-utils wget curl
+```
+
+Make sure it has execute permission ,and double click to run 
 
 If you didn't see the app display on tray,you have to install `gnome-shell-extension-appindicator`
 
