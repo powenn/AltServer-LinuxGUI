@@ -10,6 +10,8 @@ if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AltServer,shell=True) != "" 
     subprocess.run("chmod +x %s" %AltServer,shell=True)
 if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AltServerDaemon,shell=True) != "" :
     subprocess.run("chmod +x %s" %AltServerDaemon,shell=True)
+if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AutoStart,shell=True) != "" :
+    subprocess.run("chmod +x %s" %AutoStart,shell=True)
 
 # UI part
 app = QApplication(sys.argv)
@@ -39,7 +41,37 @@ menu.addAction(AltInstall)
 menu.addSeparator()
 
 # Add Launch At Login in  option to the menu.
-LaunchAtLogin = QAction("Launch at Login(Not yet Avaliable)",checkable=True)
+LaunchAtLogin = QAction("Launch at Login",checkable=True)
+launch_enable=False
+CheckTime=0
+if glob.glob("/home/*/.config/autostart/AltServer.desktop") and CheckTime==0:
+    LaunchAtLogin.setChecked(True)
+    launch_enable=True
+    CheckTime=1
+if not glob.glob("/home/*/.config/autostart/AltServer.desktop") and CheckTime==0:
+    LaunchAtLogin.setChecked(False)
+    launch_enable=False
+    CheckTime=1
+def launch_config() :
+    if LaunchAtLogin.isChecked():
+        launch_enable=True
+    if not LaunchAtLogin.isChecked():
+         launch_enable=False
+    if launch_enable :
+        LaunchAtLogin.setChecked(True)
+        sh_file = open(AutoStart, "r")
+        list_of_lines = sh_file.readlines()
+        list_of_lines[8] = 'Exec="%s"\n' %Exec
+        sh_file = open(AutoStart, "w")
+        sh_file.writelines(list_of_lines)
+        sh_file.close()
+        subprocess.run("%s" %resource_path("AutoStart.sh"),shell=True)
+    if not launch_enable :
+        LaunchAtLogin.setChecked(False)
+        subprocess.run("rm -rf /home/*/.config/autostart/AltServer.desktop",shell=True)
+
+LaunchAtLogin.toggled.connect(launch_config)
+
 menu.addAction(LaunchAtLogin)
 
 # Add Pair in  option to the menu.

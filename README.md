@@ -67,4 +67,4 @@ pyinstaller -i Icon.ico UI.spec
   <img src="https://img.youtube.com/vi/YTL99EzzrQc/maxresdefault.jpg" >
 </a>
 
-[1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/01.png
+[1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/02.png
