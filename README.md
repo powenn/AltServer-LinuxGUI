@@ -44,7 +44,7 @@ And enable it in tweaks:extension
 sudo apt install gnome-shell-extension-appindicator
 ```
 
-For Ubuntu 21.10 ,please check https://websetnet.net/top-10-things-to-do-after-installing-ubuntu-21-10-desktop/
+For Ubuntu 21.10 ,please check https://websetnet.net/top-10-things-to-do-after-installing-ubuntu-21-10-desktop/ and https://extensions.gnome.org/extension/615/appindicator-support/
 
 For older versions and others linux distributions,you have to compile it manually at the moment
 
