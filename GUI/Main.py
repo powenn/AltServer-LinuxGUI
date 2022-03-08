@@ -48,7 +48,7 @@ def about_message():
     msg_box.setIconPixmap(QPixmap(resource_path("Icon@128.png")))
     msg_box.setWindowTitle('AltServer-Linux')
     msg_box.setInformativeText('GUI by powenn on Github\n\nAltServer-Linux by NyaMisty on Github\n\nNot offical AltServer from Riley Testut')
-    msg_box.setDetailedText('Version : 0.1.1\nSource code :\nhttps://github.com/powenn/AltServer-LinuxGUI\n\nFor questions about this GUI, you can contact @powen00hsiao on Twitter')
+    msg_box.setDetailedText('Version : 0.1.2\nSource code :\nhttps://github.com/powenn/AltServer-LinuxGUI\n\nFor questions about this GUI, you can contact @powen00hsiao on Twitter')
     msg_box.exec()
 
 @QtCore.Slot()
