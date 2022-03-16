@@ -16,18 +16,16 @@ import sys
 
 # set path
 def resource_path(relative_path):
-    if hasattr(sys, "_MEIPASS"):
-        base_path = sys._MEIPASS
-    else:
-        base_path = os.path.abspath(".")
+    base_path = os.path.abspath("./resources")
     return os.path.join(base_path, relative_path)
 
 cwd = os.getcwd()
 AltServer = resource_path("AltServer")
 AltServerDaemon = resource_path("AltServerDaemon")
 AutoStart = resource_path("AutoStart.sh")
-Exec = cwd+"/AltServerGUI"
-
+Exec = cwd+"/altserver"
+UserName = subprocess.check_output("whoami",shell=True).decode('utf-8').replace("\n", "")
+Update_successed = False
 
 def internet_stat():
     timeout = 5
@@ -47,8 +45,8 @@ def about_message():
     msg_box = QMessageBox()
     msg_box.setIconPixmap(QPixmap(resource_path("Icon@128.png")))
     msg_box.setWindowTitle('AltServer-Linux')
-    msg_box.setInformativeText('GUI by powenn on Github\n\nAltServer-Linux by NyaMisty on Github\n\nNot offical AltServer from Riley Testut')
-    msg_box.setDetailedText('Version : 0.1.2\nSource code :\nhttps://github.com/powenn/AltServer-LinuxGUI\n\nFor questions about this GUI, you can contact @powen00hsiao on Twitter')
+    msg_box.setInformativeText('GUI by powenn on Github\n\nAltServer-Linux by NyaMisty on Github\n\nNot offical AltServer from Riley Testut\nVersion : %s' %LocalVersion)
+    msg_box.setDetailedText('Source code :\nhttps://github.com/powenn/AltServer-LinuxGUI\nFor questions about this GUI, you can contact @powen00hsiao on Twitter')
     msg_box.exec()
 
 @QtCore.Slot()
@@ -75,9 +73,7 @@ def Installation():
             AccountArea.close()
             AppleID=IDInputArea.text()
             Password=PasswordInputArea.text()
-            print(AppleID+','+Password)
             InsAltStoreCMD='%s -u %s -a %s -p %s %s > %s' % (resource_path("AltServer"),UDID,AppleID,Password,PATH,resource_path("log.txt"))
-            print(InsAltStoreCMD)
             Installing = True
             WarnTime=0
             InsAltStore=subprocess.Popen(InsAltStoreCMD, stdin=PIPE, stdout=PIPE, shell=True)
@@ -159,6 +155,7 @@ def restart_daemon():
 
 @QtCore.Slot()
 def check_update():
+    Passwd_Check_Time = 0
     if (internet_stat()) == True  :
         LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode('utf-8')
         if LatestVersion == LocalVersion :
@@ -170,37 +167,64 @@ def check_update():
             UpdateLog=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/updatelog.md",shell=True).decode('utf-8')
             Updatemsg_box.setText(UpdateLog)
             buttonReply = QMessageBox.information(Updatemsg_box, 'Update now ?', UpdateLog, QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
-            if buttonReply == QMessageBox.Yes:
-                Updating_msg_box = QSystemTrayIcon()
-                Updating_msg_box.setVisible(True)
-                Updating_msg_box.showMessage("Updating","Please wait a moment",QSystemTrayIcon.Information,200)
-                update_pyfile = cwd+"/update.py"
-                subprocess.run("curl -L 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' > %s" %update_pyfile,shell=True)
-                Updating = subprocess.run("python3 %s" %update_pyfile,shell=True)
-                if Updating.returncode == 0 :
-                    cur_file = cwd+"/AltServerGUI"
-                    old_ver =  cwd+"/AltServerGUI-old"
-                    new_ver = cwd+"/AltServerGUI-new"
-                    subprocess.run("rm -rf %s" %update_pyfile,shell=True)
-                    move(cur_file,old_ver)
-                    move(new_ver,cur_file)
-                    os.remove(old_ver)
-                    Update_done_msg_box = QMessageBox()
-                    Update_done_msg_box.setText("Update done\nPlease restart the app to apply the new version")
-                    Update_done_msg_box.exec()
-                if Updating.returncode == 1 :
-                    Update_err_msg_box = QMessageBox()
-                    Update_err_msg_box.setText("Error occurred")
-                    Update_err_msg_box.exec()
+            if buttonReply == QMessageBox.Yes and Passwd_Check_Time == 0:
+                Passwd_Check_Time = 1
+                passwd_Area=QDialog()
+                passwd_Area.setWindowTitle("Requires password")
+                passwd_Layout = QVBoxLayout()
+                passwd_label = QLabel("Please enter password for %s" %UserName)
+                Input_passwd_Area = QLineEdit(placeholderText="password")
+                send_passwd_btn = QPushButton()
+
+                def Button_passwd_Clicked():
+                    passwd_Area.close()
+                    sudo_passwd=Input_passwd_Area.text()
+                    sudo_passwd=sudo_passwd+"\n"
+                    sudo_passwd_bytes = bytes(sudo_passwd.encode())
+                    sudo_Check = os.system('echo "%s" | sudo -S %s' % (sudo_passwd, "echo 'check password'"))
+                    if sudo_Check == 0 :
+                        Updating_msg_box = QSystemTrayIcon()
+                        Updating_msg_box.setVisible(True)
+                        Updating_msg_box.showMessage("Updating","Please wait a moment",QSystemTrayIcon.Information,200)
+                        update_pyfile = cwd+"/update.py"
+                        deb_file = cwd+"/AltServer.deb"
+                        subprocess.run("curl -L 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' > %s" %update_pyfile,shell=True)
+                        Updating = subprocess.run("python3 %s" %update_pyfile,shell=True)
+                        if Updating.returncode == 0:
+                            subprocess.Popen("sudo -S dpkg -i %s" %deb_file, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True).communicate(input=sudo_passwd_bytes) 
+                            Update_successed = True
+                            subprocess.run("rm -rf %s" %deb_file,shell=True)
+                            Update_done_msg_box = QMessageBox()
+                            Update_done_msg_box.setText("Update Done\nPlease restart the App to apply the new version")
+                            Update_done_msg_box.exec()
+                        if Updating.returncode == 1 :
+                            Update_successed = False
+                            Update_err_msg_box = QMessageBox()
+                            Update_err_msg_box.setText("Error occurred")
+                            Update_err_msg_box.exec()
+                    if sudo_Check != 0 :
+                        Update_successed = False
+                        Wrong_sudo_passwd_box = QMessageBox()
+                        Wrong_sudo_passwd_box.setText("Wrong password entered")
+                        Wrong_sudo_passwd_box.exec() 
+                    return Update_successed
+                send_passwd_btn.setText("Send")
+                send_passwd_btn.clicked.connect(Button_passwd_Clicked)
+                passwd_Layout.addWidget(passwd_label)
+                passwd_Layout.addWidget(Input_passwd_Area)
+                passwd_Layout.addWidget(send_passwd_btn)
+                passwd_Area.setLayout(passwd_Layout)
+                passwd_Area.exec()
+
             if buttonReply == QMessageBox.No:
                 pass
+
     if (internet_stat()) == False:
         No_network_box = QMessageBox()
         No_network_box.setWindowTitle('No network')
         No_network_box.setText("Please connect to network")
         No_network_box.exec()
-
-
+        
 # Show update avaliable message
 @QtCore.Slot()
 def UpdateNotification() :

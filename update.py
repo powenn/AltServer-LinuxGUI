@@ -8,9 +8,6 @@ import os
 
 cwd = os.getcwd()
 LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode('utf-8')
-ReleaseName = cwd+"/AltServerGUI-new"
-
-GetReleaseCMD='curl -L https://github.com/powenn/AltServer-LinuxGUI/releases/download/%s/AltServerGUI > %s' %(LatestVersion,ReleaseName)
+GetReleaseCMD='curl -L https://github.com/powenn/AltServer-LinuxGUI/releases/download/%s/AltServer.deb > AltServer.deb' %LatestVersion
 
 subprocess.run(GetReleaseCMD,shell=True)
-subprocess.run("chmod +x %s" %ReleaseName,shell=True)

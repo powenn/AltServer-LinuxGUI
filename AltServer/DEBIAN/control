@@ -1,0 +1,6 @@
+Package: AltServerLinux
+Version: 0.1.3
+Architecture: all
+Maintainer: powen
+Description: GUI for AltServerLinux
+Depiction: https://github.com/powenn/AltServer-LinuxGUI

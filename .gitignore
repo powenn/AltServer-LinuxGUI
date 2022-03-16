@@ -4,3 +4,6 @@ AltServerData
 __pycache__
 .DS_Store
 log.txt
+AltServer/usr/lib/altserver/*
+*.spec
+*.deb

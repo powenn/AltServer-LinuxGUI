@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=AltServer
+Path=/usr/lib/altserver
+Exec=/usr/lib/altserver/altserver
+Icon=/usr/share/icons/Icon.ico
+Terminal=false
+Type=Application
+Categories=Application
+Name[en_US]=AltServer

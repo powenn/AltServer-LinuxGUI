@@ -59,12 +59,6 @@ def launch_config() :
          launch_enable=False
     if launch_enable :
         LaunchAtLogin.setChecked(True)
-        sh_file = open(AutoStart, "r")
-        list_of_lines = sh_file.readlines()
-        list_of_lines[8] = 'Exec="%s"\n' %Exec
-        sh_file = open(AutoStart, "w")
-        sh_file.writelines(list_of_lines)
-        sh_file.close()
         subprocess.run("%s" %resource_path("AutoStart.sh"),shell=True)
     if not launch_enable :
         LaunchAtLogin.setChecked(False)
@@ -90,6 +84,7 @@ CheckUpdate = QAction("Check for Update")
 CheckUpdate.triggered.connect(check_update)
 menu.addAction(CheckUpdate)
 menu.addSeparator()
+
 
 # Add a Quit option to the menu.
 def app_quit():
