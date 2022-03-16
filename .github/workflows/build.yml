@@ -11,7 +11,7 @@ jobs:
       - name: submodules-init
         uses: snickerbockers/submodules-init@v4
       - name: Install Dependencies
-      - uses: actions/setup-python@v2
+        uses: actions/setup-python@v2
         with:
           python-version: 3.7
       - run: |
