@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: |
-          pip3 install pyinstaller PySide2 PyQt5 
+          chmod +x build.sh
       - uses: actions/checkout@v2
       - name: submodules-init
         uses: snickerbockers/submodules-init@v4
