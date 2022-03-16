@@ -10,10 +10,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: submodules-init
         uses: snickerbockers/submodules-init@v4
+      - name: Install Dependencies
       - uses: actions/setup-python@v2
         with:
           python-version: 3.7
-      - name: Install Dependencies
       - run: |
           pip install PyQt5 PySide2 pyinstaller pyqt5-plugins 
       - name: Build
