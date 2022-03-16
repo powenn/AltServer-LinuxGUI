@@ -3,7 +3,13 @@
 AltServer_PATH="/usr/lib/altserver"
 USER=$(whoami)
 
-if [ -d "$AltServer_PATH" ]; then
-    sudo chown -R $USER:$USER "$AltServer_PATH"
-    sudo chmod -R 777 "$AltServer_PATH"
+# if [ -d "$AltServer_PATH" ]; then
+#     chown -R $USER:$USER "$AltServer_PATH"
+#     chmod -R 777 "$AltServer_PATH"
+# fi
+if [ "$1" = "configure" ];then
+    chmod 777 $AltServer_PATH
 fi
+
+
+echo "Installed"
