@@ -1,0 +1,24 @@
+name: Build deb file
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |
+          pip3 install pyinstaller PySide2 PyQt5 
+      - uses: actions/checkout@v2
+      - name: submodules-init
+        uses: snickerbockers/submodules-init@v4
+      - name: Build
+        run: |
+          chmod +x build.sh
+          /bin/bash -c ./build.sh
+      - name: Upload deb file
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: "AltServer.deb"
+          path: "AltServer.deb"
