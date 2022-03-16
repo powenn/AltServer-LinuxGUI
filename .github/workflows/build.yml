@@ -13,7 +13,7 @@ jobs:
       - name: Install Dependencies
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.8
       - run: |
           pip install PyQt5 PySide2 pyinstaller pyqt5-plugins 
       - name: Build
