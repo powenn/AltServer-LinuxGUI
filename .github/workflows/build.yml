@@ -16,7 +16,7 @@ jobs:
           python-version: 3.7
       - run: |
           python -m pip install --upgrade pip
-          pip install PyQt5 PySide2 pyinstaller pyqt5-plugins requests subprocess
+          pip install PyQt5 PySide2 pyinstaller pyqt5-plugins requests
       - name: Build
         run: |
           chmod +x build.sh
