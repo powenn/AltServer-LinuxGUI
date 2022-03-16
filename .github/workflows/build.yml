@@ -7,12 +7,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Install Dependencies
-        run: |
-          chmod +x build.sh
       - uses: actions/checkout@v2
       - name: submodules-init
         uses: snickerbockers/submodules-init@v4
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - run: pip install PyQt5 PySide2 pyinstaller
       - name: Build
         run: |
           chmod +x build.sh
