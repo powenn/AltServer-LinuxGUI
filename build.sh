@@ -9,4 +9,4 @@ if [ ! -d "./AltServer/usr/lib" ]; then
 fi
 
 cp -R ./dist/altserver ./AltServer/usr/lib
-dpkg -b AltServer AltServer.deb
+dpkg-deb --build --root-owner-group AltServer AltServer.deb
