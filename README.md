@@ -35,7 +35,27 @@ Needed dependencies
 sudo apt-get install usbmuxd libimobiledevice6 libimobiledevice-utils wget curl
 ```
 
-Make sure it has execute permission ,and double click to run 
+## How to install and uninstall
+
+Install
+
+`Download the release and do `
+```
+sudo dpkg -i AltServer.deb
+```
+or
+```
+sudo apt install AltServer.deb
+```
+
+Uninstall
+'''
+sudo apt remove altserverlinux
+'''
+or
+'''
+sudo dpkg -r altserverlinux
+'''
 
 If you didn't see the app display on tray,you have to install `gnome-shell-extension-appindicator`
 
@@ -52,14 +72,7 @@ For older versions and others linux distributions,you have to compile it manuall
 
 ## How to build
 
-It's written in PyQt5,so you have to install it and used modules and pyinstaller
-
-Modify UI.spec,relpace the path to yours,and then run this
-
-```
-pyinstaller -i Icon.ico UI.spec
-```
-
+It's written in PyQt5,so you have to install it and all used modules and pyinstaller then run build.sh(If you are on lower version os,you might need to do some modification)
 
 ## Demo Video
 
