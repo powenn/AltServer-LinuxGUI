@@ -50,13 +50,13 @@ sudo apt install AltServer.deb
 
 Uninstall
 
-'''
+```
 sudo apt remove altserverlinux
-'''
+```
 or
-'''
+```
 sudo dpkg -r altserverlinux
-'''
+```
 
 If you didn't see the app display on tray,you have to install `gnome-shell-extension-appindicator`
 
@@ -74,6 +74,8 @@ For older versions and others linux distributions,you have to compile it manuall
 ## How to build
 
 It's written in PyQt5,so you have to install it and all used modules and pyinstaller then run build.sh(If you are on lower version os,you might need to do some modification)
+
+I am using VScode to maintain this,so I would say that VScode is a great choice to build,test,develop or contribute to it 
 
 ## Demo Video
 
