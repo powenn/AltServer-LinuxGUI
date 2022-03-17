@@ -49,6 +49,7 @@ sudo apt install AltServer.deb
 ```
 
 Uninstall
+
 '''
 sudo apt remove altserverlinux
 '''
