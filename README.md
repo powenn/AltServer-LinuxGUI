@@ -77,6 +77,19 @@ It's written in PyQt5,so you have to install it and all used modules and pyinsta
 
 I am using VScode to maintain this,so I would say that VScode is a great choice to build,test,develop or contribute to it 
 
+Require dependencies
+
+`python3-pyqt5 python3-pip`
+```
+sudo apt install python3-pyqt5 python3-pip
+```
+```
+python3 -m pip install —upgrade pip
+```
+`Pyside2 pyinstaller pyqt5-plugins `
+```
+pip3 install Pyside2 pyinstaller pyqt5-plugins 
+```
 ## Demo Video
 
 <a href="https://www.youtube.com/watch?v=YTL99EzzrQc">
