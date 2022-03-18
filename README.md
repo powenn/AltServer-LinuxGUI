@@ -1,6 +1,8 @@
 # AltServer-LinuxGUI
  
-Currently Works on newer debian-based linux distributions
+Currently providing release for Debian-Based distributions
+
+For others distributions,please build manually with the instruction below
 
 Demo videos at the bottom
 
@@ -9,6 +11,7 @@ AltServer from https://github.com/NyaMisty/AltServer-Linux/releases
 Special thanks to [NyaMisty](https://github.com/NyaMisty) for AltServer-Linux project 
 
 ![photo][1]
+![photo][2]
 
 ## About the GUI
 
@@ -97,3 +100,4 @@ pip3 install Pyside2 pyinstaller pyqt5-plugins
 </a>
 
 [1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/02.png
+[2]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/03.png
