@@ -1,0 +1,31 @@
+name: Build deb file
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - uses: actions/checkout@v2
+      - name: submodules-init
+        uses: snickerbockers/submodules-init@v4
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8.12
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install python3-pyqt5 python3-pip
+          python3 -m pip install --upgrade pip
+          pip3 install Pyside2 pyinstaller pyqt5-plugins requests
+      - name: Build
+        run: |
+          chmod +x build.sh
+          /bin/bash -c ./build.sh
+      - name: Upload deb file
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: "AltServer.deb"
+          path: "AltServer.deb"
