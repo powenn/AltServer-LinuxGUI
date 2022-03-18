@@ -1,8 +1,8 @@
 # AltServer-LinuxGUI
  
-Currently providing release for Debian-Based distributions
+Currently providing release for Debian-Based distributions,but I had tested this on manjaro,It works
 
-For others distributions,please build manually with the instruction below
+If the release not working on the distribution which you using,please build manually with the instruction below
 
 Demo videos at the bottom
 
