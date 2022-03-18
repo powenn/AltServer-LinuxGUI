@@ -84,7 +84,7 @@ Require dependencies
 sudo apt install python3-pyqt5 python3-pip
 ```
 ```
-python3 -m pip install —upgrade pip
+python3 -m pip install --upgrade pip
 ```
 `Pyside2 pyinstaller pyqt5-plugins `
 ```
