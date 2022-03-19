@@ -1,6 +1,6 @@
 # AltServer-LinuxGUI
  
-Currently providing release for Debian-Based distributions,but I had tested this on manjaro,It works
+Tested on Debian11,Ubuntu20.04,Manjaro21.2.4
 
 If the release not working on the distribution which you're using,please build manually with the instruction below
 
@@ -61,16 +61,11 @@ or
 sudo dpkg -r altserverlinux
 ```
 
-If you didn't see the app display on tray,you have to install `gnome-shell-extension-appindicator`
+If you are using gnome and didn't see the app display on tray,you have to install `gnome-shell-extension-appindicator`
 
-And enable it in tweaks:extension
-```
-sudo apt install gnome-shell-extension-appindicator
-```
+And enable it
 
-For Ubuntu 21.10 ,please check https://websetnet.net/top-10-things-to-do-after-installing-ubuntu-21-10-desktop/ and https://extensions.gnome.org/extension/615/appindicator-support/
-
-For older versions and others linux distributions,you have to compile it manually at the moment
+please check https://extensions.gnome.org/extension/615/appindicator-support/
 
 
 
@@ -100,4 +95,4 @@ pip3 install Pyside2 pyinstaller pyqt5-plugins
 </a>
 
 [1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/02.png
-[2]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/03.png
+[2]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/04.png
