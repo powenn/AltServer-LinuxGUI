@@ -90,8 +90,8 @@ pip3 install Pyside2 pyinstaller pyqt5-plugins
 ```
 ## Demo Video
 
-<a href="https://www.youtube.com/watch?v=YTL99EzzrQc">
-  <img src="https://img.youtube.com/vi/YTL99EzzrQc/maxresdefault.jpg" >
+<a href="https://www.youtube.com/watch?v=kEYg-f8lDOQ">
+  <img src="https://img.youtube.com/vi/kEYg-f8lDOQ/maxresdefault.jpg" >
 </a>
 
 [1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/02.png
