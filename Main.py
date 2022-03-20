@@ -21,7 +21,6 @@ def resource_path(relative_path):
 
 cwd = os.getcwd()
 AltServer = resource_path("AltServer")
-AltServerDaemon = resource_path("AltServerDaemon")
 AutoStart = resource_path("AutoStart.sh")
 Exec = cwd+"/altserver"
 UserName = subprocess.check_output("whoami",shell=True).decode('utf-8').replace("\n", "")
@@ -149,9 +148,9 @@ def pair():
 
 @QtCore.Slot()
 def restart_daemon():
-    subprocess.run('killall %s' %AltServerDaemon,shell=True)
+    subprocess.run('killall %s' %AltServer,shell=True)
     subprocess.run('idevicepair pair',shell=True)
-    subprocess.run('%s &> /dev/null &' %AltServerDaemon,shell=True)
+    subprocess.run('%s &> /dev/null &' %AltServer,shell=True)
 
 @QtCore.Slot()
 def check_update():

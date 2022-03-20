@@ -8,8 +8,6 @@ from Main import *
 # check permission
 if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AltServer,shell=True) != "" :
     subprocess.run("chmod +x %s" %AltServer,shell=True)
-if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AltServerDaemon,shell=True) != "" :
-    subprocess.run("chmod +x %s" %AltServerDaemon,shell=True)
 if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AutoStart,shell=True) != "" :
     subprocess.run("chmod +x %s" %AutoStart,shell=True)
 
@@ -88,7 +86,7 @@ menu.addSeparator()
 
 # Add a Quit option to the menu.
 def app_quit():
-    subprocess.run('killall %s' %AltServerDaemon,shell=True)
+    subprocess.run('killall %s' %AltServer,shell=True)
     app.quit()
     
 quit = QAction("Quit AltServer")
@@ -101,7 +99,7 @@ menu.addAction(quit)
 
 # Add the menu to the tray
 tray.setContextMenu(menu)
-subprocess.run('%s &> /dev/null &' %AltServerDaemon,shell=True)
+subprocess.run('%s &> /dev/null &' %AltServer,shell=True)
 UpdateNotification()
 app.exec_()
 
