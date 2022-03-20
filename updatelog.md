@@ -1,5 +1,5 @@
-0.1.3
-Now pack into deb file for app support
-You can Install it to your operate system(Newer debian-based)
-**Have to manually update for this version**
-please check https://github.com/powenn/AltServer-LinuxGUI
+0.1.4
+Using the latest commit of AltServer-Linux
+AltServerDaemon is no longer needed
+You can find and delete in /usr/lib/altserver/resources
+For details: https://github.com/powenn/AltServer-LinuxGUI

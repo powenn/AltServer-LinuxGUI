@@ -1,5 +1,7 @@
 # AltServer-LinuxGUI
- 
+
+Currently providing release for x64
+
 Tested on Debian11,Ubuntu20.04,Manjaro21.2.4
 
 If the release not working on the distribution which you're using,please build manually with the instruction below
@@ -70,6 +72,8 @@ please check https://extensions.gnome.org/extension/615/appindicator-support/
 
 
 ## How to build
+
+For others architecture,replace AltServer binary in resources folder,and then run build.sh
 
 It's written in PyQt5,so you have to install it and all used modules and pyinstaller then run build.sh(If you are on lower version os,you might need to do some modification)
 
