@@ -193,10 +193,10 @@ def check_update():
                             NewRelease_Installation.communicate(input=sudo_passwd_bytes) 
                             subprocess.run("rm -rf %s" %deb_file,shell=True)
                             subprocess.run("rm -rf %s" %update_pyfile,shell=True)
-                            Update_done_msg_box = QMessageBox()
-                            Update_done_msg_box.setText("Update Done\nApp will restart to apply the new version")
-                            Update_done_msg_box.exec()
                             if NewRelease_Installation.returncode == 0 :
+                                Update_done_msg_box = QMessageBox()
+                                Update_done_msg_box.setText("Update Done\nApp will restart to apply the new version")
+                                Update_done_msg_box.exec()
                                 os.execl(sys.executable,sys.executable,*sys.argv)
                             else :
                                 Update_err_msg_box = QMessageBox()
