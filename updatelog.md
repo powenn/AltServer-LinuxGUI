@@ -1,5 +1,4 @@
-0.1.4
-Using the latest commit of AltServer-Linux
-AltServerDaemon is no longer needed
-You can find and delete in /usr/lib/altserver/resources
+0.1.5
+Added auto-restart-after-updated
+(You will see that in next update)
 For details: https://github.com/powenn/AltServer-LinuxGUI

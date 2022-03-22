@@ -24,7 +24,6 @@ AltServer = resource_path("AltServer")
 AutoStart = resource_path("AutoStart.sh")
 Exec = cwd+"/altserver"
 UserName = subprocess.check_output("whoami",shell=True).decode('utf-8').replace("\n", "")
-Update_successed = False
 
 def internet_stat():
     timeout = 5
@@ -190,23 +189,27 @@ def check_update():
                         subprocess.run("curl -L 'https://github.com/powenn/AltServer-LinuxGUI/raw/main/update.py' > %s" %update_pyfile,shell=True)
                         Updating = subprocess.run("python3 %s" %update_pyfile,shell=True)
                         if Updating.returncode == 0:
-                            subprocess.Popen("sudo -S dpkg -i %s" %deb_file, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True).communicate(input=sudo_passwd_bytes) 
-                            Update_successed = True
+                            NewRelease_Installation = subprocess.Popen("sudo -S dpkg -i %s" %deb_file, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True)
+                            NewRelease_Installation.communicate(input=sudo_passwd_bytes) 
                             subprocess.run("rm -rf %s" %deb_file,shell=True)
+                            subprocess.run("rm -rf %s" %update_pyfile,shell=True)
                             Update_done_msg_box = QMessageBox()
-                            Update_done_msg_box.setText("Update Done\nPlease restart the App to apply the new version")
+                            Update_done_msg_box.setText("Update Done\nApp will restart to apply the new version")
                             Update_done_msg_box.exec()
+                            if NewRelease_Installation.returncode == 0 :
+                                os.execl(sys.executable,sys.executable,*sys.argv)
+                            else :
+                                Update_err_msg_box = QMessageBox()
+                                Update_err_msg_box.setText("Error occurred")
+                                Update_err_msg_box.exec()
                         if Updating.returncode == 1 :
-                            Update_successed = False
                             Update_err_msg_box = QMessageBox()
                             Update_err_msg_box.setText("Error occurred")
                             Update_err_msg_box.exec()
                     if sudo_Check != 0 :
-                        Update_successed = False
                         Wrong_sudo_passwd_box = QMessageBox()
                         Wrong_sudo_passwd_box.setText("Wrong password entered")
                         Wrong_sudo_passwd_box.exec() 
-                    return Update_successed
                 send_passwd_btn.setText("Send")
                 send_passwd_btn.clicked.connect(Button_passwd_Clicked)
                 passwd_Layout.addWidget(passwd_label)
