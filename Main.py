@@ -28,7 +28,7 @@ UserName = subprocess.check_output("whoami",shell=True).decode('utf-8').replace(
 def internet_stat():
     timeout = 5
     try:
-        requests.get("https://www.google.com", timeout=timeout)
+        requests.get("https://github.com", timeout=timeout)
         return True
     except (requests.ConnectionError, requests.Timeout) as exception:
 	    return False
@@ -238,8 +238,4 @@ def UpdateNotification() :
             Update_Avaliable_box.setWindowTitle('UPDATE AVALIABLE')
             Update_Avaliable_box.setText(UpdateLog)
             Update_Avaliable_box.exec()
-    if (internet_stat()) == False:
-        No_network_box = QMessageBox()
-        No_network_box.setWindowTitle('No network')
-        No_network_box.setText("Please connect to network")
-        No_network_box.exec()
+            

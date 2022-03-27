@@ -1,6 +1,9 @@
 Package: AltServerLinux
-Version: 0.1.5
+Name: AltServerLinuxGUI
+Version: 0.1.6
 Architecture: all
-Maintainer: powen
+Author: powen <powen0966091716@gmail.com>
+Maintainer: powen <powen0966091716@gmail.com>
 Description: GUI for AltServerLinux
-Depiction: https://github.com/powenn/AltServer-LinuxGUI
+Depiction: https://powenn.github.io/AltServer-LinuxGUI
+Homepage: https://github.com/powenn/AltServer-LinuxGUI

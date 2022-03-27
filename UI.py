@@ -63,7 +63,6 @@ def launch_config() :
         subprocess.run("rm -rf /home/*/.config/autostart/AltServer.desktop",shell=True)
 
 LaunchAtLogin.toggled.connect(launch_config)
-
 menu.addAction(LaunchAtLogin)
 
 # Add Pair in  option to the menu.
@@ -83,23 +82,18 @@ CheckUpdate.triggered.connect(check_update)
 menu.addAction(CheckUpdate)
 menu.addSeparator()
 
-
 # Add a Quit option to the menu.
 def app_quit():
     subprocess.run('killall %s' %AltServer,shell=True)
-    app.quit()
-    
+    app.quit()    
 quit = QAction("Quit AltServer")
 quit.triggered.connect(app_quit)
-
 quit.setCheckable(False)
 quit.setShortcut('Ctrl+Q')
 menu.addAction(quit)
-
 
 # Add the menu to the tray
 tray.setContextMenu(menu)
 subprocess.run('%s &> /dev/null &' %AltServer,shell=True)
 UpdateNotification()
 app.exec_()
-
