@@ -12,8 +12,8 @@ AltServer from https://github.com/NyaMisty/AltServer-Linux/releases
 
 Special thanks to [NyaMisty](https://github.com/NyaMisty) for AltServer-Linux project 
 
-![photo][1]
-![photo][2]
+ <img src="https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/02.png" alt="02.png"> 
+ <img src="https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/04.png" alt="04.png">
 
 ## About the GUI
 
@@ -97,6 +97,3 @@ pip3 install Pyside2 pyinstaller pyqt5-plugins
 <a href="https://www.youtube.com/watch?v=kEYg-f8lDOQ">
   <img src="https://img.youtube.com/vi/kEYg-f8lDOQ/maxresdefault.jpg" >
 </a>
-
-[1]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/02.png
-[2]:https://github.com/powenn/AltServer-LinuxGUI/blob/main/photos/04.png
