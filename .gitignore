@@ -5,5 +5,7 @@ __pycache__
 .DS_Store
 log.txt
 AltServer/usr/lib/altserver
+resources/AltServer
+resources/AltStore.ipa
 *.spec
 *.deb

@@ -2,14 +2,14 @@
 
 cd "$(dirname "$0")" || exit
 
+ALTSERVER_VERSION="v0.0.3-rc1"
+ALTSTORE_VERSION="1_4_9"
 
 if [ ! -f "./resources/AltServer" ]; then
-   echo 'AltServer not exist'
-   exit   
+    curl -L "https://github.com/NyaMisty/AltServer-Linux/releases/download/$ALTSERVER_VERSION/AltServer-x86_64" > "./resources/AltServer"
 fi
 if [ ! -f "./resources/AltStore.ipa" ]; then
-    echo 'AltStore.ipa not exist'
-    exit    
+    curl -L "https://cdn.altstore.io/file/altstore/apps/altstore/$ALTSTORE_VERSION.ipa" > "./resources/AltStore.ipa"
 fi
 if [ -d "./AltServer/usr/lib" ]; then
     rm -rf "./AltServer/usr/lib"

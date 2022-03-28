@@ -22,12 +22,8 @@ jobs:
           pip3 install pyinstaller pyqt5-plugins requests
       - name: Build
         run: |
-          ALTSTORE_VERSION = 1_4_9
-          ALTSERVER_VERSION= v0.0.3-rc1
-          curl -L 'https://cdn.altstore.io/file/altstore/apps/altstore/$(ALTSTORE_VERSION).ipa' > "./resources/AltStore.ipa"
-          curl -L 'https://github.com/NyaMisty/AltServer-Linux/releases/download/$(ALTSERVER_VERSION)/AltServer-x86_64' > "./resources/AltServer"
-          chmod +x build.sh
-          /bin/bash -c ./build.sh
+          chmod +x action.sh
+          /bin/bash -c ./action.sh
       - name: Upload deb file
         uses: actions/upload-artifact@v2.2.4
         with:
