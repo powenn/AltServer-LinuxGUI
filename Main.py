@@ -5,6 +5,7 @@
 # import
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+from PySide2 import QtCore
 from subprocess import *
 import subprocess
 from shutil import *
@@ -37,6 +38,7 @@ LocalVersion=subprocess.check_output("sed -n 1p %s" %resource_path("version"),sh
 LatestVersion=""
 
 # Function part
+@QtCore.Slot()
 def about_message():
     msg_box = QMessageBox()
     msg_box.setIconPixmap(QPixmap(resource_path("Icon@128.png")))
@@ -45,6 +47,7 @@ def about_message():
     msg_box.setDetailedText('Source code :\nhttps://github.com/powenn/AltServer-LinuxGUI\nFor questions about this GUI, you can contact @powen00hsiao on Twitter')
     msg_box.exec()
 
+@QtCore.Slot()
 def Installation():
     DeviceCheck=subprocess.run('idevicepair pair',shell=True)
     if DeviceCheck.returncode == 1 :
@@ -138,14 +141,17 @@ def Installation():
         AccountArea.setLayout(Layout)
         AccountArea.exec()
 
+@QtCore.Slot()
 def pair():
     subprocess.run('idevicepair pair',shell=True)
 
+@QtCore.Slot()
 def restart_daemon():
     subprocess.run('killall %s' %AltServer,shell=True)
     subprocess.run('idevicepair pair',shell=True)
     subprocess.run('%s &> /dev/null &' %AltServer,shell=True)
 
+@QtCore.Slot()
 def check_update():
     Passwd_Check_Time = 0
     if (internet_stat()) == True  :
@@ -222,6 +228,7 @@ def check_update():
         No_network_box.exec()
         
 # Show update avaliable message
+@QtCore.Slot()
 def UpdateNotification() :
     if (internet_stat()) == True:
         LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode('utf-8')

@@ -88,9 +88,9 @@ sudo apt install python3-pyqt5 python3-pip
 ```
 python3 -m pip install --upgrade pip
 ```
-`pyinstaller pyqt5-plugins `
+`Pyside2 pyinstaller pyqt5-plugins `
 ```
-pip3 install pyinstaller pyqt5-plugins 
+pip3 install Pyside2 pyinstaller pyqt5-plugins 
 ```
 Place AltServer-Linux binary and AltStore.ipa into resources folder then run build.sh
 ```

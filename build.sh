@@ -2,7 +2,6 @@
 
 cd "$(dirname "$0")" || exit
 
-
 if [ ! -f "./resources/AltServer" ]; then
    echo 'AltServer not exist'
    exit   
