@@ -92,6 +92,15 @@ python3 -m pip install --upgrade pip
 ```
 pip3 install pyinstaller pyqt5-plugins 
 ```
+Place AltServer-Linux binary and AltStore.ipa into resources folder then run build.sh
+```
+resources
+    AltServer
+    AltStore.ipa
+    AutoStart.sh
+    and others
+```
+
 ## Demo Video
 
 <a href="https://www.youtube.com/watch?v=kEYg-f8lDOQ">
