@@ -3,7 +3,7 @@
 set -ex
 
 AltServer_PATH="/usr/lib/altserver"
-USER=$(logname)
+USER=$SUDO_USER
 
 if [ -d "$AltServer_PATH" ]; then
     sudo chown -R "$USER:$USER" "$AltServer_PATH"
