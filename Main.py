@@ -6,9 +6,7 @@
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PySide2 import QtCore
-from subprocess import *
 import subprocess
-from shutil import *
 import requests
 import glob
 import os
@@ -74,7 +72,7 @@ def Installation():
             InsAltStoreCMD='%s -u %s -a %s -p %s %s > %s' % (resource_path("AltServer"),UDID,AppleID,Password,PATH,resource_path("log.txt"))
             Installing = True
             WarnTime=0
-            InsAltStore=subprocess.Popen(InsAltStoreCMD, stdin=PIPE, stdout=PIPE, shell=True)
+            InsAltStore=subprocess.Popen(InsAltStoreCMD, stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
             while Installing :   
                 CheckIns=subprocess.run('grep "Installation Failed" %s' %resource_path("log.txt"),shell=True)
                 CheckWarn=subprocess.run('grep "Are you sure you want to continue?" %s' %resource_path("log.txt"),shell=True)
