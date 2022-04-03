@@ -11,6 +11,7 @@ import requests
 import os
 import sys
 import shutil
+import pathlib
 
 # set path
 def resource_path(relative_path):
@@ -30,9 +31,10 @@ Exec = cwd + "/altserver"
 UserName = os.getlogin()
 
 HOME = os.path.expanduser("~")
-TMP_FILE = os.path.join(HOME, ".temp/log.txt")
+TMP_FILE = os.path.join(HOME, ".tmp/log.txt")
 if not os.path.exists(TMP_FILE):
-    subprocess.run(f"touch {TMP_FILE}", shell=True)
+    os.makedirs(os.path.dirname(TMP_FILE), exist_ok=True)
+    pathlib.Path(TMP_FILE).touch()
 
 
 def internet_stat():

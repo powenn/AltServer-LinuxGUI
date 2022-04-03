@@ -7,6 +7,7 @@ conflicts=('altserver-gui')
 url="https://github.com/powenn/AltServer-LinuxGUI"
 license=('AGPL3')
 options=('!strip' '!emptydirs')
+depends=('libimobiledevice')
 source=("https://github.com/powenn/AltServer-LinuxGUI/releases/download/${pkgver}/AltServer.deb")
 sha256sums=('bc11522d64f83734ace6fdcadacd7c5cbcd67d0d052e8bdebf4be119c651d5ae')
 
