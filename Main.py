@@ -31,6 +31,7 @@ UserName = os.getlogin()
 
 HOME = os.path.expanduser("~")
 TMP_FILE = os.path.join(HOME, ".temp/log.txt")
+open(TMP_FILE, "a").close()
 
 
 def internet_stat():
