@@ -11,6 +11,7 @@ import requests
 import os
 import sys
 import shutil
+import pathlib
 
 # set path
 def resource_path(relative_path):
@@ -31,7 +32,8 @@ UserName = os.getlogin()
 
 HOME = os.path.expanduser("~")
 TMP_FILE = os.path.join(HOME, ".temp/log.txt")
-open(TMP_FILE, "a").close()
+if not pathlib.Path.exists(TMP_FILE):
+    pathlib.Path(TMP_FILE).touch()
 
 
 def internet_stat():
