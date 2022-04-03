@@ -29,6 +29,9 @@ AutoStart = resource_path("AutoStart.sh")
 Exec = cwd + "/altserver"
 UserName = os.getlogin()
 
+HOME = os.path.expanduser("~")
+TMP_FILE = os.path.join(HOME, ".temp/log.txt")
+
 
 def internet_stat():
     timeout = 5
@@ -107,7 +110,7 @@ def Installation():
             AccountArea.close()
             AppleID = IDInputArea.text()
             Password = PasswordInputArea.text()
-            InsAltStoreCMD = f'{resource_path("AltServer")} -u {UDID} -a {AppleID} -p {Password} {PATH} > {resource_path("log.txt")}'
+            InsAltStoreCMD = f'{resource_path("AltServer")} -u {UDID} -a {AppleID} -p {Password} {PATH} > {TMP_FILE}'
             Installing = True
             WarnTime = 0
             InsAltStore = subprocess.Popen(
@@ -118,18 +121,18 @@ def Installation():
             )
             while Installing:
                 CheckIns = subprocess.run(
-                    f'grep "Installation Failed" {resource_path("log.txt")}', shell=True
+                    f'grep "Installation Failed" {TMP_FILE}', shell=True
                 )
                 CheckWarn = subprocess.run(
-                    f'grep "Are you sure you want to continue?" {resource_path("log.txt")}',
+                    f'grep "Are you sure you want to continue?" {TMP_FILE}',
                     shell=True,
                 )
                 CheckSuccess = subprocess.run(
-                    f'grep "Installation Succeeded" {resource_path("log.txt")}',
+                    f'grep "Installation Succeeded" {TMP_FILE}',
                     shell=True,
                 )
                 Check2fa = subprocess.run(
-                    f'grep "Requires two factor..." {resource_path("log.txt")}',
+                    f'grep "Requires two factor..." {TMP_FILE}',
                     shell=True,
                 )
 
@@ -137,14 +140,14 @@ def Installation():
                     Installing = False
                     InsAltStore.terminate()
                     Failmsg = subprocess.check_output(
-                        f"tail -6 {resource_path('log.txt')}", shell=True
+                        f"tail -6 {TMP_FILE}", shell=True
                     ).decode()
                     Failmsg_box = QMessageBox()
                     Failmsg_box.setText(Failmsg)
                     Failmsg_box.exec()
                 if CheckWarn.returncode == 0 and WarnTime == 0:
                     Warnmsg = subprocess.check_output(
-                        f"tail -8 {resource_path('log.txt')}", shell=True
+                        f"tail -8 {TMP_FILE}", shell=True
                     ).decode()
                     Warnmsg_box = QMessageBox()
                     buttonReply = QMessageBox.warning(
