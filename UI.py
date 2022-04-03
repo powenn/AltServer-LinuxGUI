@@ -4,12 +4,13 @@
 
 # import
 from Main import *
+import glob
 
 # check permission
-if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AltServer,shell=True) != "" :
-    subprocess.run("chmod +x %s" %AltServer,shell=True)
-if subprocess.run('stat %s | grep -- "-rw-r--r--"' %AutoStart,shell=True) != "" :
-    subprocess.run("chmod +x %s" %AutoStart,shell=True)
+if not os.access(AltServer, os.X_OK):
+    subprocess.run(f"chmod +x {AltServer}", shell=True)
+if not os.access(AutoStart, os.X_OK):
+    subprocess.run(f"chmod +x {AutoStart}", shell=True)
 
 # UI part
 app = QApplication(sys.argv)
@@ -57,7 +58,7 @@ def launch_config() :
          launch_enable=False
     if launch_enable :
         LaunchAtLogin.setChecked(True)
-        subprocess.run("%s" %resource_path("AutoStart.sh"),shell=True)
+        subprocess.run(resource_path("AutoStart.sh"),shell=True)
     if not launch_enable :
         LaunchAtLogin.setChecked(False)
         subprocess.run("rm -rf /home/*/.config/autostart/AltServer.desktop",shell=True)
@@ -84,7 +85,7 @@ menu.addSeparator()
 
 # Add a Quit option to the menu.
 def app_quit():
-    subprocess.run('killall %s' %AltServer,shell=True)
+    subprocess.run(f'killall {AltServer}',shell=True)
     app.quit()    
 quit = QAction("Quit AltServer")
 quit.triggered.connect(app_quit)
@@ -94,6 +95,6 @@ menu.addAction(quit)
 
 # Add the menu to the tray
 tray.setContextMenu(menu)
-subprocess.run('%s &> /dev/null &' %AltServer,shell=True)
+subprocess.run(f'{AltServer} &> /dev/null &',shell=True)
 UpdateNotification()
 app.exec_()
