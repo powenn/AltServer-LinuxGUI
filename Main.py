@@ -110,7 +110,9 @@ def Installation():
             AccountArea.close()
             AppleID = IDInputArea.text()
             Password = PasswordInputArea.text()
-            InsAltStoreCMD = f'{AltServer} -u {UDID} -a {AppleID} -p {Password} {PATH} > {TMP_FILE}'
+            InsAltStoreCMD = (
+                f"{AltServer} -u {UDID} -a {AppleID} -p {Password} {PATH} > {TMP_FILE}"
+            )
             Installing = True
             WarnTime = 0
             InsAltStore = subprocess.Popen(
