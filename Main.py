@@ -32,7 +32,7 @@ UserName = os.getlogin()
 
 HOME = os.path.expanduser("~")
 TMP_FILE = os.path.join(HOME, ".temp/log.txt")
-if not pathlib.Path.exists(TMP_FILE):
+if not os.path.exists(TMP_FILE):
     pathlib.Path(TMP_FILE).touch()
 
 
