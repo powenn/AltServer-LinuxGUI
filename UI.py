@@ -4,7 +4,6 @@
 
 # import
 from Main import *
-import glob
 
 # check permission
 if not os.access(AltServer, os.X_OK):

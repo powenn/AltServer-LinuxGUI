@@ -6,6 +6,7 @@
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PySide2 import QtCore
+import glob
 import subprocess
 import requests
 import os
@@ -48,7 +49,7 @@ def about_message():
         f'Version : {LocalVersion}')
     msg_box.setDetailedText(
         'Source code :\n'
-        'https://github.com/powenn/AltServer-LinuxGUI'
+        'https://github.com/powenn/AltServer-LinuxGUI\n'
         'For questions about this GUI, you can contact @powen00hsiao on Twitter')
     msg_box.exec()
 
@@ -64,7 +65,11 @@ def Installation():
     if DeviceCheck.returncode == 0 :
         PATH = resource_path("AltStore.ipa")
         _udid = subprocess.check_output("lsusb -v 2> /dev/null | grep -e 'Apple Inc' -A 2 | grep iSerial | awk '{print $3}'",shell=True).decode().strip()
-        UDID = _udid[:8] + '-' + _udid[8:]
+        _udid_length = len(_udid)
+        if _udid_length == 24 :
+            UDID = _udid[:8] + '-' + _udid[8:]
+        if _udid_length == 40 :
+            UDID = _udid
         AccountArea=QDialog()
         Layout = QVBoxLayout()
         Privacy_msg = QLabel(
@@ -140,7 +145,7 @@ def Installation():
                 if CheckSuccess.returncode == 0 :
                     Installing = False
                     Success_msg.setVisible(True)
-                    Success_msg.showMessage("Installation Succeded","AltStore was successfully installed", QSystemTrayIcon.Information,200)
+                    Success_msg.showMessage("Installation Succeded","AltStore was successfully installed",QSystemTrayIcon.Information,200)
 
         btn.setText("Install")
         btn.clicked.connect(ButtonClicked)
