@@ -1,5 +1,5 @@
 name: Build deb file
-on: [pull_request, workflow_dispatch]
+on: [ pull_request, workflow_dispatch ]
 
 jobs:
   build:
@@ -19,11 +19,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install python3-pyqt5 python3-pip curl
           python3 -m pip install --upgrade pip
-          pip3 install Pyside2 pyinstaller pyqt5-plugins requests
+          pip3 install pyinstaller pyqt5-plugins requests
       - name: Build
         run: |
-          chmod +x action.sh
-          /bin/bash -c ./action.sh
+          chmod +x packaging/ubuntu/build_deb.sh
+          /bin/bash -c ./packaging/ubuntu/build_deb.sh
       - name: Upload deb file
         uses: actions/upload-artifact@v2.2.4
         with:
