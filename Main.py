@@ -40,7 +40,7 @@ if not os.path.exists(TMP_FILE):
 def internet_stat():
     timeout = 5
     try:
-        requests.get("https://example.com", timeout=timeout)
+        requests.get("https://github.com", timeout=timeout)
         return True
     except (requests.ConnectionError, requests.Timeout):
         return False
