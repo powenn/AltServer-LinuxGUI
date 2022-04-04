@@ -1,0 +1,17 @@
+pkgname=altserver-gui-bin
+pkgver=0.1.7
+pkgrel=1
+pkgdesc="GUI for AltServerLinux. Binary version"
+arch=('x86_64')
+conflicts=('altserver-gui')
+url="https://github.com/powenn/AltServer-LinuxGUI"
+license=('AGPL3')
+options=('!strip' '!emptydirs')
+depends=('libimobiledevice')
+source=("https://github.com/powenn/AltServer-LinuxGUI/releases/download/${pkgver}/AltServer.deb")
+sha256sums=('bc11522d64f83734ace6fdcadacd7c5cbcd67d0d052e8bdebf4be119c651d5ae')
+
+package() {
+	bsdtar -O -xf "AltServer.deb" data.tar.xz | bsdtar -C "${pkgdir}" -xJf -
+	install -dm0755 "${pkgdir}"
+}
