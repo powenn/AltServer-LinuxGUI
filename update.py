@@ -4,11 +4,8 @@
 
 # import
 import subprocess
-import requests
 
-LatestVersion = requests.get(
-    "https://github.com/powenn/AltServer-LinuxGUI/raw/main/version"
-).text
+LatestVersion=subprocess.check_output("curl -Lsk https://github.com/powenn/AltServer-LinuxGUI/raw/main/version",shell=True).decode()
 GetReleaseCMD = f"curl -L https://github.com/powenn/AltServer-LinuxGUI/releases/download/{LatestVersion}/AltServer.deb > /tmp/AltServer.deb"
 
 subprocess.run(GetReleaseCMD, shell=True)
