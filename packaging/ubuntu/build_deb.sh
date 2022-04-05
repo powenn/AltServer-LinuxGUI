@@ -4,7 +4,7 @@
 PACKAGE_NAME="altserver-linuxgui"
 
 # Path variables
-SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 REPO_ROOT_DIR="$SCRIPT_DIR/../.."
 SOURCE_DIR="$REPO_ROOT_DIR/src"
 TEMP_DIR=$(mktemp -d)
@@ -36,4 +36,4 @@ cp -R "$DIST_ROOT_DIR/$PACKAGE_NAME/"* "$DEB_USR_LIB_DIR"
 cp -R "$PROGRAM_RESOURCES_DIR" "$DEB_USR_LIB_DIR"
 
 # Build deb package
-dpkg-deb --build --root-owner-group AltServer "$OUTPUT_DEB_PATH"
+dpkg-deb --build --root-owner-group "$DEB_ROOT_DIR" "$OUTPUT_DEB_PATH"

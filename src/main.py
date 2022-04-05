@@ -245,6 +245,7 @@ def update_binaries():
     logging.info(f"Updating {ALT_SERVER_LINUX_NAME} and {ALT_STORE_NAME} binaries")
 
     # Download AltServer Linux exec
+    stop_daemon()
     if download_file(ALT_SERVER_URL, ALT_SERVER_EXEC):
         update_config("alt_server_update_date", datetime.datetime.now().strftime("%c"))
         os.chmod(ALT_SERVER_EXEC, 0o755)
@@ -490,6 +491,9 @@ def gui_install_alt_store():
             else:
                 logging.info(line_log_message)
 
+    # Stop the daemon if it's running
+    stop_daemon()
+
     # Throw an error message if unable to pair with connected iOS device
     if not pair_ios_device():
         errmsg_box = QMessageBox()
@@ -528,6 +532,9 @@ def gui_install_alt_store():
     layout.addWidget(btn)
     account_area.setLayout(layout)
     account_area.exec()
+
+    # Start the daemon
+    start_daemon()
 
 
 def gui_restart_daemon():
