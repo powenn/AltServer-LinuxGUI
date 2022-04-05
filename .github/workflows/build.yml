@@ -27,5 +27,5 @@ jobs:
       - name: Upload deb file
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: "AltServer.deb"
-          path: "AltServer.deb"
+          name: "altserver-linuxgui.deb"
+          path: "altserver-linuxgui.deb"
