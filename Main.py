@@ -233,6 +233,14 @@ def restart_daemon():
 
 @QtCore.Slot()
 def check_update():
+    # Only check update for Ubuntu/Debian
+    if not shutil.which("dpkg"):
+        Not_deb_distro_msg_box = QMessageBox()
+        Not_deb_distro_msg_box.setText(
+            "Update is only supported for Ubuntu/Debian distro"
+        )
+        Not_deb_distro_msg_box.exec()
+        return
     Passwd_Check_Time = 0
     if internet_stat():
         LatestVersion = requests.get(
