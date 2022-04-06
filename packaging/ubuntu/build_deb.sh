@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")" || exit
+
 # Package variables
 PACKAGE_NAME="altserver-linuxgui"
 
