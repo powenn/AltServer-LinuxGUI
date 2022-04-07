@@ -24,6 +24,7 @@ GUI_VERSION = "0.5"
 PROGRAM_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_DIRECTORY = os.path.join(PROGRAM_DIRECTORY, "resources")
 USER_DATA_DIRECTORY = os.path.expanduser(f"~/.local/share/{GUI_NAME}")
+USER_DATA_PATH = os.path.join(USER_DATA_DIRECTORY, "./")
 CONFIG_FILE_PATH = os.path.join(USER_DATA_DIRECTORY, "config.json")
 LOG_DIRECTORY = os.path.join(USER_DATA_DIRECTORY, "logs")
 
@@ -225,7 +226,7 @@ def start_daemon():
     stop_daemon()
     logging.info(f"Starting {ALT_SERVER_LINUX_NAME} daemon")
     DAEMON_PROCESS = subprocess.Popen(ALT_SERVER_EXEC,
-                                      cwd=USER_DATA_DIRECTORY,
+                                      cwd=USER_DATA_PATH,
                                       stderr=subprocess.DEVNULL,
                                       stdout=subprocess.DEVNULL)
 
@@ -399,7 +400,7 @@ def gui_install_alt_store():
         # Start the installation process
         logging.info(f"Installing {ALT_STORE_NAME} to connected iOS device: '{connected_device_udids[0]}'")
         install_process = subprocess.Popen(install_command,
-                                           cwd=USER_DATA_DIRECTORY,
+                                           cwd=USER_DATA_PATH,
                                            stderr=subprocess.PIPE,
                                            stdin=subprocess.PIPE,
                                            stdout=subprocess.PIPE)
