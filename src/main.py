@@ -24,7 +24,7 @@ GUI_VERSION = "0.5"
 PROGRAM_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_DIRECTORY = os.path.join(PROGRAM_DIRECTORY, "resources")
 USER_DATA_DIRECTORY = os.path.expanduser(f"~/.local/share/{GUI_NAME}")
-USER_DATA_PATH = os.path.join(USER_DATA_DIRECTORY, "./")
+USER_DATA_PATH = os.path.dirname(USER_DATA_DIRECTORY)
 CONFIG_FILE_PATH = os.path.join(USER_DATA_DIRECTORY, "config.json")
 LOG_DIRECTORY = os.path.join(USER_DATA_DIRECTORY, "logs")
 
