@@ -3,4 +3,3 @@ __pycache__
 *.spec
 *.deb
 .idea/
-AltServerData

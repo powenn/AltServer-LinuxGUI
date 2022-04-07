@@ -87,7 +87,7 @@ def create_directory(directory_path: str, fail_exit: bool = False):
                 logging.error(f"Unable to create directory '{directory_path}', {err}")
 
             if fail_exit:
-                exit(1)
+                sys.exit(1)
 
 
 def download_file(file_url: str, output_path: str) -> bool:
@@ -224,7 +224,10 @@ def start_daemon():
 
     stop_daemon()
     logging.info(f"Starting {ALT_SERVER_LINUX_NAME} daemon")
-    DAEMON_PROCESS = subprocess.Popen(ALT_SERVER_EXEC, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
+    DAEMON_PROCESS = subprocess.Popen(ALT_SERVER_EXEC,
+                                      cwd=USER_DATA_DIRECTORY,
+                                      stderr=subprocess.DEVNULL,
+                                      stdout=subprocess.DEVNULL)
 
 
 def stop_daemon():
@@ -369,7 +372,7 @@ def gui_initialization():
         GUI_PROCESS.exec_()
     except Exception as err:
         logging.error(f"Failed to initialize GUI, {err}")
-        exit(1)
+        sys.exit(1)
 
 
 def gui_install_alt_store():
@@ -396,6 +399,7 @@ def gui_install_alt_store():
         # Start the installation process
         logging.info(f"Installing {ALT_STORE_NAME} to connected iOS device: '{connected_device_udids[0]}'")
         install_process = subprocess.Popen(install_command,
+                                           cwd=USER_DATA_DIRECTORY,
                                            stderr=subprocess.PIPE,
                                            stdin=subprocess.PIPE,
                                            stdout=subprocess.PIPE)
@@ -566,7 +570,7 @@ def gui_quit():
     logging.info(f"Exiting {GUI_NAME}")
     stop_daemon()
     GUI_PROCESS.quit()
-    exit(0)
+    sys.exit(0)
 
 
 if __name__ == "__main__":
@@ -576,11 +580,11 @@ if __name__ == "__main__":
 
     # If any of our required dependencies are not installed, exit out
     if not exec_path_check(IDEVICEPAIR_EXEC) or not exec_path_check(IDEVICE_ID_EXEC):
-        exit(1)
+        sys.exit(1)
 
     # If unable to connect to the internet, exit out
     if not connection_check():
-        exit(1)
+        sys.exit(1)
 
     # If AltServer or AltStore binaries are absent, download them
     if not os.path.exists(ALT_SERVER_EXEC) or not os.path.exists(ALT_STORE_IPA_PATH):
