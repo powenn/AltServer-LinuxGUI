@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=AltServer
-Path=/usr/lib/altserver-linuxgui
 Exec=/usr/lib/altserver-linuxgui/altserver-linuxgui
 Icon=/usr/share/icons/altserver-linuxgui.ico
 Terminal=false
