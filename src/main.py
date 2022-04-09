@@ -8,8 +8,9 @@ import time
 from typing import List, Any
 
 import requests
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtGui import QPixmap, QIcon, QFont
+from PyQt5.QtWidgets import QMessageBox, QSystemTrayIcon, QMenu, QAction, QDialog, QVBoxLayout, QLabel, QLineEdit, \
+    QPushButton, QApplication
 
 # Program constants
 ALT_SERVER_NAME = "AltServer"
@@ -47,8 +48,12 @@ IDEVICE_ID_EXEC = "idevice_id"
 
 # Process constants
 GUI_PROCESS = QApplication(sys.argv)
-START_DAEMON_ON_LAUNCH_TOGGLE = None
 DAEMON_PROCESS = None
+
+# GUI elements
+TRAY_MENU = None
+DAEMON_STATUS_TOGGLE = None
+START_DAEMON_ON_LAUNCH_TOGGLE = None
 
 # Config keys
 CONFIG_KEY_START_DAEMON = "start_daemon_on_launch"
@@ -222,7 +227,6 @@ def start_daemon():
     """
     global DAEMON_PROCESS
 
-    stop_daemon()
     logging.info(f"Starting {ALT_SERVER_LINUX_NAME} daemon")
     DAEMON_PROCESS = subprocess.Popen(ALT_SERVER_EXEC,
                                       cwd=USER_DATA_DIRECTORY,
@@ -235,9 +239,12 @@ def stop_daemon():
     Stops the AltServer daemon if it is running
     :return: None
     """
+    global DAEMON_PROCESS
+
     if DAEMON_PROCESS is not None:
         logging.info(f"Stopping {ALT_SERVER_LINUX_NAME} daemon")
         DAEMON_PROCESS.terminate()
+        DAEMON_PROCESS = None
 
 
 def update_binaries():
@@ -245,23 +252,24 @@ def update_binaries():
     Downloads the latest versions of AltServer and AltStore
     :return: None
     """
-    logging.info(f"Updating {ALT_SERVER_LINUX_NAME} and {ALT_STORE_NAME} binaries")
-
     # Download AltServer Linux exec
-    stop_daemon()
-    if download_file(ALT_SERVER_URL, ALT_SERVER_EXEC):
-        update_config("alt_server_update_date", datetime.datetime.now().strftime("%c"))
-        os.chmod(ALT_SERVER_EXEC, 0o755)
-    else:
-        logging.error(f"Failed to download {ALT_SERVER_LINUX_NAME} binary, please try again later")
-        os.remove(ALT_SERVER_EXEC)
+    if not os.path.exists(ALT_SERVER_EXEC):
+        logging.info(f"Updating {ALT_SERVER_LINUX_NAME} executable")
+        if download_file(ALT_SERVER_URL, ALT_SERVER_EXEC):
+            update_config("alt_server_update_date", datetime.datetime.now().strftime("%c"))
+            os.chmod(ALT_SERVER_EXEC, 0o755)
+        else:
+            logging.error(f"Failed to download {ALT_SERVER_LINUX_NAME} binary, please try again later")
+            os.remove(ALT_SERVER_EXEC)
 
     # Download AltStore IPA
-    if download_file(ALT_STORE_IPA_URL, ALT_STORE_IPA_PATH):
-        update_config("alt_store_update_date", datetime.datetime.now().strftime("%c"))
-    else:
-        logging.error(f"Failed to download {ALT_STORE_NAME} IPA, please try again later")
-        os.remove(ALT_STORE_IPA_PATH)
+    if not os.path.exists(ALT_STORE_IPA_PATH):
+        logging.info(f"Updating cached {ALT_STORE_NAME} .ipa")
+        if download_file(ALT_STORE_IPA_URL, ALT_STORE_IPA_PATH):
+            update_config("alt_store_update_date", datetime.datetime.now().strftime("%c"))
+        else:
+            logging.error(f"Failed to download {ALT_STORE_NAME} IPA, please try again later")
+            os.remove(ALT_STORE_IPA_PATH)
 
 
 def update_config(config_key: str, config_value: Any):
@@ -311,15 +319,10 @@ def gui_initialization():
         logging.info(f"Starting {GUI_NAME}")
 
         # Initialize QT application
+        icon = QIcon(get_resource("MenuBar.png"))
         GUI_PROCESS.setApplicationName("AltServer")
         GUI_PROCESS.setQuitOnLastWindowClosed(False)
-        icon = QIcon(get_resource("MenuBar.png"))
         GUI_PROCESS.setWindowIcon(QIcon(get_resource("AppIcon.png")))
-
-        # Initialize system tray icon
-        tray = QSystemTrayIcon()
-        tray.setIcon(icon)
-        tray.setVisible(True)
 
         # Initialize menu and add 'About' option
         menu = QMenu()
@@ -338,24 +341,21 @@ def gui_initialization():
         menu_item_pair = QAction("Pair")
         menu_item_pair.triggered.connect(pair_ios_device)
         menu.addAction(menu_item_pair)
-
-        # Add 'Restart AltDaemon' option to menu
-        menu_item_restart = QAction("Restart AltDaemon")
-        menu.addAction(menu_item_restart)
-        menu_item_restart.triggered.connect(gui_restart_daemon)
-
-        # Add 'Autostart AltDaemon' option to menu
-        global START_DAEMON_ON_LAUNCH_TOGGLE
-        START_DAEMON_ON_LAUNCH_TOGGLE = QAction("Start AltDaemon on Launch", checkable=True)
-        menu.addAction(START_DAEMON_ON_LAUNCH_TOGGLE)
-        START_DAEMON_ON_LAUNCH_TOGGLE.triggered.connect(gui_toggle_start_daemon_on_launch)
-        START_DAEMON_ON_LAUNCH_TOGGLE.setChecked(get_config_value(CONFIG_KEY_START_DAEMON, default_value=False))
         menu.addSeparator()
 
-        # Add 'Update' option to menu
-        menu_item_update = QAction(f"Update {ALT_SERVER_NAME}")
-        menu_item_update.triggered.connect(update_binaries)
-        menu.addAction(menu_item_update)
+        # Add 'AltServer daemon toggle' option to menu
+        global DAEMON_STATUS_TOGGLE
+        DAEMON_STATUS_TOGGLE = QAction("Daemon toggle not initialized", checkable=True)
+        DAEMON_STATUS_TOGGLE.triggered.connect(gui_toggle_daemon)
+        DAEMON_STATUS_TOGGLE.setChecked(False)
+        menu.addAction(DAEMON_STATUS_TOGGLE)
+
+        # Add 'Autostart AltServer' option to menu
+        global START_DAEMON_ON_LAUNCH_TOGGLE
+        START_DAEMON_ON_LAUNCH_TOGGLE = QAction(f"Start {ALT_SERVER_NAME} daemon on launch", checkable=True)
+        START_DAEMON_ON_LAUNCH_TOGGLE.triggered.connect(gui_toggle_start_daemon_on_launch)
+        START_DAEMON_ON_LAUNCH_TOGGLE.setChecked(get_config_value(CONFIG_KEY_START_DAEMON, default_value=False))
+        menu.addAction(START_DAEMON_ON_LAUNCH_TOGGLE)
         menu.addSeparator()
 
         # Add 'Quit' option to menu
@@ -365,10 +365,15 @@ def gui_initialization():
         menu_item_quit.setShortcut("Ctrl+Q")
         menu.addAction(menu_item_quit)
 
-        # Add the menu to the system tray icon
-        tray.setContextMenu(menu)
+        # Initialize system tray icon and add menu to it
+        global TRAY_MENU
+        TRAY_MENU = QSystemTrayIcon()
+        TRAY_MENU.setIcon(icon)
+        TRAY_MENU.setVisible(True)
+        TRAY_MENU.setContextMenu(menu)
 
         # Start application
+        gui_update_ui_elements()
         GUI_PROCESS.exec_()
     except Exception as err:
         logging.error(f"Failed to initialize GUI, {err}")
@@ -380,6 +385,7 @@ def gui_install_alt_store():
     Installs AltStore on the connected iOS device
     :return: None
     """
+    restart_daemon = False
 
     def installation_workflow():
         """
@@ -418,11 +424,10 @@ def gui_install_alt_store():
                 logging.info(line_log_message)
 
                 install_process.terminate()
-                success_msg.setVisible(True)
-                success_msg.showMessage("Installation Succeeded",
-                                        "AltStore was successfully installed",
-                                        QSystemTrayIcon.Information,
-                                        200)
+                TRAY_MENU.showMessage("Installation Succeeded",
+                                      "AltStore was successfully installed",
+                                      QSystemTrayIcon.Information,
+                                      5000)
                 return
 
             # Install failed workflow
@@ -470,6 +475,7 @@ def gui_install_alt_store():
                     """
                     two_factor_dialog.close()
                     code_2fa = two_factor_input.text()
+                    logging.info(f"Submitting 2FA code: {code_2fa}")
                     code_2fa = code_2fa + "\n"
                     code_2fa_bytes = bytes(code_2fa.encode())
                     install_process.communicate(input=code_2fa_bytes)
@@ -496,7 +502,10 @@ def gui_install_alt_store():
                 logging.info(line_log_message)
 
     # Stop the daemon if it's running
-    stop_daemon()
+    if DAEMON_PROCESS is not None:
+        restart_daemon = True
+        stop_daemon()
+        gui_update_ui_elements()
 
     # Throw an error message if unable to pair with connected iOS device
     if not pair_ios_device():
@@ -525,31 +534,37 @@ def gui_install_alt_store():
     id_input_area = QLineEdit(placeholderText="Apple ID")
     password_input_area = QLineEdit(placeholderText="Password")
     password_input_area.setEchoMode(QLineEdit.EchoMode.Password)
-    btn = QPushButton()
-    success_msg = QSystemTrayIcon()
-    btn.setText("Install")
-    btn.clicked.connect(installation_workflow)
+    install_button = QPushButton()
+    install_button.setText("Install")
+    install_button.clicked.connect(installation_workflow)
     layout.addWidget(label)
     layout.addWidget(privacy_msg)
     layout.addWidget(id_input_area)
     layout.addWidget(password_input_area)
-    layout.addWidget(btn)
+    layout.addWidget(install_button)
     account_area.setLayout(layout)
     account_area.exec()
 
-    # Start the daemon
-    start_daemon()
+    # Start the daemon if it was running before the install started
+    if restart_daemon:
+        start_daemon()
+        gui_update_ui_elements()
 
 
-def gui_restart_daemon():
+def gui_toggle_daemon():
     """
     Restarts the AltServer daemon
     :return: None
     """
-    logging.info(f"Restarting {ALT_SERVER_LINUX_NAME} daemon")
-    stop_daemon()
-    pair_ios_device()
-    start_daemon()
+    # Stop the daemon if it's running
+    if DAEMON_PROCESS is not None:
+        stop_daemon()
+
+    # Start the daemon if it's not running
+    elif DAEMON_PROCESS is None:
+        start_daemon()
+
+    gui_update_ui_elements()
 
 
 def gui_toggle_start_daemon_on_launch():
@@ -569,8 +584,23 @@ def gui_quit():
     """
     logging.info(f"Exiting {GUI_NAME}")
     stop_daemon()
+    gui_update_ui_elements()
     GUI_PROCESS.quit()
     sys.exit(0)
+
+
+def gui_update_ui_elements():
+    """
+    Updates GUI elements based on current program state
+    :return: None
+    """
+    # Update the status toggle in the menu
+    if DAEMON_PROCESS is not None:
+        DAEMON_STATUS_TOGGLE.setText("AltServer daemon is running")
+        DAEMON_STATUS_TOGGLE.setChecked(True)
+    elif DAEMON_PROCESS is None:
+        DAEMON_STATUS_TOGGLE.setText("AltServer daemon is stopped")
+        DAEMON_STATUS_TOGGLE.setChecked(False)
 
 
 if __name__ == "__main__":
@@ -586,9 +616,8 @@ if __name__ == "__main__":
     if not connection_check():
         sys.exit(1)
 
-    # If AltServer or AltStore binaries are absent, download them
-    if not os.path.exists(ALT_SERVER_EXEC) or not os.path.exists(ALT_STORE_IPA_PATH):
-        update_binaries()
+    # Check for AltServer and AltStore updates
+    update_binaries()
 
     # If the user enabled auto start, start the daemon
     if get_config_value(CONFIG_KEY_START_DAEMON, default_value=False):
