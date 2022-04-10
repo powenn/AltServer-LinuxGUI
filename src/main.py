@@ -1,4 +1,5 @@
 import datetime
+import hashlib
 import json
 import logging
 import os
@@ -9,16 +10,19 @@ import time
 from typing import List, Any
 
 import requests
+from PyQt5.QtCore import QThread
 from PyQt5.QtGui import QPixmap, QIcon, QFont
 from PyQt5.QtWidgets import QMessageBox, QSystemTrayIcon, QMenu, QAction, QDialog, QVBoxLayout, QLabel, QLineEdit, \
-    QPushButton, QApplication
+    QPushButton, QApplication, QProgressDialog
 
 # Program constants
 ALT_SERVER_NAME = "AltServer"
 ALT_SERVER_VERSION = "v0.0.3-rc1"
+ALT_SERVER_LINUX_NAME = "AltServer-Linux"
+ALT_SERVER_MD5_SUM = "592f00dc6cf255c4277ec674711febdd"
 ALT_STORE_NAME = "AltStore"
 ALT_STORE_VERSION = "1_4_9"
-ALT_SERVER_LINUX_NAME = "AltServer-Linux"
+ALT_STORE_MD5_SUM = "127add35f5a64a71ff30297a182b91ef"
 GUI_NAME = "AltServer-LinuxGUI"
 GUI_VERSION = "0.6"
 
@@ -33,6 +37,7 @@ LOG_DIRECTORY = os.path.join(USER_DATA_DIRECTORY, "logs")
 # Networking constants
 ALT_SERVER_URL = f"https://github.com/NyaMisty/AltServer-Linux/releases/download/{ALT_SERVER_VERSION}/AltServer-x86_64"
 ALT_STORE_IPA_URL = f"https://cdn.altstore.io/file/altstore/apps/altstore/{ALT_STORE_VERSION}.ipa"
+CHUNK_SIZE = 512
 CONNECTION_CHECK_URL = "https://github.com"
 CONNECTION_TIMEOUT = 5
 MAX_CONNECTION_RETRIES = 5
@@ -49,6 +54,8 @@ IDEVICEPAIR_EXEC = "idevicepair"
 IDEVICE_ID_EXEC = "idevice_id"
 
 # Config keys
+CONFIG_KEY_ALT_SERVER_UPDATE = "alt_server_update_date"
+CONFIG_KEY_ALT_STORE_UPDATE = "alt_store_update_date"
 CONFIG_KEY_START_DAEMON = "start_daemon_on_launch"
 
 # GUI elements
@@ -95,8 +102,11 @@ class AltServerDaemon:
         Stops the AltServer daemon if it is running
         :return: None
         """
-        self.__daemon_subprocess.kill()
-        self.__daemon_thread.join()
+        if self.__daemon_subprocess is not None:
+            self.__daemon_subprocess.kill()
+
+        if self.__daemon_thread is not None:
+            self.__daemon_thread.join()
 
         while self.daemon_is_running():
             logging.info(f"Waiting for {ALT_SERVER_NAME} daemon to stop")
@@ -143,6 +153,31 @@ class AltServerDaemon:
             DAEMON_STATUS_TOGGLE.setChecked(False)
 
 
+class GuiDownloadThread(QThread):
+    """
+    Thread that handles downloading a file with a GUI progress bar
+    """
+
+    def __init__(self, file_url: str, output_path: str, progress_dialog: QProgressDialog):
+        """
+        Thread that handles downloading a file with a GUI progress bar
+        :param file_url: URL to the file we want to download, Example: "https://path_to.file.com/file.zip"
+        :param output_path: Local path where the file should be saved to, Example: "~/Downloads"
+        :param progress_dialog: Popup dialog box containing a progress bar that tracks download status
+        """
+        super().__init__()
+        self.file_url = file_url
+        self.output_path = output_path
+        self.progress_dialog = progress_dialog
+
+    def run(self):
+        """
+        Executes the download process
+        :return: None
+        """
+        download_file(self.file_url, self.output_path, self.progress_dialog)
+
+
 def connection_check() -> bool:
     """
     Checks if we are able to connect to the internet
@@ -177,11 +212,12 @@ def create_directory(directory_path: str, fail_exit: bool = False):
                 sys.exit(1)
 
 
-def download_file(file_url: str, output_path: str) -> bool:
+def download_file(file_url: str, output_path: str, progress_dialog: QProgressDialog = None) -> bool:
     """
     Downloads a file from the internet and saves it locally
     :param file_url: URL to the file we want to download, Example: "https://path_to.file.com/file.zip"
     :param output_path: Local path where the file should be saved to, Example: "~/Downloads"
+    :param progress_dialog: Popup dialog box containing a progress bar that tracks download status
     :return: True if file was successfully downloaded, False if not
     """
     retry_counter = 0
@@ -191,9 +227,20 @@ def download_file(file_url: str, output_path: str) -> bool:
         try:
             with requests.get(file_url, stream=True, timeout=CONNECTION_TIMEOUT) as request:
                 if request.ok:
+                    if progress_dialog is not None:
+                        chunk_counter = 0
+                        progress_dialog.setRange(0, int(int(request.headers.get("Content-length")) / CHUNK_SIZE))
+
                     with open(output_path, "wb") as output_file:
-                        for chunk in request.iter_content(chunk_size=512):
+                        for chunk in request.iter_content(chunk_size=CHUNK_SIZE):
                             output_file.write(chunk)
+
+                            if progress_dialog is not None:
+                                chunk_counter += 1
+                                progress_dialog.setValue(chunk_counter)
+
+                                if progress_dialog.wasCanceled():
+                                    return False
 
                     logging.info(f"Successfully downloaded '{output_path}'")
                     return True
@@ -302,31 +349,6 @@ def pair_ios_device() -> bool:
         return False
 
 
-def update_binaries():
-    """
-    Downloads the latest versions of AltServer and AltStore
-    :return: None
-    """
-    # Download AltServer Linux exec
-    if not os.path.exists(ALT_SERVER_EXEC):
-        logging.info(f"Updating {ALT_SERVER_LINUX_NAME} executable")
-        if download_file(ALT_SERVER_URL, ALT_SERVER_EXEC):
-            update_config("alt_server_update_date", datetime.datetime.now().strftime("%c"))
-            os.chmod(ALT_SERVER_EXEC, 0o755)
-        else:
-            logging.error(f"Failed to download {ALT_SERVER_LINUX_NAME} binary, please try again later")
-            os.remove(ALT_SERVER_EXEC)
-
-    # Download AltStore IPA
-    if not os.path.exists(ALT_STORE_IPA_PATH):
-        logging.info(f"Updating cached {ALT_STORE_NAME} .ipa")
-        if download_file(ALT_STORE_IPA_URL, ALT_STORE_IPA_PATH):
-            update_config("alt_store_update_date", datetime.datetime.now().strftime("%c"))
-        else:
-            logging.error(f"Failed to download {ALT_STORE_NAME} IPA, please try again later")
-            os.remove(ALT_STORE_IPA_PATH)
-
-
 def update_config(config_key: str, config_value: Any):
     """
     Updates the config with a new value
@@ -363,6 +385,55 @@ def gui_about_message():
     msg_box.setDetailedText("Source code:\n"
                             "https://github.com/powenn/AltServer-LinuxGUI")
     msg_box.exec()
+
+
+def gui_critical_error(title: str, detailed_message: str, exit_code: int = 1):
+    """
+    Raises a message box with a critical error message and then exits
+    :param title: Error message title, Example: "Failed to download file.zip"
+    :param detailed_message: Detailed information about error, Example: "Verify file exists"
+    :param exit_code: Exit code to exit with after displaying the message box, Example: 1
+    :return: None
+    """
+    message_box = QMessageBox()
+    message_box.setIcon(QMessageBox.Critical)
+    message_box.setWindowTitle(title)
+    message_box.setText(f"{title}.\n\n{detailed_message}.")
+    message_box.exec()
+    sys.exit(exit_code)
+
+
+def gui_download(file_url: str, output_path: str, md5_sum: str) -> bool:
+    """
+    Download a file with a GUI progress box, verifies the file's integrity after download is complete
+    :param file_url: URL to the file we want to download, Example: "https://path_to.file.com/file.zip"
+    :param output_path: Local path where the file should be saved to, Example: "~/Downloads"
+    :param md5_sum: MD5 checksum used to verify the file's integrity, Example: "592f00dc6cf255c4277ec674711febdd"
+    :return: True if file downloaded and MD5 checksum matches, False if not
+    """
+    file_name = os.path.basename(output_path)
+
+    # Create progress dialog window
+    progress_dialog = QProgressDialog()
+    progress_dialog.setWindowTitle(f"Downloading {file_name}")
+    progress_dialog.setLabelText(file_url)
+    progress_dialog.setFixedSize(progress_dialog.size())
+    progress_dialog.setValue(0)
+
+    # Create download thread and start download
+    download_thread = GuiDownloadThread(file_url, output_path, progress_dialog)
+    download_thread.start()
+    progress_dialog.exec()
+
+    # Check MD5 sum to verify file was downloaded successfully
+    if os.path.isfile(output_path):
+        with open(output_path, "rb") as downloaded_file:
+            if md5_sum == hashlib.md5(downloaded_file.read()).hexdigest():
+                logging.info(f"Verified integrity of '{file_name}'")
+                return True
+
+    logging.error(f"Unable to verify integrity of '{file_name}'")
+    return False
 
 
 def gui_initialization():
@@ -648,20 +719,39 @@ if __name__ == "__main__":
     create_directory(USER_DATA_DIRECTORY, fail_exit=True)
     initialize_logging()
 
-    # If any of our required dependencies are not installed, exit out
-    if not exec_path_check(IDEVICEPAIR_EXEC) or not exec_path_check(IDEVICE_ID_EXEC):
-        no_idevicepair_message_box = QMessageBox()
-        no_idevicepair_message_box.setText("idevicepair is required to be installed")
-        no_idevicepair_message_box.exec()
+    # If idevicepair is not accessible, display an error message window and then exit
+    if not exec_path_check(IDEVICEPAIR_EXEC):
+        gui_critical_error(title=f"{IDEVICEPAIR_EXEC} could not be located",
+                           detailed_message="Verify libimobiledevice is installed")
+
+    # If idevice_id is not accessible, display an error message window and then exit
+    if not exec_path_check(IDEVICE_ID_EXEC):
+        gui_critical_error(title=f"{IDEVICE_ID_EXEC} could not be located",
+                           detailed_message="Verify libimobiledevice is installed")
 
     # If unable to connect to the internet, exit out
     if not connection_check():
-        no_network_message_box = QMessageBox()
-        no_network_message_box.setText("No network connected")
-        no_network_message_box.exec()
-    else:
-        # Check for AltServer and AltStore updates
-        update_binaries()
+        gui_critical_error(title="Unable to connect to the internet",
+                           detailed_message="Verify this host has a valid network connection")
+
+    # Download AltServer Linux exec if needed
+    if not os.path.exists(ALT_SERVER_EXEC):
+        if gui_download(file_url=ALT_SERVER_URL, output_path=ALT_SERVER_EXEC, md5_sum=ALT_SERVER_MD5_SUM):
+            update_config(CONFIG_KEY_ALT_SERVER_UPDATE, datetime.datetime.now().strftime("%c"))
+            os.chmod(ALT_SERVER_EXEC, 0o755)
+        else:
+            os.remove(ALT_SERVER_EXEC)
+            gui_critical_error(title=f"Failed to download {ALT_SERVER_LINUX_NAME}",
+                               detailed_message=f"Please try again later")
+
+    # Download AltStore IPA if needed
+    if not os.path.exists(ALT_STORE_IPA_PATH):
+        if gui_download(file_url=ALT_STORE_IPA_URL, output_path=ALT_STORE_IPA_PATH, md5_sum=ALT_STORE_MD5_SUM):
+            update_config(CONFIG_KEY_ALT_STORE_UPDATE, datetime.datetime.now().strftime("%c"))
+        else:
+            os.remove(ALT_STORE_IPA_PATH)
+            gui_critical_error(title=f"Failed to download {ALT_STORE_IPA_PATH}",
+                               detailed_message=f"Please try again later")
 
     # Initialize daemon container object
     DAEMON_OBJECT = AltServerDaemon()
