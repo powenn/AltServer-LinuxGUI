@@ -4,6 +4,7 @@ import logging
 import os
 import subprocess
 import sys
+import threading
 import time
 from typing import List, Any
 
@@ -19,7 +20,7 @@ ALT_STORE_NAME = "AltStore"
 ALT_STORE_VERSION = "1_4_9"
 ALT_SERVER_LINUX_NAME = "AltServer-Linux"
 GUI_NAME = "AltServer-LinuxGUI"
-GUI_VERSION = "0.5"
+GUI_VERSION = "0.6"
 
 # Path constants
 PROGRAM_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
@@ -47,19 +48,99 @@ ALT_STORE_IPA_PATH = os.path.join(USER_DATA_DIRECTORY, f"{ALT_STORE_NAME}_{ALT_S
 IDEVICEPAIR_EXEC = "idevicepair"
 IDEVICE_ID_EXEC = "idevice_id"
 
-# Process constants
-GUI_PROCESS = QApplication(sys.argv)
-DAEMON_PROCESS = None
-
-# GUI elements
-TRAY_MENU = None
-DAEMON_STATUS_TOGGLE = None
-START_DAEMON_ON_LAUNCH_TOGGLE = None
-
 # Config keys
 CONFIG_KEY_START_DAEMON = "start_daemon_on_launch"
 
+# GUI elements
+GUI_APPLICATION = QApplication(sys.argv)
+TRAY_MENU: QSystemTrayIcon or None = None
+DAEMON_STATUS_TOGGLE: QAction or None = None
+START_DAEMON_ON_LAUNCH_TOGGLE: QAction or None = None
+
+# Runtime variables
 LOGGING_INITIALIZED = False
+DAEMON_OBJECT = None
+
+
+class AltServerDaemon:
+    """
+    Container object that handles interfacing with the AltServer daemon
+    """
+    __daemon_subprocess = None
+    __daemon_thread = None
+
+    def daemon_is_running(self) -> bool:
+        """
+        Checks if the daemon is still running
+        :return: True if the daemon is running, False if not
+        """
+        if self.__daemon_subprocess is not None:
+            if self.__daemon_subprocess.poll() is None:
+                return True
+
+        return False
+
+    def start_daemon(self):
+        """
+        Starts the AltServer daemon
+        :return: None
+        """
+        self.__daemon_thread = threading.Thread(daemon=True,
+                                                name="altserver_daemon",
+                                                target=self.__daemon_process)
+        self.__daemon_thread.start()
+
+    def stop_daemon(self):
+        """
+        Stops the AltServer daemon if it is running
+        :return: None
+        """
+        self.__daemon_subprocess.kill()
+        self.__daemon_thread.join()
+
+        while self.daemon_is_running():
+            logging.info(f"Waiting for {ALT_SERVER_NAME} daemon to stop")
+            time.sleep(1)
+
+        logging.info(f"Stopped {ALT_SERVER_NAME} daemon")
+
+    def __daemon_process(self):
+        """
+        Actual daemon process that runs in the background once the daemon thread is started
+        :return:
+        """
+        logging.info(f"Starting {ALT_SERVER_NAME} daemon")
+        self.__daemon_subprocess = subprocess.Popen(ALT_SERVER_EXEC,
+                                                    cwd=USER_DATA_PATH,
+                                                    stderr=subprocess.STDOUT,
+                                                    stdout=subprocess.PIPE)
+
+        while True:
+            # Update GUI to reflect daemon status
+            self.__update_gui_status()
+
+            # Log any output from the daemon process
+            if self.__daemon_subprocess.poll() is None:
+                daemon_stdout = self.__daemon_subprocess.stdout.readline().decode().strip()
+                if daemon_stdout:
+                    logging.info(f"{ALT_SERVER_NAME} Daemon: {daemon_stdout}")
+
+            # If the daemon process stops print the exit code
+            else:
+                logging.info(f"{ALT_SERVER_NAME} Daemon: Exited with code {self.__daemon_subprocess.poll()}")
+                break
+
+    def __update_gui_status(self):
+        """
+        Updates relevant GUI elements to reflect the daemon's current status
+        :return: None
+        """
+        if self.daemon_is_running():
+            DAEMON_STATUS_TOGGLE.setText("AltServer daemon is running")
+            DAEMON_STATUS_TOGGLE.setChecked(True)
+        else:
+            DAEMON_STATUS_TOGGLE.setText("AltServer daemon is stopped")
+            DAEMON_STATUS_TOGGLE.setChecked(False)
 
 
 def connection_check() -> bool:
@@ -221,33 +302,6 @@ def pair_ios_device() -> bool:
         return False
 
 
-def start_daemon():
-    """
-    Starts the AltServer daemon
-    :return: None
-    """
-    global DAEMON_PROCESS
-
-    logging.info(f"Starting {ALT_SERVER_LINUX_NAME} daemon")
-    DAEMON_PROCESS = subprocess.Popen(ALT_SERVER_EXEC,
-                                      cwd=USER_DATA_PATH,
-                                      stderr=subprocess.DEVNULL,
-                                      stdout=subprocess.DEVNULL)
-
-
-def stop_daemon():
-    """
-    Stops the AltServer daemon if it is running
-    :return: None
-    """
-    global DAEMON_PROCESS
-
-    if DAEMON_PROCESS is not None:
-        logging.info(f"Stopping {ALT_SERVER_LINUX_NAME} daemon")
-        DAEMON_PROCESS.terminate()
-        DAEMON_PROCESS = None
-
-
 def update_binaries():
     """
     Downloads the latest versions of AltServer and AltStore
@@ -321,9 +375,9 @@ def gui_initialization():
 
         # Initialize QT application
         icon = QIcon(get_resource("MenuBar.png"))
-        GUI_PROCESS.setApplicationName("AltServer")
-        GUI_PROCESS.setQuitOnLastWindowClosed(False)
-        GUI_PROCESS.setWindowIcon(QIcon(get_resource("AppIcon.png")))
+        GUI_APPLICATION.setApplicationName("AltServer")
+        GUI_APPLICATION.setQuitOnLastWindowClosed(False)
+        GUI_APPLICATION.setWindowIcon(QIcon(get_resource("AppIcon.png")))
 
         # Initialize menu and add 'About' option
         menu = QMenu()
@@ -373,9 +427,12 @@ def gui_initialization():
         TRAY_MENU.setVisible(True)
         TRAY_MENU.setContextMenu(menu)
 
+        # If the user enabled auto start, start the daemon
+        if get_config_value(CONFIG_KEY_START_DAEMON, default_value=False):
+            DAEMON_OBJECT.start_daemon()
+
         # Start application
-        gui_update_ui_elements()
-        GUI_PROCESS.exec_()
+        GUI_APPLICATION.exec_()
     except Exception as err:
         logging.error(f"Failed to initialize GUI, {err}")
         sys.exit(1)
@@ -407,12 +464,16 @@ def gui_install_alt_store():
         logging.info(f"Installing {ALT_STORE_NAME} to connected iOS device: '{connected_device_udids[0]}'")
         install_process = subprocess.Popen(install_command,
                                            cwd=USER_DATA_PATH,
-                                           stderr=subprocess.PIPE,
+                                           stderr=subprocess.STDOUT,
                                            stdin=subprocess.PIPE,
                                            stdout=subprocess.PIPE)
 
         # Watch the installation process and react accordingly
         while True:
+            if install_process.poll() is not None:
+                logging.error(f"Installation process terminated unexpectedly. Exit code: {install_process.poll()}")
+                return
+
             try:
                 output_line = install_process.stdout.readline().decode().strip()
                 line_log_message = f"{ALT_SERVER_NAME}: {output_line}"
@@ -503,10 +564,9 @@ def gui_install_alt_store():
                 logging.info(line_log_message)
 
     # Stop the daemon if it's running
-    if DAEMON_PROCESS is not None:
+    if DAEMON_OBJECT.daemon_is_running():
         restart_daemon = True
-        stop_daemon()
-        gui_update_ui_elements()
+        DAEMON_OBJECT.stop_daemon()
 
     # Throw an error message if unable to pair with connected iOS device
     if not pair_ios_device():
@@ -548,8 +608,7 @@ def gui_install_alt_store():
 
     # Start the daemon if it was running before the install started
     if restart_daemon:
-        start_daemon()
-        gui_update_ui_elements()
+        DAEMON_OBJECT.start_daemon()
 
 
 def gui_toggle_daemon():
@@ -557,15 +616,10 @@ def gui_toggle_daemon():
     Restarts the AltServer daemon
     :return: None
     """
-    # Stop the daemon if it's running
-    if DAEMON_PROCESS is not None:
-        stop_daemon()
-
-    # Start the daemon if it's not running
-    elif DAEMON_PROCESS is None:
-        start_daemon()
-
-    gui_update_ui_elements()
+    if DAEMON_OBJECT.daemon_is_running():
+        DAEMON_OBJECT.stop_daemon()
+    else:
+        DAEMON_OBJECT.start_daemon()
 
 
 def gui_toggle_start_daemon_on_launch():
@@ -584,24 +638,9 @@ def gui_quit():
     :return: None
     """
     logging.info(f"Exiting {GUI_NAME}")
-    stop_daemon()
-    gui_update_ui_elements()
-    GUI_PROCESS.quit()
+    DAEMON_OBJECT.stop_daemon()
+    GUI_APPLICATION.quit()
     sys.exit(0)
-
-
-def gui_update_ui_elements():
-    """
-    Updates GUI elements based on current program state
-    :return: None
-    """
-    # Update the status toggle in the menu
-    if DAEMON_PROCESS is not None:
-        DAEMON_STATUS_TOGGLE.setText("AltServer daemon is running")
-        DAEMON_STATUS_TOGGLE.setChecked(True)
-    elif DAEMON_PROCESS is None:
-        DAEMON_STATUS_TOGGLE.setText("AltServer daemon is stopped")
-        DAEMON_STATUS_TOGGLE.setChecked(False)
 
 
 if __name__ == "__main__":
@@ -620,9 +659,8 @@ if __name__ == "__main__":
     # Check for AltServer and AltStore updates
     update_binaries()
 
-    # If the user enabled auto start, start the daemon
-    if get_config_value(CONFIG_KEY_START_DAEMON, default_value=False):
-        start_daemon()
+    # Initialize daemon container object
+    DAEMON_OBJECT = AltServerDaemon()
 
     # Start GUI
     gui_initialization()
