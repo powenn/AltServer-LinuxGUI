@@ -650,14 +650,18 @@ if __name__ == "__main__":
 
     # If any of our required dependencies are not installed, exit out
     if not exec_path_check(IDEVICEPAIR_EXEC) or not exec_path_check(IDEVICE_ID_EXEC):
-        sys.exit(1)
+        no_idevicepair_message_box = QMessageBox()
+        no_idevicepair_message_box.setText("idevicepair is required to be installed")
+        no_idevicepair_message_box.exec()
 
     # If unable to connect to the internet, exit out
     if not connection_check():
-        sys.exit(1)
-
-    # Check for AltServer and AltStore updates
-    update_binaries()
+        no_network_message_box = QMessageBox()
+        no_network_message_box.setText("No network connected")
+        no_network_message_box.exec()
+    else:
+        # Check for AltServer and AltStore updates
+        update_binaries()
 
     # Initialize daemon container object
     DAEMON_OBJECT = AltServerDaemon()
