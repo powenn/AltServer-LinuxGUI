@@ -1,35 +1,43 @@
 import datetime
+import hashlib
 import json
 import logging
 import os
 import subprocess
 import sys
+import threading
 import time
 from typing import List, Any
 
 import requests
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtCore import QThread
+from PyQt5.QtGui import QPixmap, QIcon, QFont
+from PyQt5.QtWidgets import QMessageBox, QSystemTrayIcon, QMenu, QAction, QDialog, QVBoxLayout, QLabel, QLineEdit, \
+    QPushButton, QApplication, QProgressDialog
 
 # Program constants
 ALT_SERVER_NAME = "AltServer"
 ALT_SERVER_VERSION = "v0.0.3-rc1"
+ALT_SERVER_LINUX_NAME = "AltServer-Linux"
+ALT_SERVER_MD5_SUM = "592f00dc6cf255c4277ec674711febdd"
 ALT_STORE_NAME = "AltStore"
 ALT_STORE_VERSION = "1_4_9"
-ALT_SERVER_LINUX_NAME = "AltServer-Linux"
+ALT_STORE_MD5_SUM = "127add35f5a64a71ff30297a182b91ef"
 GUI_NAME = "AltServer-LinuxGUI"
-GUI_VERSION = "0.5"
+GUI_VERSION = "0.6"
 
 # Path constants
 PROGRAM_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_DIRECTORY = os.path.join(PROGRAM_DIRECTORY, "resources")
 USER_DATA_DIRECTORY = os.path.expanduser(f"~/.local/share/{GUI_NAME}")
+USER_DATA_PATH = os.path.dirname(USER_DATA_DIRECTORY)
 CONFIG_FILE_PATH = os.path.join(USER_DATA_DIRECTORY, "config.json")
 LOG_DIRECTORY = os.path.join(USER_DATA_DIRECTORY, "logs")
 
 # Networking constants
 ALT_SERVER_URL = f"https://github.com/NyaMisty/AltServer-Linux/releases/download/{ALT_SERVER_VERSION}/AltServer-x86_64"
 ALT_STORE_IPA_URL = f"https://cdn.altstore.io/file/altstore/apps/altstore/{ALT_STORE_VERSION}.ipa"
+CHUNK_SIZE = 512
 CONNECTION_CHECK_URL = "https://github.com"
 CONNECTION_TIMEOUT = 5
 MAX_CONNECTION_RETRIES = 5
@@ -45,15 +53,129 @@ ALT_STORE_IPA_PATH = os.path.join(USER_DATA_DIRECTORY, f"{ALT_STORE_NAME}_{ALT_S
 IDEVICEPAIR_EXEC = "idevicepair"
 IDEVICE_ID_EXEC = "idevice_id"
 
-# Process constants
-GUI_PROCESS = QApplication(sys.argv)
-START_DAEMON_ON_LAUNCH_TOGGLE = None
-DAEMON_PROCESS = None
-
 # Config keys
+CONFIG_KEY_ALT_SERVER_UPDATE = "alt_server_update_date"
+CONFIG_KEY_ALT_STORE_UPDATE = "alt_store_update_date"
 CONFIG_KEY_START_DAEMON = "start_daemon_on_launch"
 
+# GUI elements
+GUI_APPLICATION = QApplication(sys.argv)
+TRAY_MENU: QSystemTrayIcon or None = None
+DAEMON_STATUS_TOGGLE: QAction or None = None
+START_DAEMON_ON_LAUNCH_TOGGLE: QAction or None = None
+
+# Runtime variables
 LOGGING_INITIALIZED = False
+DAEMON_OBJECT = None
+
+
+class AltServerDaemon:
+    """
+    Container object that handles interfacing with the AltServer daemon
+    """
+    __daemon_subprocess = None
+    __daemon_thread = None
+
+    def daemon_is_running(self) -> bool:
+        """
+        Checks if the daemon is still running
+        :return: True if the daemon is running, False if not
+        """
+        if self.__daemon_subprocess is not None:
+            if self.__daemon_subprocess.poll() is None:
+                return True
+
+        return False
+
+    def start_daemon(self):
+        """
+        Starts the AltServer daemon
+        :return: None
+        """
+        self.__daemon_thread = threading.Thread(daemon=True,
+                                                name="altserver_daemon",
+                                                target=self.__daemon_process)
+        self.__daemon_thread.start()
+
+    def stop_daemon(self):
+        """
+        Stops the AltServer daemon if it is running
+        :return: None
+        """
+        if self.__daemon_subprocess is not None:
+            self.__daemon_subprocess.kill()
+
+        if self.__daemon_thread is not None:
+            self.__daemon_thread.join()
+
+        while self.daemon_is_running():
+            logging.info(f"Waiting for {ALT_SERVER_NAME} daemon to stop")
+            time.sleep(1)
+
+        logging.info(f"Stopped {ALT_SERVER_NAME} daemon")
+
+    def __daemon_process(self):
+        """
+        Actual daemon process that runs in the background once the daemon thread is started
+        :return:
+        """
+        logging.info(f"Starting {ALT_SERVER_NAME} daemon")
+        self.__daemon_subprocess = subprocess.Popen(ALT_SERVER_EXEC,
+                                                    cwd=USER_DATA_PATH,
+                                                    stderr=subprocess.STDOUT,
+                                                    stdout=subprocess.PIPE)
+
+        while True:
+            # Update GUI to reflect daemon status
+            self.__update_gui_status()
+
+            # Log any output from the daemon process
+            if self.__daemon_subprocess.poll() is None:
+                daemon_stdout = self.__daemon_subprocess.stdout.readline().decode().strip()
+                if daemon_stdout:
+                    logging.info(f"{ALT_SERVER_NAME} Daemon: {daemon_stdout}")
+
+            # If the daemon process stops print the exit code
+            else:
+                logging.info(f"{ALT_SERVER_NAME} Daemon: Exited with code {self.__daemon_subprocess.poll()}")
+                break
+
+    def __update_gui_status(self):
+        """
+        Updates relevant GUI elements to reflect the daemon's current status
+        :return: None
+        """
+        if self.daemon_is_running():
+            DAEMON_STATUS_TOGGLE.setText("AltServer daemon is running")
+            DAEMON_STATUS_TOGGLE.setChecked(True)
+        else:
+            DAEMON_STATUS_TOGGLE.setText("AltServer daemon is stopped")
+            DAEMON_STATUS_TOGGLE.setChecked(False)
+
+
+class GuiDownloadThread(QThread):
+    """
+    Thread that handles downloading a file with a GUI progress bar
+    """
+
+    def __init__(self, file_url: str, output_path: str, progress_dialog: QProgressDialog):
+        """
+        Thread that handles downloading a file with a GUI progress bar
+        :param file_url: URL to the file we want to download, Example: "https://path_to.file.com/file.zip"
+        :param output_path: Local path where the file should be saved to, Example: "~/Downloads"
+        :param progress_dialog: Popup dialog box containing a progress bar that tracks download status
+        """
+        super().__init__()
+        self.file_url = file_url
+        self.output_path = output_path
+        self.progress_dialog = progress_dialog
+
+    def run(self):
+        """
+        Executes the download process
+        :return: None
+        """
+        download_file(self.file_url, self.output_path, self.progress_dialog)
 
 
 def connection_check() -> bool:
@@ -87,14 +209,15 @@ def create_directory(directory_path: str, fail_exit: bool = False):
                 logging.error(f"Unable to create directory '{directory_path}', {err}")
 
             if fail_exit:
-                exit(1)
+                sys.exit(1)
 
 
-def download_file(file_url: str, output_path: str) -> bool:
+def download_file(file_url: str, output_path: str, progress_dialog: QProgressDialog = None) -> bool:
     """
     Downloads a file from the internet and saves it locally
     :param file_url: URL to the file we want to download, Example: "https://path_to.file.com/file.zip"
     :param output_path: Local path where the file should be saved to, Example: "~/Downloads"
+    :param progress_dialog: Popup dialog box containing a progress bar that tracks download status
     :return: True if file was successfully downloaded, False if not
     """
     retry_counter = 0
@@ -104,9 +227,20 @@ def download_file(file_url: str, output_path: str) -> bool:
         try:
             with requests.get(file_url, stream=True, timeout=CONNECTION_TIMEOUT) as request:
                 if request.ok:
+                    if progress_dialog is not None:
+                        chunk_counter = 0
+                        progress_dialog.setRange(0, int(int(request.headers.get("Content-length")) / CHUNK_SIZE))
+
                     with open(output_path, "wb") as output_file:
-                        for chunk in request.iter_content(chunk_size=512):
+                        for chunk in request.iter_content(chunk_size=CHUNK_SIZE):
                             output_file.write(chunk)
+
+                            if progress_dialog is not None:
+                                chunk_counter += 1
+                                progress_dialog.setValue(chunk_counter)
+
+                                if progress_dialog.wasCanceled():
+                                    return False
 
                     logging.info(f"Successfully downloaded '{output_path}'")
                     return True
@@ -215,52 +349,6 @@ def pair_ios_device() -> bool:
         return False
 
 
-def start_daemon():
-    """
-    Starts the AltServer daemon
-    :return: None
-    """
-    global DAEMON_PROCESS
-
-    stop_daemon()
-    logging.info(f"Starting {ALT_SERVER_LINUX_NAME} daemon")
-    DAEMON_PROCESS = subprocess.Popen(ALT_SERVER_EXEC, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
-
-
-def stop_daemon():
-    """
-    Stops the AltServer daemon if it is running
-    :return: None
-    """
-    if DAEMON_PROCESS is not None:
-        logging.info(f"Stopping {ALT_SERVER_LINUX_NAME} daemon")
-        DAEMON_PROCESS.terminate()
-
-
-def update_binaries():
-    """
-    Downloads the latest versions of AltServer and AltStore
-    :return: None
-    """
-    logging.info(f"Updating {ALT_SERVER_LINUX_NAME} and {ALT_STORE_NAME} binaries")
-
-    # Download AltServer Linux exec
-    stop_daemon()
-    if download_file(ALT_SERVER_URL, ALT_SERVER_EXEC):
-        update_config("alt_server_update_date", datetime.datetime.now().strftime("%c"))
-        os.chmod(ALT_SERVER_EXEC, 0o755)
-    else:
-        logging.error(f"Failed to download {ALT_SERVER_LINUX_NAME} binary, please try again later")
-        os.remove(ALT_SERVER_EXEC)
-
-    # Download AltStore IPA
-    if download_file(ALT_STORE_IPA_URL, ALT_STORE_IPA_PATH):
-        update_config("alt_store_update_date", datetime.datetime.now().strftime("%c"))
-    else:
-        logging.error(f"Failed to download {ALT_STORE_NAME} IPA, please try again later")
-        os.remove(ALT_STORE_IPA_PATH)
-
-
 def update_config(config_key: str, config_value: Any):
     """
     Updates the config with a new value
@@ -299,6 +387,55 @@ def gui_about_message():
     msg_box.exec()
 
 
+def gui_critical_error(title: str, detailed_message: str, exit_code: int = 1):
+    """
+    Raises a message box with a critical error message and then exits
+    :param title: Error message title, Example: "Failed to download file.zip"
+    :param detailed_message: Detailed information about error, Example: "Verify file exists"
+    :param exit_code: Exit code to exit with after displaying the message box, Example: 1
+    :return: None
+    """
+    message_box = QMessageBox()
+    message_box.setIcon(QMessageBox.Critical)
+    message_box.setWindowTitle(title)
+    message_box.setText(f"{title}.\n\n{detailed_message}.")
+    message_box.exec()
+    sys.exit(exit_code)
+
+
+def gui_download(file_url: str, output_path: str, md5_sum: str) -> bool:
+    """
+    Download a file with a GUI progress box, verifies the file's integrity after download is complete
+    :param file_url: URL to the file we want to download, Example: "https://path_to.file.com/file.zip"
+    :param output_path: Local path where the file should be saved to, Example: "~/Downloads"
+    :param md5_sum: MD5 checksum used to verify the file's integrity, Example: "592f00dc6cf255c4277ec674711febdd"
+    :return: True if file downloaded and MD5 checksum matches, False if not
+    """
+    file_name = os.path.basename(output_path)
+
+    # Create progress dialog window
+    progress_dialog = QProgressDialog()
+    progress_dialog.setWindowTitle(f"Downloading {file_name}")
+    progress_dialog.setLabelText(file_url)
+    progress_dialog.setFixedSize(progress_dialog.size())
+    progress_dialog.setValue(0)
+
+    # Create download thread and start download
+    download_thread = GuiDownloadThread(file_url, output_path, progress_dialog)
+    download_thread.start()
+    progress_dialog.exec()
+
+    # Check MD5 sum to verify file was downloaded successfully
+    if os.path.isfile(output_path):
+        with open(output_path, "rb") as downloaded_file:
+            if md5_sum == hashlib.md5(downloaded_file.read()).hexdigest():
+                logging.info(f"Verified integrity of '{file_name}'")
+                return True
+
+    logging.error(f"Unable to verify integrity of '{file_name}'")
+    return False
+
+
 def gui_initialization():
     """
     Initializes GUI items and constructs
@@ -308,15 +445,10 @@ def gui_initialization():
         logging.info(f"Starting {GUI_NAME}")
 
         # Initialize QT application
-        GUI_PROCESS.setApplicationName("AltServer")
-        GUI_PROCESS.setQuitOnLastWindowClosed(False)
         icon = QIcon(get_resource("MenuBar.png"))
-        GUI_PROCESS.setWindowIcon(QIcon(get_resource("AppIcon.png")))
-
-        # Initialize system tray icon
-        tray = QSystemTrayIcon()
-        tray.setIcon(icon)
-        tray.setVisible(True)
+        GUI_APPLICATION.setApplicationName("AltServer")
+        GUI_APPLICATION.setQuitOnLastWindowClosed(False)
+        GUI_APPLICATION.setWindowIcon(QIcon(get_resource("AppIcon.png")))
 
         # Initialize menu and add 'About' option
         menu = QMenu()
@@ -335,24 +467,21 @@ def gui_initialization():
         menu_item_pair = QAction("Pair")
         menu_item_pair.triggered.connect(pair_ios_device)
         menu.addAction(menu_item_pair)
-
-        # Add 'Restart AltDaemon' option to menu
-        menu_item_restart = QAction("Restart AltDaemon")
-        menu.addAction(menu_item_restart)
-        menu_item_restart.triggered.connect(gui_restart_daemon)
-
-        # Add 'Autostart AltDaemon' option to menu
-        global START_DAEMON_ON_LAUNCH_TOGGLE
-        START_DAEMON_ON_LAUNCH_TOGGLE = QAction("Start AltDaemon on Launch", checkable=True)
-        menu.addAction(START_DAEMON_ON_LAUNCH_TOGGLE)
-        START_DAEMON_ON_LAUNCH_TOGGLE.triggered.connect(gui_toggle_start_daemon_on_launch)
-        START_DAEMON_ON_LAUNCH_TOGGLE.setChecked(get_config_value(CONFIG_KEY_START_DAEMON, default_value=False))
         menu.addSeparator()
 
-        # Add 'Update' option to menu
-        menu_item_update = QAction(f"Update {ALT_SERVER_NAME}")
-        menu_item_update.triggered.connect(update_binaries)
-        menu.addAction(menu_item_update)
+        # Add 'AltServer daemon toggle' option to menu
+        global DAEMON_STATUS_TOGGLE
+        DAEMON_STATUS_TOGGLE = QAction("Daemon toggle not initialized", checkable=True)
+        DAEMON_STATUS_TOGGLE.triggered.connect(gui_toggle_daemon)
+        DAEMON_STATUS_TOGGLE.setChecked(False)
+        menu.addAction(DAEMON_STATUS_TOGGLE)
+
+        # Add 'Autostart AltServer' option to menu
+        global START_DAEMON_ON_LAUNCH_TOGGLE
+        START_DAEMON_ON_LAUNCH_TOGGLE = QAction(f"Start {ALT_SERVER_NAME} daemon on launch", checkable=True)
+        START_DAEMON_ON_LAUNCH_TOGGLE.triggered.connect(gui_toggle_start_daemon_on_launch)
+        START_DAEMON_ON_LAUNCH_TOGGLE.setChecked(get_config_value(CONFIG_KEY_START_DAEMON, default_value=False))
+        menu.addAction(START_DAEMON_ON_LAUNCH_TOGGLE)
         menu.addSeparator()
 
         # Add 'Quit' option to menu
@@ -362,14 +491,22 @@ def gui_initialization():
         menu_item_quit.setShortcut("Ctrl+Q")
         menu.addAction(menu_item_quit)
 
-        # Add the menu to the system tray icon
-        tray.setContextMenu(menu)
+        # Initialize system tray icon and add menu to it
+        global TRAY_MENU
+        TRAY_MENU = QSystemTrayIcon()
+        TRAY_MENU.setIcon(icon)
+        TRAY_MENU.setVisible(True)
+        TRAY_MENU.setContextMenu(menu)
+
+        # If the user enabled auto start, start the daemon
+        if get_config_value(CONFIG_KEY_START_DAEMON, default_value=False):
+            DAEMON_OBJECT.start_daemon()
 
         # Start application
-        GUI_PROCESS.exec_()
+        GUI_APPLICATION.exec_()
     except Exception as err:
         logging.error(f"Failed to initialize GUI, {err}")
-        exit(1)
+        sys.exit(1)
 
 
 def gui_install_alt_store():
@@ -377,6 +514,7 @@ def gui_install_alt_store():
     Installs AltStore on the connected iOS device
     :return: None
     """
+    restart_daemon = False
 
     def installation_workflow():
         """
@@ -396,12 +534,17 @@ def gui_install_alt_store():
         # Start the installation process
         logging.info(f"Installing {ALT_STORE_NAME} to connected iOS device: '{connected_device_udids[0]}'")
         install_process = subprocess.Popen(install_command,
-                                           stderr=subprocess.PIPE,
+                                           cwd=USER_DATA_PATH,
+                                           stderr=subprocess.STDOUT,
                                            stdin=subprocess.PIPE,
                                            stdout=subprocess.PIPE)
 
         # Watch the installation process and react accordingly
         while True:
+            if install_process.poll() is not None:
+                logging.error(f"Installation process terminated unexpectedly. Exit code: {install_process.poll()}")
+                return
+
             try:
                 output_line = install_process.stdout.readline().decode().strip()
                 line_log_message = f"{ALT_SERVER_NAME}: {output_line}"
@@ -414,11 +557,10 @@ def gui_install_alt_store():
                 logging.info(line_log_message)
 
                 install_process.terminate()
-                success_msg.setVisible(True)
-                success_msg.showMessage("Installation Succeeded",
-                                        "AltStore was successfully installed",
-                                        QSystemTrayIcon.Information,
-                                        200)
+                TRAY_MENU.showMessage("Installation Succeeded",
+                                      "AltStore was successfully installed",
+                                      QSystemTrayIcon.Information,
+                                      5000)
                 return
 
             # Install failed workflow
@@ -466,6 +608,7 @@ def gui_install_alt_store():
                     """
                     two_factor_dialog.close()
                     code_2fa = two_factor_input.text()
+                    logging.info(f"Submitting 2FA code: {code_2fa}")
                     code_2fa = code_2fa + "\n"
                     code_2fa_bytes = bytes(code_2fa.encode())
                     install_process.communicate(input=code_2fa_bytes)
@@ -492,7 +635,9 @@ def gui_install_alt_store():
                 logging.info(line_log_message)
 
     # Stop the daemon if it's running
-    stop_daemon()
+    if DAEMON_OBJECT.daemon_is_running():
+        restart_daemon = True
+        DAEMON_OBJECT.stop_daemon()
 
     # Throw an error message if unable to pair with connected iOS device
     if not pair_ios_device():
@@ -521,31 +666,31 @@ def gui_install_alt_store():
     id_input_area = QLineEdit(placeholderText="Apple ID")
     password_input_area = QLineEdit(placeholderText="Password")
     password_input_area.setEchoMode(QLineEdit.EchoMode.Password)
-    btn = QPushButton()
-    success_msg = QSystemTrayIcon()
-    btn.setText("Install")
-    btn.clicked.connect(installation_workflow)
+    install_button = QPushButton()
+    install_button.setText("Install")
+    install_button.clicked.connect(installation_workflow)
     layout.addWidget(label)
     layout.addWidget(privacy_msg)
     layout.addWidget(id_input_area)
     layout.addWidget(password_input_area)
-    layout.addWidget(btn)
+    layout.addWidget(install_button)
     account_area.setLayout(layout)
     account_area.exec()
 
-    # Start the daemon
-    start_daemon()
+    # Start the daemon if it was running before the install started
+    if restart_daemon:
+        DAEMON_OBJECT.start_daemon()
 
 
-def gui_restart_daemon():
+def gui_toggle_daemon():
     """
     Restarts the AltServer daemon
     :return: None
     """
-    logging.info(f"Restarting {ALT_SERVER_LINUX_NAME} daemon")
-    stop_daemon()
-    pair_ios_device()
-    start_daemon()
+    if DAEMON_OBJECT.daemon_is_running():
+        DAEMON_OBJECT.stop_daemon()
+    else:
+        DAEMON_OBJECT.start_daemon()
 
 
 def gui_toggle_start_daemon_on_launch():
@@ -564,9 +709,9 @@ def gui_quit():
     :return: None
     """
     logging.info(f"Exiting {GUI_NAME}")
-    stop_daemon()
-    GUI_PROCESS.quit()
-    exit(0)
+    DAEMON_OBJECT.stop_daemon()
+    GUI_APPLICATION.quit()
+    sys.exit(0)
 
 
 if __name__ == "__main__":
@@ -574,21 +719,42 @@ if __name__ == "__main__":
     create_directory(USER_DATA_DIRECTORY, fail_exit=True)
     initialize_logging()
 
-    # If any of our required dependencies are not installed, exit out
-    if not exec_path_check(IDEVICEPAIR_EXEC) or not exec_path_check(IDEVICE_ID_EXEC):
-        exit(1)
+    # If idevicepair is not accessible, display an error message window and then exit
+    if not exec_path_check(IDEVICEPAIR_EXEC):
+        gui_critical_error(title=f"{IDEVICEPAIR_EXEC} could not be located",
+                           detailed_message="Verify libimobiledevice is installed")
+
+    # If idevice_id is not accessible, display an error message window and then exit
+    if not exec_path_check(IDEVICE_ID_EXEC):
+        gui_critical_error(title=f"{IDEVICE_ID_EXEC} could not be located",
+                           detailed_message="Verify libimobiledevice is installed")
 
     # If unable to connect to the internet, exit out
     if not connection_check():
-        exit(1)
+        gui_critical_error(title="Unable to connect to the internet",
+                           detailed_message="Verify this host has a valid network connection")
 
-    # If AltServer or AltStore binaries are absent, download them
-    if not os.path.exists(ALT_SERVER_EXEC) or not os.path.exists(ALT_STORE_IPA_PATH):
-        update_binaries()
+    # Download AltServer Linux exec if needed
+    if not os.path.exists(ALT_SERVER_EXEC):
+        if gui_download(file_url=ALT_SERVER_URL, output_path=ALT_SERVER_EXEC, md5_sum=ALT_SERVER_MD5_SUM):
+            update_config(CONFIG_KEY_ALT_SERVER_UPDATE, datetime.datetime.now().strftime("%c"))
+            os.chmod(ALT_SERVER_EXEC, 0o755)
+        else:
+            os.remove(ALT_SERVER_EXEC)
+            gui_critical_error(title=f"Failed to download {ALT_SERVER_LINUX_NAME}",
+                               detailed_message=f"Please try again later")
 
-    # If the user enabled auto start, start the daemon
-    if get_config_value(CONFIG_KEY_START_DAEMON, default_value=False):
-        start_daemon()
+    # Download AltStore IPA if needed
+    if not os.path.exists(ALT_STORE_IPA_PATH):
+        if gui_download(file_url=ALT_STORE_IPA_URL, output_path=ALT_STORE_IPA_PATH, md5_sum=ALT_STORE_MD5_SUM):
+            update_config(CONFIG_KEY_ALT_STORE_UPDATE, datetime.datetime.now().strftime("%c"))
+        else:
+            os.remove(ALT_STORE_IPA_PATH)
+            gui_critical_error(title=f"Failed to download {ALT_STORE_IPA_PATH}",
+                               detailed_message=f"Please try again later")
+
+    # Initialize daemon container object
+    DAEMON_OBJECT = AltServerDaemon()
 
     # Start GUI
     gui_initialization()
