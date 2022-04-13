@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")" || exit
 
-ALTSERVER_VERSION="v0.0.3-rc1"
+ALTSERVER_VERSION="v0.0.4"
 ALTSTORE_VERSION="1_4_9"
 
 if [ ! -f "./resources/AltServer" ]; then
