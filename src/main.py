@@ -17,7 +17,7 @@ from PyQt5.QtWidgets import QMessageBox, QSystemTrayIcon, QMenu, QAction, QDialo
 
 # Program constants
 ALT_SERVER_NAME = "AltServer"
-ALT_SERVER_VERSION = "v0.0.3-rc1"
+ALT_SERVER_VERSION = "v0.0.5"
 ALT_SERVER_LINUX_NAME = "AltServer-Linux"
 ALT_SERVER_MD5_SUM = "592f00dc6cf255c4277ec674711febdd"
 ALT_STORE_NAME = "AltStore"
