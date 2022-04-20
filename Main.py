@@ -20,6 +20,7 @@ def resource_path(relative_path):
 cwd = os.getcwd()
 AltServer = resource_path("AltServer")
 AutoStart = resource_path("AutoStart.sh")
+NetMuxd = resource_path("netmuxd")
 Exec = cwd+"/altserver"
 UserName = os.getlogin()
 

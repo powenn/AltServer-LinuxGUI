@@ -11,6 +11,9 @@ fi
 if [ ! -f "./resources/AltStore.ipa" ]; then
     curl -L "https://cdn.altstore.io/file/altstore/apps/altstore/$ALTSTORE_VERSION.ipa" > "./resources/AltStore.ipa"
 fi
+if [ ! -f "./resources/netmuxd" ]; then
+    curl -L "https://github.com/jkcoxson/netmuxd/releases/download/v0.1.1/netmuxd" > "./resources/netmuxd"
+fi
 if [ -d "./AltServer/usr/lib" ]; then
     rm -rf "./AltServer/usr/lib"
 fi
