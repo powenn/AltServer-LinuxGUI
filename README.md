@@ -50,7 +50,7 @@ sudo dpkg -i AltServer.deb
 ```
 or
 ```
-sudo apt install AltServer.deb
+sudo apt install ./AltServer.deb
 ```
 
 Uninstall
